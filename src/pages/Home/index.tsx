@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from '../../components/Header'
 import self from '../../assets/images/self.jpg'
+import nyc from '../../assets/images/nyc-me.jpeg'
 const Home: React.FC = () => {
     return (
         <div id="home" className="flex flex-col">

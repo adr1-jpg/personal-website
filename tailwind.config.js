@@ -8,6 +8,9 @@ module.exports = {
         openSans: ['Open Sans', 'Arial', 'sans-serif'], 
         montaga: ['Montaga', 'serif'],  // Add Montaga font here
       },
+      colors: {
+        'accent': '#C14725',
+      },
     },
   },
   plugins: [],
