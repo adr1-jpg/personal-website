@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/personal-website/static/css/main.f0c8a805.css",
+    "main.js": "/personal-website/static/js/main.90b0dea3.js",
+    "static/js/453.253ccfac.chunk.js": "/personal-website/static/js/453.253ccfac.chunk.js",
+    "static/media/self.jpg": "/personal-website/static/media/self.fe89867752516d33537d.jpg",
+    "static/media/logo-adri.svg": "/personal-website/static/media/logo-adri.bbc31599f37b31a1409e37bd60a67fcb.svg",
+    "index.html": "/personal-website/index.html",
+    "main.f0c8a805.css.map": "/personal-website/static/css/main.f0c8a805.css.map",
+    "main.90b0dea3.js.map": "/personal-website/static/js/main.90b0dea3.js.map",
+    "453.253ccfac.chunk.js.map": "/personal-website/static/js/453.253ccfac.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f0c8a805.css",
+    "static/js/main.90b0dea3.js"
+  ]
+}
