@@ -2,7 +2,16 @@ import React from "react";
 import styles from './Header.module.css';
 import logo from '../../assets/icons/logo-adri.svg'
 import { useForm } from "../../context/DataProvider";
+import { useNavigate } from "react-router";
 const Header: React.FC = () => {
+    const navigate = useNavigate();
+
+    const handleHomeClick = () => {
+        navigate('/personal-website')
+    }
+    const handleGalleryClick = () => {
+        navigate('/gallery')
+    }
 
     const { navState, setNavState } = useForm();
     // scrolling to about me
@@ -28,12 +37,12 @@ const Header: React.FC = () => {
     });
     return (
         <div className="sticky top-0 z-50 bg-background flex justify-between items-center px-8 py-1 w-screen">
-            <img className="w-14" src={logo}></img>
+            <img onClick={handleHomeClick} className="w-14 hover:cursor-pointer" src={logo}></img>
             <div className="flex flex-row gap-8 font-montaga text-xl">
                 <a
                     // className={`${navState.currentState === 'home' ? 'text-accent font-bold' : ''} hover:cursor-pointer scroll-link`}
                     className='hover:cursor-pointer scroll-link'
-                    onClick={() => setNavState({ ...navState, currentState: 'home' })} href="#home">home</a>
+                    onClick={handleHomeClick}  href="#home">home</a>
                 <a
                     // className={`${navState.currentState === 'about' ? 'text-accent font-bold' : ''} hover:cursor-pointer scroll-link`}
                     className='hover:cursor-pointer scroll-link'
@@ -45,7 +54,7 @@ const Header: React.FC = () => {
                 <a
                     // className={`${navState.currentState === 'gallery' ? 'text-accent font-bold' : ''} hover:cursor-pointer scroll-link`}
                     className='hover:cursor-pointer scroll-link'
-                    onClick={() => setNavState({ ...navState, currentState: 'gallery' })} href="#gallery">gallery</a>
+                    onClick={handleGalleryClick} >gallery</a>
             </div>
 
         </div>
