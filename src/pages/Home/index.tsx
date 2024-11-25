@@ -172,6 +172,7 @@ const Home: React.FC = () => {
                 </div>
                 <img
                     src={self}
+                    loading='lazy'
                     className='h-[calc(100vh-77px)] size-full'>
                 </img>
 
@@ -180,7 +181,7 @@ const Home: React.FC = () => {
                 <div className='flex flex-col mx-32 mt-10 h-screen'>
                     <h2 className='font-inter text-accent text-start text-5xl font-bold mt-10'>It's so nice to meet you!</h2>
                     <div className='grid grid-cols-2 gap-10 mt-10'>
-                        <img src={nyc} />
+                        <img src={nyc} loading='lazy'/>
                         <p className='font-openSans text-xl text-left content-center'>I’m a Salvadoran American passionate about being
                             <span className='font-semibold'> playful</span>, <span className='font-semibold'> curious</span>, and
                             <span className='font-semibold'> bringing people together</span>.<br></br><br></br>
@@ -216,7 +217,7 @@ const Home: React.FC = () => {
                         </div>
                         <div>
 
-                            <img className='pt-5' src={cs} />
+                            <img className='pt-5' loading='lazy' src={cs} />
                         </div>
 
 
@@ -243,9 +244,14 @@ const Home: React.FC = () => {
 
                 <h1 className='font-openSans text-2xl text-left mt-5'>Check out my latest work at Microsoft</h1>
 
-                <div onClick={handleCardClick} ref={typeRef} className='flex justify-center p-32 bg-white rounded-xl shadow-s bg-gradient-to-r from-indigo-500/30 from-10% via-sky-500/20 via-30% to-emerald-500/30 to-90% hover:cursor-pointer' >
+                <div onClick={handleCardClick} ref={typeRef} className='flex justify-center 
+                p-32 bg-white rounded-xl shadow-s 
+                bg-gradient-to-r from-indigo-500/30 bg-[length:200%_200%] animate-gradient-x 
+                bg-gradient-to-r from-indigo-500/30 from-10% via-sky-500/20 via-30% to-emerald-500/30 to-90% hover:cursor-pointer
+                ' 
+                >
                     <div className='size-7/12' >
-                        <img src={azureTheme} />
+                        <img loading='lazy' src={azureTheme} />
                     </div>
                 </div>
 
