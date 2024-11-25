@@ -164,21 +164,6 @@ const Home: React.FC = () => {
         );
     }
 
-    document.querySelectorAll('a.scroll-link').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault(); // Prevent the default anchor click behavior
-
-            const targetId = anchor.getAttribute('href')?.substring(1); // Get the target ID
-            const targetElement = document.getElementById(targetId as string);
-            console.log("about clicked")
-            if (targetElement) {
-                window.scrollTo({
-                    top: targetElement.offsetTop , // Scroll to the target's position
-                    behavior: 'smooth' // Smooth scroll effect
-                });
-            }
-        });
-    });
 
     return (
         <div id="home" className="flex flex-col">

@@ -12,11 +12,16 @@ const Header: React.FC = () => {
 
             const targetId = anchor.getAttribute('href')?.substring(1); // Get the target ID
             const targetElement = document.getElementById(targetId as string);
-
-            if (targetElement) {
+            if (targetElement && targetElement.id === 'about') {
                 window.scrollTo({
-                    top: targetElement.offsetTop -88, // Scroll to the target's position, minus 40px offset
-                    behavior: 'smooth' // Smooth scroll effect
+                    top: targetElement.offsetTop,
+                    behavior: 'smooth'
+                });
+            }
+            else if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop - 78,
+                    behavior: 'smooth'
                 });
             }
         });
