@@ -128,7 +128,7 @@ const Home: React.FC = () => {
 
             if (targetElement) {
                 window.scrollTo({
-                    top: targetElement.offsetTop - 85, // Scroll to the target's position, minus 40px offset
+                    top: targetElement.offsetTop - 78, // Scroll to the target's position, minus 40px offset
                     behavior: 'smooth' // Smooth scroll effect
                 });
             }
