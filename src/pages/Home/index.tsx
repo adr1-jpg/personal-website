@@ -128,7 +128,7 @@ const Home: React.FC = () => {
 
             if (targetElement) {
                 window.scrollTo({
-                    top: targetElement.offsetTop - 78, // Scroll to the target's position, minus 40px offset
+                    top: targetElement.offsetTop - 85, // Scroll to the target's position, minus 40px offset
                     behavior: 'smooth' // Smooth scroll effect
                 });
             }
@@ -151,8 +151,8 @@ const Home: React.FC = () => {
                         Outside of work, you'll find me dog-watching, working on a puzzle, or taking a 10-mile walk.
                     </p>
                     <div className='flex gap-2 items-center text-accent cursor-pointer'>
-                        <a href='#aboutMe' className='scroll-link text-left font-openSans text-xl font-semibold'>Learn more about me</a>
-                        <a href='#aboutMe' className='scroll-link'>
+                        <a href='#about' className='scroll-link text-left font-openSans text-xl font-semibold'>Learn more about me</a>
+                        <a href='#about' className='scroll-link'>
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
                                 className="size-6 
                                
