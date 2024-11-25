@@ -17,7 +17,12 @@
   .slide-in {
     animation: slide-in 2s ease-out forwards;
   }
-
-  /* .grad-cursor{
-    cursor: url('../../assets/icons/grad-cap.svg'), auto; 
-  } */
+ 
+  @keyframes blink {
+    50% {
+      opacity: 0;
+    }
+  }
+  .animate-blink {
+    animation: blink 0.8s step-end infinite;
+  }

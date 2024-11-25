@@ -4,7 +4,7 @@ import Footer from '../../components/Footer'
 import self from '../../assets/images/self.jpg'
 import nyc from '../../assets/images/nyc-me.jpeg'
 import cs from '../../assets/images/me-cs.jpg'
-import azureTheme from '../../assets/images/azure-theme.png'
+import azureTheme from '../../assets/icons/azure-theme.png'
 import azure from '../../assets/images/azure.png'
 import bing from '../../assets/images/bing.png'
 import rainier from '../../assets/images/rainier.jpg'
@@ -63,72 +63,117 @@ const Home: React.FC = () => {
 
     // track scrollHeight
 
-    useEffect(() => {
-        const handleScroll = () => {
-            setNavState({ ...navState, scrollHeight: window.scrollY || 0 })
-        }
-        const currentScroll = window.scrollY + 88;
+    // useEffect(() => {
+    //     const handleScroll = () => {
+    //         setNavState({ ...navState, scrollHeight: window.scrollY || 0 })
+    //     }
+    //     const currentScroll = window.scrollY + 88;
 
-        window.addEventListener('scroll', handleScroll);
-        const home = homeRef.current;
-        const about = aboutRef.current;
-        const work = workRef.current;
-        const gallery = galleryRef.current;
-        
-        if (home && about && work && gallery) {
-            const homeTop = home.offsetTop
-            const homeHeight = home.offsetHeight
-            const aboutTop = about.offsetTop; 
-            const aboutHeight = about.offsetHeight;
-            const workTop = work.offsetTop;
-            const workHeight = work.offsetHeight
-            const galleryTop = gallery.offsetTop
-            const galleryHeight = gallery.offsetHeight
+    //     window.addEventListener('scroll', handleScroll);
+    //     const home = homeRef.current;
+    //     const about = aboutRef.current;
+    //     const work = workRef.current;
+    //     const gallery = galleryRef.current;
 
-            if (currentScroll >= homeTop && currentScroll < homeTop + homeHeight) {
-                console.log("about")
-                setNavState((prevState) => ({
-                    ...prevState,
-                    currentState: 'home',
-                }));
-            } else if (currentScroll >= aboutTop && currentScroll < aboutTop + aboutHeight){
-                setNavState((prevState) => ({
-                    ...prevState,
-                    currentState: 'about',
-                }));
-            } else if (currentScroll >= workTop && currentScroll < workTop + workHeight){
-                setNavState((prevState) => ({
-                    ...prevState,
-                    currentState: 'work',
-                }));
-            } else if (currentScroll >= galleryTop  && currentScroll < galleryTop + galleryHeight){
-                setNavState((prevState) => ({
-                    ...prevState,
-                    currentState: 'gallery',
-                }));
+    //     if (home && about && work && gallery) {
+    //         const homeTop = home.offsetTop
+    //         const homeHeight = home.offsetHeight
+    //         const aboutTop = about.offsetTop;
+    //         const aboutHeight = about.offsetHeight;
+    //         const workTop = work.offsetTop;
+    //         const workHeight = work.offsetHeight
+    //         const galleryTop = gallery.offsetTop
+    //         const galleryHeight = gallery.offsetHeight
+
+    //         if (currentScroll >= homeTop && currentScroll < homeTop + homeHeight) {
+    //             setNavState((prevState) => ({
+    //                 ...prevState,
+    //                 currentState: 'home',
+    //             }));
+    //         } else if (currentScroll >= aboutTop && currentScroll < aboutTop + aboutHeight) {
+    //             setNavState((prevState) => ({
+    //                 ...prevState,
+    //                 currentState: 'about',
+    //             }));
+    //         } else if (currentScroll >= workTop && currentScroll < workTop + workHeight) {
+    //             setNavState((prevState) => ({
+    //                 ...prevState,
+    //                 currentState: 'work',
+    //             }));
+    //         } else if (currentScroll >= galleryTop && currentScroll < galleryTop + galleryHeight) {
+    //             setNavState((prevState) => ({
+    //                 ...prevState,
+    //                 currentState: 'gallery',
+    //             }));
+    //         }
+    //     }
+
+    //     return () => {
+    //         window?.removeEventListener('scroll', handleScroll);
+    //     }
+    // }, [])
+
+
+    const typeRef = useRef<HTMLDivElement>(null);
+    const TypingEffect = ({ text }: { text: string }) => {
+        // track if text is visible
+        const [isVisible, setIsVisible] = useState(false);
+        // store text
+        const [displayedText, setDisplayedText] = useState("");
+        const [index, setIndex] = useState(0);
+
+
+        // Typing effect logic
+        useEffect(() => {
+            if (isVisible && index < text.length) {
+                const timeout = setTimeout(() => {
+                    console.log(text)
+                    setDisplayedText((prev) => prev + text[index]);
+                    setIndex(index + 1);
+                }, 100); // Adjust speed of typing here
+                return () => clearTimeout(timeout);
             }
-        }
+        }, [isVisible, index, text]);
 
-        return () => {
-            window?.removeEventListener('scroll', handleScroll);
-        }
-    },)
+        // Intersection Observer to detect when the element is in view
+        useEffect(() => {
+            const observer = new IntersectionObserver(
+                ([entry]) => {
+                    if (entry.isIntersecting) {
+                        setIsVisible(true);
+                    }
+                },
+                { threshold: 0.5 } // Adjust visibility threshold (50% visible)
+            );
 
-    useEffect(() => {
-        console.log(navState.scrollHeight)
-    }, [window.scrollY])
+            if (typeRef.current) {
+                observer.observe(typeRef.current);
+            }
 
-    // scrolling to about me
+            return () => {
+                if (typeRef.current) {
+                    observer.unobserve(typeRef.current);
+                }
+            };
+        }, []);
+        return (
+            <div ref={typeRef} className="font-inter text-3xl font-bold">
+                {displayedText}
+                <span className="border-r-2 border-black animate-blink"> </span>
+            </div>
+        );
+    }
+
     document.querySelectorAll('a.scroll-link').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault(); // Prevent the default anchor click behavior
 
             const targetId = anchor.getAttribute('href')?.substring(1); // Get the target ID
             const targetElement = document.getElementById(targetId as string);
-
+            console.log("about clicked")
             if (targetElement) {
                 window.scrollTo({
-                    top: targetElement.offsetTop - 78, // Scroll to the target's position, minus 40px offset
+                    top: targetElement.offsetTop , // Scroll to the target's position
                     behavior: 'smooth' // Smooth scroll effect
                 });
             }
@@ -154,10 +199,13 @@ const Home: React.FC = () => {
                         <a href='#about' className='scroll-link text-left font-openSans text-xl font-semibold'>Learn more about me</a>
                         <a href='#about' className='scroll-link'>
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                                className="size-6 
-                               
-                                self-end">
-                                <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25Zm-.53 14.03a.75.75 0 0 0 1.06 0l3-3a.75.75 0 1 0-1.06-1.06l-1.72 1.72V8.25a.75.75 0 0 0-1.5 0v5.69l-1.72-1.72a.75.75 0 0 0-1.06 1.06l3 3Z" clip-rule="evenodd" />
+                                className="size-6 self-end">
+                                <path fill-rule="evenodd" d="M12 2.25c-5.385 
+                                0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 
+                                9.75-4.365 9.75-9.75S17.385 2.25 12 2.25Zm-.53 
+                                14.03a.75.75 0 0 0 1.06 0l3-3a.75.75 0 1 0-1.06
+                                -1.06l-1.72 1.72V8.25a.75.75 0 0 0-1.5 0v5.69l
+                                -1.72-1.72a.75.75 0 0 0-1.06 1.06l3 3Z" clip-rule="evenodd" />
                             </svg>
                         </a>
 
@@ -165,7 +213,7 @@ const Home: React.FC = () => {
                 </div>
                 <img
                     src={self}
-                    className='h-[calc(100vh-77px)]'>
+                    className='h-[calc(100vh-77px)] size-full'>
                 </img>
 
             </div>
@@ -188,28 +236,59 @@ const Home: React.FC = () => {
                     </div>
                 </div>
 
-                <div className='flex flex-col px-32 py-20 gap-16 bg-[#D0D2CA]'>
-                    <div className='grid grid-cols-2 gap-10 mt-10'>
+                <div className='flex flex-col px-32 py-20 bg-[#D0D2CA]'>
+                    <div className='grid grid-cols-2 gap-20'>
                         <div className='content-center'>
-                            <h3 className='font-inter font-extrabold text-accent text-4xl text-left transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 duration-300 ...'>I can, and I will</h3>
-                            <p className='font-openSans text-xl text-left mt-5'>For undergrad, I attended Columbia University’s School of Engineering.
-                                I majored in <span className='font-bold'>Computer Science</span> with a focus on applications.<br></br><br></br>
-                                As a <span className='font-bold'>first-generation college student</span>, I struggled navigating higher education.
-                                With the support of friends, family, and my Columbia community, I gained the
-                                confidence to <span className='font-bold'>embrace difficult challenges</span> and push forward. </p>
+                            <div className='flow-root'>
+                                <div className='my-4 font-openSans text-2xl'>
+                                    For undergrad, I attended Columbia University’s School of Engineering.
+                                    I majored in <span className='font-bold'>Computer Science</span> with a focus on applications.
+                                </div>
+                            </div>
+                            <div className='flow-root'>
+                                <div className='my-4 font-openSans text-2xl'>
+                                    As a <span className='font-bold'>first-generation college student</span>, I struggled navigating higher education.
+                                    With the support of friends, family, and my Columbia community, I gained the
+                                    confidence to <span className='font-bold'>embrace difficult challenges</span> and push forward.
+                                </div>
+                            </div>
+
                         </div>
-                        <img src={cs} />
+                        <div>
+                            <TypingEffect text='I can, and I will.' />
+                            <img className='pt-5' src={cs} />
+                        </div>
+
+
                     </div>
                 </div>
             </div>
 
             <div id='work' className='flex flex-col mx-32 gap-6 mt-28' ref={workRef}>
-                <p className='font-openSans text-3xl '>Right now, I'm a <span className='font-bold'>Design Engineer </span>
-                    for <span className='font-bold'>Microsoft's</span> cloud service, Azure.<br></br>
-                    I build interactive and insightful prototypes for designers and researchers
-                    to conduct user studies. I also help maintain Fluent—Microsoft's internal design system.</p>
+
+                <div className='p-4'>
+                    <div className='flow-root'>
+                        <div className='my-4 font-openSans text-3xl'>
+                            Right now, I'm a <span className='font-extrabold'>Design Engineer </span>
+                            for <span className='font-extrabold'>Microsoft's</span> cloud service, <span className='text-blue font-extrabold'>Azure</span>.
+                        </div>
+                    </div>
+                    <div className='flow-root'>
+                        <div className='my-4 font-openSans text-3xl'>
+                            I build interactive and insightful prototypes for designers and researchers
+                            to conduct user studies. I also help maintain <span className='font-black text-accent'>Fluent</span>—Microsoft's internal design system.
+                        </div>
+                    </div>
+
+                </div>
+
                 <h1 className='font-openSans text-2xl text-left mt-5'>Check out my latest work at Microsoft</h1>
-                <img src={azureTheme} />
+
+                <div ref={typeRef} className='flex justify-center p-32 bg-white rounded-xl shadow-s bg-gradient-to-r from-indigo-500/30 from-10% via-sky-500/20 via-30% to-emerald-500/30 to-90% hover:cursor-pointer' >
+                    <div className='size-7/12'>
+                        <img src={azureTheme} />
+                    </div>
+                </div>
 
                 {/* <div className='grid grid-cols-2 gap-10'>
                     <img src={azureTheme} />

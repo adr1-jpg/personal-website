@@ -15,7 +15,7 @@ const Header: React.FC = () => {
 
             if (targetElement) {
                 window.scrollTo({
-                    top: targetElement.offsetTop, // Scroll to the target's position, minus 40px offset
+                    top: targetElement.offsetTop -88, // Scroll to the target's position, minus 40px offset
                     behavior: 'smooth' // Smooth scroll effect
                 });
             }
@@ -26,14 +26,20 @@ const Header: React.FC = () => {
             <img className="w-14" src={logo}></img>
             <div className="flex flex-row gap-8 font-montaga text-xl">
                 <a
-                    className={`${navState.currentState === 'home' ? 'text-accent font-bold' : ''} hover:cursor-pointer scroll-link`}
-                    onClick={() => setNavState({ ...navState, currentState: 'home' })} href="#home"
-                    >home</a>
-                <a className={`${navState.currentState === 'about' ? 'text-accent font-bold' : ''} hover:cursor-pointer scroll-link`}
-                    onClick={() => setNavState({ ...navState, currentState: 'about' })} href="#aboutMe">about</a>
-                <a className={`${navState.currentState === 'work' ? 'text-accent font-bold' : ''} hover:cursor-pointer scroll-link`} 
+                    // className={`${navState.currentState === 'home' ? 'text-accent font-bold' : ''} hover:cursor-pointer scroll-link`}
+                    className='hover:cursor-pointer scroll-link'
+                    onClick={() => setNavState({ ...navState, currentState: 'home' })} href="#home">home</a>
+                <a
+                    // className={`${navState.currentState === 'about' ? 'text-accent font-bold' : ''} hover:cursor-pointer scroll-link`}
+                    className='hover:cursor-pointer scroll-link'
+                    onClick={() => setNavState({ ...navState, currentState: 'about' })} href="#about">about</a>
+                <a
+                    // className={`${navState.currentState === 'work' ? 'text-accent font-bold' : ''} hover:cursor-pointer scroll-link`}
+                    className='hover:cursor-pointer scroll-link'
                     onClick={() => setNavState({ ...navState, currentState: 'work' })} href="#work">work</a>
-                <a className={`${navState.currentState === 'gallery' ? 'text-accent font-bold' : ''} hover:cursor-pointer scroll-link`} 
+                <a
+                    // className={`${navState.currentState === 'gallery' ? 'text-accent font-bold' : ''} hover:cursor-pointer scroll-link`}
+                    className='hover:cursor-pointer scroll-link'
                     onClick={() => setNavState({ ...navState, currentState: 'gallery' })} href="#gallery">gallery</a>
             </div>
 

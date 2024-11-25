@@ -10,7 +10,8 @@ module.exports = {
       },
       colors: {
         'accent': '#C14725',
-        'background': '#F5F5F5'
+        'background': '#F5F5F5',
+        'blue': '#1480DC',
       },
       animation: {
         'grow-text': 'grow 0.8s forwards',
