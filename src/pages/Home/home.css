@@ -1,0 +1,23 @@
+@keyframes slide-in {
+    0% {
+      transform: translateX(-100%); /* Start off-screen to the left */
+      opacity: 0; /* Start as invisible */
+    }
+    60% {
+      transform: translateX(5%); /* Overshoot a little past its final position */
+      opacity: 1;
+    }
+    100% {
+      transform: translateX(0); /* Set the final position */
+      opacity: 1;
+    }
+  }
+  
+  /* Apply the animation to elements with the class .slide-in */
+  .slide-in {
+    animation: slide-in 2s ease-out forwards;
+  }
+
+  /* .grad-cursor{
+    cursor: url('../../assets/icons/grad-cap.svg'), auto; 
+  } */

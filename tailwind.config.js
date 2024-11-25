@@ -11,6 +11,14 @@ module.exports = {
       colors: {
         'accent': '#C14725',
       },
+      animation: {
+        'grow-text': 'grow 0.8s forwards',
+      },
+      keyframes: {
+        animation: {
+          'bounce-slow': 'bounce 3s linear infinite',
+        }
+      },
     },
   },
   plugins: [],
