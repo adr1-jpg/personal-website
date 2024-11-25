@@ -58,19 +58,19 @@ const Home: React.FC = () => {
     // scrolling to about me
     document.querySelectorAll('a.scroll-link').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
-          e.preventDefault(); // Prevent the default anchor click behavior
-    
-          const targetId = anchor.getAttribute('href')?.substring(1); // Get the target ID
-          const targetElement = document.getElementById(targetId as string);
-    
-          if (targetElement) {
-            window.scrollTo({
-              top: targetElement.offsetTop - 78, // Scroll to the target's position, minus 40px offset
-              behavior: 'smooth' // Smooth scroll effect
-            });
-          }
+            e.preventDefault(); // Prevent the default anchor click behavior
+
+            const targetId = anchor.getAttribute('href')?.substring(1); // Get the target ID
+            const targetElement = document.getElementById(targetId as string);
+
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop - 78, // Scroll to the target's position, minus 40px offset
+                    behavior: 'smooth' // Smooth scroll effect
+                });
+            }
         });
-      });
+    });
 
     return (
         <div id="home" className="flex flex-col">
@@ -78,10 +78,9 @@ const Home: React.FC = () => {
 
             <div className='flex flex-row gap-6'>
                 <div
-                    // className='flex flex-col mx-32 justify-center gap-6'
                     className={`${isVisible ? 'slide-in' : ''} flex flex-col mx-32 justify-center gap-6`}
                 >
-                    <h1 className='text-6xl font-montaga text-left transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 duration-300 ...'>
+                    <h1 className='text-6xl font-montaga text-left'>
                         Adriana Orantes
                     </h1>
                     <p className='text-left font-openSans text-2xl'>
@@ -102,14 +101,13 @@ const Home: React.FC = () => {
                     </div>
                 </div>
                 <img
-                    // className={`${isVisible ? 'slide-in' : ''} h-[calc(100vh-85px)]`}
                     src={self}
-                    className='h-[calc(100vh-85px)]'>
+                    className='h-[calc(100vh-77px)]'>
                 </img>
 
             </div>
 
-            <div className='flex flex-col mx-32' id='aboutMe'>
+            <div className='flex flex-col mx-32 mt-10 h-screen' id='aboutMe'>
                 <h2 className='font-inter text-accent text-start text-5xl font-bold mt-10'>It's so nice to meet you!</h2>
                 <div className='grid grid-cols-2 gap-10 mt-10'>
                     <img src={nyc} />
@@ -127,10 +125,10 @@ const Home: React.FC = () => {
                 </div>
             </div>
 
-            <div className='flex flex-col mx-32 gap-16'>
+            <div className='flex flex-col px-32 py-20 gap-16 bg-[#D0D2CA]'>
                 <div className='grid grid-cols-2 gap-10 mt-10'>
                     <div className='content-center'>
-                        <h3 className='font-inter font-bold text-accent text-3xl text-left'>I can, and I will</h3>
+                        <h3 className='font-inter font-extrabold text-accent text-4xl text-left transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 duration-300 ...'>I can, and I will</h3>
                         <p className='font-openSans text-xl text-left mt-5'>For undergrad, I attended Columbia University’s School of Engineering.
                             I majored in <span className='font-bold'>Computer Science</span> with a focus on applications.<br></br><br></br>
                             As a <span className='font-bold'>first-generation college student</span>, I struggled navigating higher education.
@@ -139,19 +137,20 @@ const Home: React.FC = () => {
                     </div>
                     <img src={cs} />
                 </div>
-                <p className='font-openSans  text-2xl '>Right now, I'm a  <span className='font-bold'>Design Engineer </span>
+            </div>
+
+            <div className='flex flex-col mx-32 gap-6 mt-28'>
+                <p className='font-openSans text-3xl '>Right now, I'm a <span className='font-bold'>Design Engineer </span>
                     for <span className='font-bold'>Microsoft's</span> cloud service, Azure.<br></br>
                     I build interactive and insightful prototypes for designers and researchers
                     to conduct user studies. I also help maintain Fluent—Microsoft's internal design system.</p>
-            </div>
-
-            <div className='flex flex-col mx-32 gap-6'>
-                <h1 className='font-openSans text-3xl text-left mt-10'>My work at Microsoft</h1>
+                <h1 className='font-openSans text-2xl text-left mt-5'>Check out my latest work at Microsoft</h1>
                 <img src={azureTheme} />
-                <div className='grid grid-cols-2 gap-10'>
-                    <img src={azure} />
+
+                {/* <div className='grid grid-cols-2 gap-10'>
+                    <img src={azureTheme} />
                     <img src={bing} />
-                </div>
+                </div> */}
             </div>
 
             <div className='flex flex-col mx-32 mt-20'>
@@ -160,17 +159,17 @@ const Home: React.FC = () => {
                 <h2 className='font-inter text-left text-3xl mt-20'>Gallery</h2>
             </div>
             <div className='mx-32 my-5'>
-                   <ImageList variant="quilted"
+                <ImageList variant="quilted"
                     cols={2}>
                     {itemData.map((item) => (
                         <ImageListItem>
                             <img src={item.img} />
                             {/* <ImageListItemBar position="below" title={item.title} /> */}
-                        </ImageListItem> 
+                        </ImageListItem>
                     ))}
                 </ImageList>
             </div>
-         <Footer />
+            <Footer />
         </div>
     );
 };
