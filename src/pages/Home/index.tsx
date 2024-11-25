@@ -55,6 +55,23 @@ const Home: React.FC = () => {
         setIsVisible(true);
     }, []);
 
+    // scrolling to about me
+    document.querySelectorAll('a.scroll-link').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault(); // Prevent the default anchor click behavior
+    
+          const targetId = anchor.getAttribute('href')?.substring(1); // Get the target ID
+          const targetElement = document.getElementById(targetId as string);
+    
+          if (targetElement) {
+            window.scrollTo({
+              top: targetElement.offsetTop - 78, // Scroll to the target's position, minus 40px offset
+              behavior: 'smooth' // Smooth scroll effect
+            });
+          }
+        });
+      });
+
     return (
         <div id="home" className="flex flex-col">
             <Header />
@@ -72,8 +89,8 @@ const Home: React.FC = () => {
                         Outside of work, you'll find me dog-watching, working on a puzzle, or taking a 10-mile walk.
                     </p>
                     <div className='flex gap-2 items-center text-accent cursor-pointer'>
-                        <a href='#aboutMe' className='text-left font-openSans text-xl font-semibold'>Learn more about me</a>
-                        <a href='#aboutMe'>
+                        <a href='#aboutMe' className='scroll-link text-left font-openSans text-xl font-semibold'>Learn more about me</a>
+                        <a href='#aboutMe' className='scroll-link'>
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
                                 className="size-6 
                                

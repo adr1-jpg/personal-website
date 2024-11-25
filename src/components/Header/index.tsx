@@ -4,10 +4,10 @@ import logo from '../../assets/icons/logo-adri.svg'
 
 const Header: React.FC = () => {
     return (
-        <div className="sticky top-0 z-50 flex justify-between items-center px-6 py-2 w-screen">
+        <div className="sticky top-0 z-50 bg-background flex justify-between items-center px-8 py-1 w-screen">
             <img className="w-14" src={logo}></img>
-            <div className="flex flex-row gap-4 font-montaga text-1xl">
-                  <a href="home">home</a>
+            <div className="flex flex-row gap-8 font-montaga text-xl">
+                  <a>home</a>
                   <a>about</a>
                   <a>work</a>
                   <a>gallery</a>

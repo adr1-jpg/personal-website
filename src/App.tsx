@@ -2,12 +2,12 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Home from './pages/Home'
-
+import { DataProvider } from './context/DataProvider';
 function App() {
   return (
-    <div className="App">
+    <DataProvider>
       <Home />
-    </div>
+    </DataProvider>
   );
 }
 
