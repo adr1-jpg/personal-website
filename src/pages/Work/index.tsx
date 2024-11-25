@@ -54,10 +54,10 @@ const Work: React.FC = () => {
                         </div>
                     </div>
                     <div className='my-1 font-openSans text-xl flex flex-row gap-5'>
-                        <a className='content-center' target="_blank" href="https://www.npmjs.com/package/@fluentui-contrib/azure-theme?activeTab=readme">
+                        <a className='content-center' href="https://www.npmjs.com/package/@fluentui-contrib/azure-theme?activeTab=readme">
                             <img className='hover:cursor-pointer' src={npm} />
                         </a>
-                        <a target="_blank" href="https://github.com/microsoft/fluentui-contrib/tree/main/packages/azure-theme">
+                        <a  href="https://github.com/microsoft/fluentui-contrib/tree/main/packages/azure-theme">
                             <img className='hover:cursor-pointer' src={github} />
                         </a>
 
