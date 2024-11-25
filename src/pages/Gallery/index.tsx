@@ -40,7 +40,7 @@ const Gallery: React.FC = () => {
     ];
 
     return (
-        <div>
+        <div className="bg-background">
             <Header />
             <div id='gallery' className='flex flex-col mx-32 mt-8'>
                 <h2 className='font-inter text-left text-3xl'>Gallery</h2>

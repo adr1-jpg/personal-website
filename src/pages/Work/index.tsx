@@ -8,11 +8,11 @@ import github from '../../assets/icons/github.svg'
 import Footer from "../../components/Footer";
 const Work: React.FC = () => {
     return (
-        <div id='work' className="flex flex-col min-h-screen">
+        <div id='work' className="flex flex-col min-h-screen bg-background">
             <Header />
             <div className="flex flex-col flex-grow">
-                <h1 className="font-inter font-semibold text-4xl mx-32 mt-10">
-                    Creating a Unified Design System for Microsoft Cloud Services
+                <h1 className="font-inter font-semibold text-5xl mx-32 mt-10">
+                    Creating a Unified Design System for Microsoft Azure
                 </h1>
                 <div className="grid grid-cols-3">
 

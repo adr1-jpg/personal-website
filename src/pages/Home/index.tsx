@@ -140,7 +140,7 @@ const Home: React.FC = () => {
 
 
     return (
-        <div id="home" className="flex flex-col">
+        <div id="home" className="flex flex-col bg-background">
             <Header />
 
             <div id='home' className='flex flex-row gap-6' ref={homeRef}>
