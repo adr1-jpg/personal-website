@@ -1,4 +1,5 @@
 import React from "react";
+import { useEffect } from "react";
 import { Button, Slider } from "@fluentui/react-components";
 import Header from "../../components/Header";
 import theme from '../../assets/images/azure-theme-button.png'
@@ -7,14 +8,18 @@ import azureTheme from '../../assets/icons/azure-theme.svg'
 import npm from '../../assets/icons/npm.svg'
 import github from '../../assets/icons/github.svg'
 import Footer from "../../components/Footer";
+
 const Work: React.FC = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
     return (
         <div id='work' className="flex flex-col min-h-screen bg-background">
             <Header />
             <div className='flex flex-col gap-5 justify-start 
                 pl-32 pr-4 py-20 bg-white rounded-xl shadow-s 
                 bg-gradient-to-r from-indigo-500/30 bg-[length:200%_200%] animate-gradient-x 
-                bg-gradient-to-r from-indigo-500/30 from-10% via-sky-500/20 via-30% to-emerald-500/30 to-90% hover:cursor-pointer
+                bg-gradient-to-r from-indigo-500/30 from-10% via-sky-500/20 via-30% to-emerald-500/30 to-90%
                 '
             ><h1 className="font-inter font-semibold text-6xl mt-5 text-start">
                     Creating a Unified Design System for Azure
@@ -28,7 +33,7 @@ const Work: React.FC = () => {
 
 
                 <div className="mx-32">
-                    <div className='my-4 font-openSans text-2xl'>
+                    <div className='my-4 font-openSans text-xl'>
                         Microsoft's <a className="text-accent font-extrabold "
                             href='https://react.fluentui.dev/?path=/docs/concepts-introduction--docs'
                             target="_blank">Fluent UI v9</a> is the latest iteration of their design system.
@@ -66,18 +71,11 @@ const theme = AzureDarkTheme; // or AzureLightTheme
                                 </code>
                             </pre>
                         </div>
-                        <div className="mt-3">
-                            <h1 className="font-inter font-semibold text-xl">Results:</h1>
-                            <div className="flex gap-5">
-                                <Button style={{ marginTop: '10px' }}> Azure-themed Button </Button>
-                                <Button appearance="primary" style={{ marginTop: '10px' }}> Primary Button </Button>
-                                <Slider></Slider>
-                            </div>
-                        </div>
+                        
                     </div>
-                        <div className="mt-3 content-center">
+                        <div className="mt-3">
                             <div className='flow-root'>
-                                <div className='mt-1 font-openSans text-2xl'>
+                                <div className='mt-1 font-openSans text-xl'>
                                     Azure-Theme was published as an npm package for easy access and implementation
                                     by developers. By contributing to Microsoft's fluentui-contrib repository—a
                                     key project that supports Fluent—I help maintain the portal's cohesive
@@ -93,10 +91,15 @@ const theme = AzureDarkTheme; // or AzureLightTheme
                                     <img loading='lazy' className='hover:cursor-pointer' src={github} />
                                 </a>
                             </div>
+                            <div className="mt-3">
+                            <h1 className="font-inter font-semibold text-xl">Results:</h1>
+                            <div className="flex gap-5">
+                                <Button style={{ marginTop: '10px' }}> Azure-themed Button </Button>
+                                <Button appearance="primary" style={{ marginTop: '10px' }}> Primary Button </Button>
+                                <Slider></Slider>
+                            </div>
                         </div>
-
-
-
+                        </div>
                     </div>
 
 

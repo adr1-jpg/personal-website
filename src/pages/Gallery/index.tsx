@@ -1,4 +1,5 @@
 import React from "react";
+import { useEffect } from "react";
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import ImageListItemBar from '@mui/material/ImageListItemBar';
@@ -12,6 +13,10 @@ import love from '../../assets/images/love.jpg'
 import door from '../../assets/images/door.jpg'
 
 const Gallery: React.FC = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
+
     const itemData = [
         {
             img: rainier,
