@@ -50,7 +50,7 @@ const Gallery: React.FC = () => {
                     cols={2}>
                     {itemData.map((item) => (
                         <ImageListItem>
-                            <img loading='lazy'className="object-cover blur-sm opacity-0 transition-all duration-500" src={item.img} />
+                            <img loading='lazy' src={item.img} />
                             {/* <ImageListItemBar position="below" title={item.title} /> */}
                         </ImageListItem>
                     ))}

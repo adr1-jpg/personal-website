@@ -174,7 +174,7 @@ const Home: React.FC = () => {
                     src={self}
                     rel="preload"
                    
-                    className='h-[calc(100vh-77px)] object-cover blur-sm opacity-0 transition-all duration-500'>
+                    className='h-[calc(100vh-77px)]'>
                 </img>
 
             </div>
