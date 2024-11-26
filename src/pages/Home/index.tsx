@@ -104,7 +104,7 @@ const Home: React.FC = () => {
                     console.log(text)
                     setDisplayedText((prev) => prev + text[index]);
                     setIndex(index + 1);
-                }, 100); // Adjust speed of typing here
+                }, 120); // Adjust speed of typing here
                 return () => clearTimeout(timeout);
             }
         }, [isVisible, index, text]);
@@ -133,7 +133,7 @@ const Home: React.FC = () => {
         return (
             <div ref={typeRef} className="font-inter text-accent text-5xl font-bold">
                 {displayedText}
-                <span className="border-r-2 border-black animate-blink"> </span>
+                {/* <span className="border-r-2 border-black animate-blink"> </span> */}
             </div>
         );
     }
