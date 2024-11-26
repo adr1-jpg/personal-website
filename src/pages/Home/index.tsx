@@ -172,8 +172,9 @@ const Home: React.FC = () => {
                 </div>
                 <img
                     src={self}
-                    loading='lazy'
-                    className='h-[calc(100vh-77px)] size-full'>
+                    rel="preload"
+                   
+                    className='h-[calc(100vh-77px)] object-cover blur-sm opacity-0 transition-all duration-500'>
                 </img>
 
             </div>
