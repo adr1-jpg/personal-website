@@ -11,7 +11,7 @@ const Work: React.FC = () => {
         <div id='work' className="flex flex-col min-h-screen bg-background">
             <Header />
             <div className="flex flex-col flex-grow">
-                <h1 className="font-inter font-semibold text-5xl mx-32 mt-10">
+                <h1 className="font-inter font-semibold text-5xl mx-32 mt-5">
                     Creating a Unified Design System for Microsoft Azure
                 </h1>
                 <div className="grid grid-cols-3">
@@ -22,13 +22,16 @@ const Work: React.FC = () => {
                         <div className="grid">
                             <div className='flow-root'>
                                 <div className='my-4 font-openSans text-xl'>
-                                    Earlier this year, Microsoft launched Fluent v9, the latest version of their design system.
-                                    To ensure consistency across all components using Fluent UI for the Azure portal—a
-                                    platform used by millions of developers and businesses worldwide—I created a custom theme
-                                    that applied Azure's brand colors to each Fluent component. This ensured that the portal's
-                                    styling, color scheme, typography, and borders were cohesive and aligned with the Azure
-                                    design language, providing a seamless and unified user experience for a vast, global audience.
+                                    Microsoft's <a className="text-accent font-extrabold " 
+                                    href='https://react.fluentui.dev/?path=/docs/concepts-introduction--docs' 
+                                    target="_blank">Fluent UI v9</a> is the latest iteration of their design system.
+                                     To maintain visual cohesion across all Azure
+                                    portal components—a platform that serves millions of developers and businesses
+                                    globally—I developed a custom theme that integrated Azure's brand colors into each
+                                    Fluent UI component. <br></br><br></br>
+                                    This customization ensures a cohesive design by aligning the color scheme, typography, and overall style.
                                 </div>
+                                
                             </div>
                         </div>
                     </div>
@@ -39,31 +42,31 @@ const Work: React.FC = () => {
                     <h1 className="font-inter font-semibold text-3xl">
                         Results
                     </h1>
-                    <p className="font-openSans text-xl mt-2">Example Fluent components with Azure-Theme: </p>
+                    
+                    <div className='flow-root'>
+                        <div className='mt-1 font-openSans text-xl'>
+                            Azure-Theme was published as an npm package for easy access and implementation
+                            by developers. By contributing to Microsoft's fluentui-contrib repository—a
+                            key project that supports Fluent—I help maintain the portal's cohesive
+                            look, and support one of the largest cloud platforms in the world.
+                        </div>
+                        
+                    </div>
+                    <div className='flex flex-row gap-3 mt-1'>
+                        <a className='content-center size-7' href="https://www.npmjs.com/package/@fluentui-contrib/azure-theme?activeTab=readme" target="_blank">
+                            <img loading='lazy' className='hover:cursor-pointer' src={npm} />
+                        </a>
+                        <a className='size-6'href="https://github.com/microsoft/fluentui-contrib/tree/main/packages/azure-theme" target="_blank">
+                            <img loading='lazy' className='hover:cursor-pointer' src={github} />
+                        </a>
+                    </div>
+                    <p className="font-openSans text-xl font-semibold mt-3">Example Fluent components styled with Azure-Theme: </p>
                     <div className="flex gap-5 items-end">
                         <Button style={{ marginTop: '10px' }}> Azure-themed Button </Button>
                         <Button appearance="primary" style={{ marginTop: '10px' }}> Primary Button </Button>
                         <Slider></Slider>
                     </div>
-                    <div className='flow-root'>
-                        <div className='mt-4 font-openSans text-xl'>
-                            Azure Theme was published as an npm package for easy access and implementation
-                            by developers. By contributing to Microsoft's fluentui-contrib repository—a
-                            key project that supports Fluent UI— I help maintain the portal's cohesive
-                            look, and support one of the largest cloud platforms in the world.
-                        </div>
-                    </div>
-                    <div className='my-1 font-openSans text-xl flex flex-row gap-5'>
-                        <a className='content-center' href="https://www.npmjs.com/package/@fluentui-contrib/azure-theme?activeTab=readme">
-                            <img loading='lazy' className='hover:cursor-pointer' src={npm} />
-                        </a>
-                        <a  href="https://github.com/microsoft/fluentui-contrib/tree/main/packages/azure-theme">
-                            <img loading='lazy' className='hover:cursor-pointer' src={github} />
-                        </a>
-
-
-
-                    </div>
+                   
                 </div>
             </div>
 
