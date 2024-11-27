@@ -69,7 +69,7 @@ const Gallery: React.FC = () => {
                                 objectFit: 'cover',
                                 opacity: loaded ? 1 : 0,
                                 visibility: loaded ? 'visible' : 'hidden',
-                                transition: 'opacity .5s ease-in-out',
+                                transition: 'opacity 2s ease-in-out',
                             }}
                             />
                             {/* <ImageListItemBar position="below" title={item.title} /> */}

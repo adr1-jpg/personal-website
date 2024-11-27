@@ -42,7 +42,7 @@ const Header: React.FC = () => {
                 <a
                     // className={`${navState.currentState === 'home' ? 'text-accent font-bold' : ''} hover:cursor-pointer scroll-link`}
                     className='hover:cursor-pointer scroll-link'
-                    onClick={handleHomeClick}  href="#home">home</a>
+                    onClick={handleHomeClick}  href="#">home</a>
                 <a
                     // className={`${navState.currentState === 'about' ? 'text-accent font-bold' : ''} hover:cursor-pointer scroll-link`}
                     className='hover:cursor-pointer scroll-link'

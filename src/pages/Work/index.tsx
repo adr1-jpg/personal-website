@@ -94,74 +94,18 @@ const theme = AzureDarkTheme; // or AzureLightTheme
                                        
                                         <div className="flex flex-col gap-4 ">
                                             <p className="font-inter font-semibold text-lg">Button and Slider demo</p>
-                                            <Button className="w-44" onClick={() => alert('Hi!')}> Azure-themed Button </Button>
-                                            <Button className="w-44" appearance="primary" > Primary Button </Button>
+                                            <Button className="w-44" onClick={() => alert('Just an example of how a Fluent button styled with the azure-theme package')}> Azure-themed Button </Button>
+                                            <Button className="w-44"  onClick={() => alert('A primary button!')} appearance="primary" > Primary Button </Button>
                                             <Slider className="w-44" value={30}></Slider>
                                         </div>
                                     </div>
                                 </div>
 
                             </div>
-
-
-
                         </div>
                     </div>
-
-
                 </div>
-                {/* <div className='flex flex-row gap-4 mt-1'>
-                        <a className='content-center size-8' href="https://www.npmjs.com/package/@fluentui-contrib/azure-theme?activeTab=readme" target="_blank">
-                            <img loading='lazy' className='hover:cursor-pointer' src={npm} />
-                        </a>
-                        <a className='size-7' href="https://github.com/microsoft/fluentui-contrib/tree/main/packages/azure-theme" target="_blank">
-                            <img loading='lazy' className='hover:cursor-pointer' src={github} />
-                        </a>
-                    </div> */}
-                {/* <div className="flex flex-col mx-32 mt-2 h-max">
-                    <h1 className="text-2xl">How to use </h1>
-                    <div className="flex gap-10">
-                        <div className="flex flex-row gap-10 justify-between mt-3 ">
-                            <div className="bg-[#f9f9f9] p-6 rounded-sm ">
-                                <pre>
-                                    <code>
-                                        {`import * as React from 'react';
-import { Button, Slider } from '@fluentui/react-components';
-import { FluentProvider, button } from '@fluentui/react-components';
-import { AzureDarkTheme } from '@fluentui-contrib/azure-theme';
-
-function App() {
-const theme = AzureDarkTheme; // or AzureLightTheme
-
-    return (
-        <FluentProvider theme={theme}>
-            <Button>Azure Themed Button</Button>
-            <Button appearance='primary'>Primary Button</Button>
-            <Slider />
-        </FluentProvider>
-    );
-}`}
-                                    </code>
-                                </pre>
-                            </div>
-                            <p>some text</p>
-                        </div>
-
-                    </div>
-                    <div className="mt-10">
-                        <h1 className="font-inter font-semibold text-3xl">Examples:</h1>
-                        <p className="mt-2 text-2xl">Just 3 components styled</p>
-                        <div className="flex gap-5">
-                            <Button style={{ marginTop: '10px' }}> Azure-themed Button </Button>
-                            <Button appearance="primary" style={{ marginTop: '10px' }}> Primary Button </Button>
-                            <Slider></Slider>
-                        </div>
-                    </div>
-
-
-                </div> */}
             </div>
-
             <Footer />
         </div>
     )

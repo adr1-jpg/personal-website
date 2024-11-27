@@ -20,6 +20,12 @@ const Home: React.FC = () => {
     const handleCardClick = () => {
         navigate('/work');
     };
+    const handleAquaireClick = () => {
+        navigate('./aquaire')
+    }
+    const handleCampusClick = () => {
+        navigate('./campus')
+    }
     const handleGalleryClick = () => {
         navigate('/gallery')
     }
@@ -41,59 +47,6 @@ const Home: React.FC = () => {
         setIsVisible(true);
     }, []);
 
-    // track scrollHeight
-
-    // useEffect(() => {
-    //     const handleScroll = () => {
-    //         setNavState({ ...navState, scrollHeight: window.scrollY || 0 })
-    //     }
-    //     const currentScroll = window.scrollY + 88;
-
-    //     window.addEventListener('scroll', handleScroll);
-    //     const home = homeRef.current;
-    //     const about = aboutRef.current;
-    //     const work = workRef.current;
-    //     const gallery = galleryRef.current;
-
-    //     if (home && about && work && gallery) {
-    //         const homeTop = home.offsetTop
-    //         const homeHeight = home.offsetHeight
-    //         const aboutTop = about.offsetTop;
-    //         const aboutHeight = about.offsetHeight;
-    //         const workTop = work.offsetTop;
-    //         const workHeight = work.offsetHeight
-    //         const galleryTop = gallery.offsetTop
-    //         const galleryHeight = gallery.offsetHeight
-
-    //         if (currentScroll >= homeTop && currentScroll < homeTop + homeHeight) {
-    //             setNavState((prevState) => ({
-    //                 ...prevState,
-    //                 currentState: 'home',
-    //             }));
-    //         } else if (currentScroll >= aboutTop && currentScroll < aboutTop + aboutHeight) {
-    //             setNavState((prevState) => ({
-    //                 ...prevState,
-    //                 currentState: 'about',
-    //             }));
-    //         } else if (currentScroll >= workTop && currentScroll < workTop + workHeight) {
-    //             setNavState((prevState) => ({
-    //                 ...prevState,
-    //                 currentState: 'work',
-    //             }));
-    //         } else if (currentScroll >= galleryTop && currentScroll < galleryTop + galleryHeight) {
-    //             setNavState((prevState) => ({
-    //                 ...prevState,
-    //                 currentState: 'gallery',
-    //             }));
-    //         }
-    //     }
-
-    //     return () => {
-    //         window?.removeEventListener('scroll', handleScroll);
-    //     }
-    // }, [])
-
-
     const typeRef = useRef<HTMLDivElement>(null);
     const TypingEffect = ({ text }: { text: string }) => {
         // track if text is visible
@@ -101,9 +54,6 @@ const Home: React.FC = () => {
         // store text
         const [displayedText, setDisplayedText] = useState("");
         const [index, setIndex] = useState(0);
-
-
-        // Typing effect logic
         useEffect(() => {
             if (isVisible && index < text.length) {
                 const timeout = setTimeout(() => {
@@ -114,8 +64,6 @@ const Home: React.FC = () => {
                 return () => clearTimeout(timeout);
             }
         }, [isVisible, index, text]);
-
-        // Intersection Observer to detect when the element is in view
         useEffect(() => {
             const observer = new IntersectionObserver(
                 ([entry]) => {
@@ -139,12 +87,9 @@ const Home: React.FC = () => {
         return (
             <div ref={typeRef} className="font-inter text-accent text-5xl font-bold">
                 {displayedText}
-                {/* <span className="border-r-2 border-black animate-blink"> </span> */}
             </div>
         );
     }
-
-
     return (
         <div id="home" className="flex flex-col bg-background">
             <Header />
@@ -191,7 +136,7 @@ const Home: React.FC = () => {
                 />
             </div>
             <div id='about' className='grid ' ref={aboutRef}>
-                <div className='flex flex-col mx-40 mt-10 '>
+                <div className='flex flex-col mx-48 mt-10 '>
                     <h2 className='font-inter text-accent text-start text-5xl font-bold mt-10'>It's so nice to meet you!</h2>
                     <div className='grid grid-cols-2 gap-10 mt-10 mb-20'>
                         <img className='rounded-sm' src={nyc} loading='lazy' />
@@ -212,7 +157,7 @@ const Home: React.FC = () => {
                     </div>
                 </div>
 
-                <div id='edu' className='flex flex-col px-40 py-20 bg-[#D0D2CA] justify-center'>
+                <div id='edu' className='flex flex-col px-48 py-20 bg-[#D0D2CA] justify-center'>
                     <div className='grid grid-cols-2 gap-20 '>
                         <div className='content-center self-center'>
                             <TypingEffect text='I can, and I will.' />
@@ -241,7 +186,7 @@ const Home: React.FC = () => {
                 </div>
             </div>
 
-            <div id='work' className='flex flex-col mx-40 gap-6 mt-20' ref={workRef}>
+            <div id='work' className='flex flex-col mx-48 gap-6 mt-20' ref={workRef}>
 
                 <div className='p-4'>
                     <div className='flow-root'>
@@ -261,9 +206,10 @@ const Home: React.FC = () => {
                 <h1 className='font-openSans text-2xl text-left mt-5'>Check out my latest work at Microsoft</h1>
 
                 <div onClick={handleCardClick} ref={typeRef} className='flex justify-center 
-                p-32 bg-white rounded-xl shadow-s 
+                p-32 bg-white rounded-s shadow-s 
                 bg-gradient-to-r from-indigo-500/30 bg-[length:200%_200%] animate-gradient-x 
                 bg-gradient-to-r from-indigo-500/30 from-10% via-sky-500/20 via-30% to-emerald-500/30 to-90% hover:cursor-pointer
+                transition-transform duration-200 hover:-translate-y-2
                 '
                 >
                     <div className='size-7/12' >
@@ -271,35 +217,24 @@ const Home: React.FC = () => {
                     </div>
                 </div>
                 <h1 className='font-openSans text-2xl text-left mt-5'>Projects</h1>
-
-                {/* <div onClick={handleCardClick} ref={typeRef} className='flex justify-center p-32 bg-white rounded-xl shadow-s hover:cursor-pointer'
-                >
-                    <div className='size-6/12' >
-                        <img loading='lazy' src={virtualCampus} />
-                    </div>
-                </div> */}
                 <div className='grid grid-cols-2 gap-5'>
-                    <div onClick={handleCardClick} ref={typeRef} className='flex justify-center px-28 py-20 bg-white rounded-xl shadow-s hover:cursor-pointer items-center'
+                    <div onClick={handleCampusClick} ref={typeRef} className='flex justify-center px-28 py-20 
+                    bg-white rounded-s shadow-s hover:cursor-pointer items-center
+                    transition-transform duration-200 hover:-translate-y-2'
                     >
                         <div >
-
                             <img src={virtualCampus} />
                         </div>
                     </div>
-                    <div onClick={handleCardClick} ref={typeRef} className='flex justify-center px-28 py-20 bg-aquaire rounded-xl shadow-s hover:cursor-pointer items-center'
+                    <div onClick={handleAquaireClick} ref={typeRef} className='flex justify-center px-28 py-20 bg-aquaire
+                     rounded-s shadow-s hover:cursor-pointer items-center
+                     transition-transform duration-200 hover:-translate-y-2'
                     >
-
                         <img loading='lazy' src={aquaire} />
-
                     </div>
-
-
                 </div>
-
-
-
             </div>
-            <div className='grid grid-rows-2 mt-20 mb-10 gap-5 text-center justify-items-center mx-40 content-center'>
+            <div className='grid grid-rows-2 mt-20 mb-10 gap-5 text-center justify-items-center mx-48 content-center'>
                 <p className='font-inter text-2xl'>In my free time, I enjoy exploring the West Coast, international
                     travel, and photography.</p>
                 <div className='flex gap-2 items-center text-accent cursor-pointer' onClick={handleGalleryClick}>
