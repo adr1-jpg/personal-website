@@ -7,11 +7,14 @@ module.exports = {
         inter: ['Inter', 'Arial', 'sans-serif'], // Default sans font to Inter
         openSans: ['Open Sans', 'Arial', 'sans-serif'],
         montaga: ['Montaga', 'serif'],  // Add Montaga font here
+        poppins: ['Poppins', 'sans-serif'], // Define Poppins
       },
       colors: {
         'accent': '#C14725',
         'background': '#F5F5F5',
         'blue': '#1480DC',
+        'aquaire': '#3A435E',
+        'campus': '#0072CE'
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',

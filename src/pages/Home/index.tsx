@@ -5,8 +5,9 @@ import self from '../../assets/images/self.jpg'
 import nyc from '../../assets/images/nyc-me.jpeg'
 import cs from '../../assets/images/me-cs.jpg'
 import azureTheme from '../../assets/icons/azure-theme.png'
-
-
+import virtualCampus from '../../assets/icons/campus.png'
+import aquaire from '../../assets/icons/aquaire.png'
+import neighborhood from '../../assets/icons/neighborhood.svg'
 import './home.css'
 import { useState, useEffect } from 'react';
 import { useForm } from '../../context/DataProvider';
@@ -150,8 +151,7 @@ const Home: React.FC = () => {
 
             <div id='home' className='grid grid-cols-2 gap-6 h-screen' ref={homeRef}>
                 <div
-                    // className={`${isVisible ? 'slide-in' : ''} flex flex-col mx-32 justify-center gap-6`}
-                    className='flex flex-col mx-32 justify-center gap-6'
+                    className='flex flex-col ml-40 mr-10 justify-center gap-6'
                 >
                     <h1 className='text-6xl font-montaga text-left'>
                         Adriana Orantes
@@ -186,23 +186,17 @@ const Home: React.FC = () => {
                         objectFit: 'cover',
                         opacity: loaded ? 1 : 0,
                         visibility: loaded ? 'visible' : 'hidden',
-                        transition: 'opacity 1s ease-in-out',
+                        transition: 'opacity 2.5s ease-in-out',
                     }}
-                    
-                //   className={`${loaded ? 'visible' : 'hidden'}`}
-                >
-
-                </img>
-
-
-
+                />
             </div>
-            <div id='about' className='grid 'ref={aboutRef}>
-                <div className='flex flex-col mx-32 mt-10 h-screen '>
+            <div id='about' className='grid ' ref={aboutRef}>
+                <div className='flex flex-col mx-40 mt-10 '>
                     <h2 className='font-inter text-accent text-start text-5xl font-bold mt-10'>It's so nice to meet you!</h2>
-                    <div className='flex flex-column gap-10 mt-10 content-center space-between align-center'>
-                        <img className='size-3/4'src={nyc} loading='lazy' />
-                        <p className='font-openSans text-2xl text-left content-start'>I’m a Salvadoran American passionate about being
+                    <div className='grid grid-cols-2 gap-10 mt-10 mb-20'>
+                        <img className='rounded-sm' src={nyc} loading='lazy' />
+                        <p className='font-openSans text-2xl text-left content-center '>
+                            I'm a Salvadoran American passionate about being
                             <span className='font-semibold'> playful</span>, <span className='font-semibold'> curious</span>, and
                             <span className='font-semibold'> bringing people together</span>.<br></br><br></br>
                             Growing up, I had no clear picture of the future I was working toward.
@@ -212,13 +206,15 @@ const Home: React.FC = () => {
                             and <span className='font-bold'> joy</span>.<br></br><br></br>
                             I first discovered computer science in high school through a summer program at MIT.
                             It was tough—I had never experienced such academic rigor.
-                            But by proactively seeking support, I persevered.</p>
+                            But by proactively seeking support, <span className='text-accent font-bold'>I persevered.</span>
+
+                        </p>
                     </div>
                 </div>
 
-                <div className='flex flex-col px-32 py-20 bg-[#D0D2CA]'>
-                    <div className='grid grid-cols-2 gap-20'>
-                        <div className='content-center'>
+                <div id='edu' className='flex flex-col px-40 py-20 bg-[#D0D2CA] justify-center'>
+                    <div className='grid grid-cols-2 gap-20 '>
+                        <div className='content-center self-center'>
                             <TypingEffect text='I can, and I will.' />
                             <div className='flow-root'>
                                 <div className='my-4 font-openSans text-2xl'>
@@ -237,7 +233,7 @@ const Home: React.FC = () => {
                         </div>
                         <div>
 
-                            <img className='pt-5' loading='lazy' src={cs} />
+                            <img className='rounded-sm' loading='lazy' src={cs} />
                         </div>
 
 
@@ -245,7 +241,7 @@ const Home: React.FC = () => {
                 </div>
             </div>
 
-            <div id='work' className='flex flex-col mx-32 gap-6 mt-20' ref={workRef}>
+            <div id='work' className='flex flex-col mx-40 gap-6 mt-20' ref={workRef}>
 
                 <div className='p-4'>
                     <div className='flow-root'>
@@ -274,9 +270,36 @@ const Home: React.FC = () => {
                         <img loading='lazy' src={azureTheme} />
                     </div>
                 </div>
+                <h1 className='font-openSans text-2xl text-left mt-5'>Projects</h1>
+
+                {/* <div onClick={handleCardClick} ref={typeRef} className='flex justify-center p-32 bg-white rounded-xl shadow-s hover:cursor-pointer'
+                >
+                    <div className='size-6/12' >
+                        <img loading='lazy' src={virtualCampus} />
+                    </div>
+                </div> */}
+                <div className='grid grid-cols-2 gap-5'>
+                    <div onClick={handleCardClick} ref={typeRef} className='flex justify-center px-28 py-20 bg-white rounded-xl shadow-s hover:cursor-pointer items-center'
+                    >
+                        <div >
+
+                            <img src={virtualCampus} />
+                        </div>
+                    </div>
+                    <div onClick={handleCardClick} ref={typeRef} className='flex justify-center px-28 py-20 bg-aquaire rounded-xl shadow-s hover:cursor-pointer items-center'
+                    >
+
+                        <img loading='lazy' src={aquaire} />
+
+                    </div>
+
+
+                </div>
+
+
 
             </div>
-            <div className='grid grid-rows-2 mt-20 mb-10 gap-5 text-center justify-items-center mx-32 content-center'>
+            <div className='grid grid-rows-2 mt-20 mb-10 gap-5 text-center justify-items-center mx-40 content-center'>
                 <p className='font-inter text-2xl'>In my free time, I enjoy exploring the West Coast, international
                     travel, and photography.</p>
                 <div className='flex gap-2 items-center text-accent cursor-pointer' onClick={handleGalleryClick}>

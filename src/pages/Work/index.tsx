@@ -12,12 +12,12 @@ import Footer from "../../components/Footer";
 const Work: React.FC = () => {
     useEffect(() => {
         window.scrollTo(0, 0);
-      }, []);
+    }, []);
     return (
         <div id='work' className="flex flex-col min-h-screen bg-background">
             <Header />
-            <div className='flex flex-col gap-5 justify-start 
-                pl-32 pr-4 py-20 bg-white rounded-xl shadow-s 
+            <div className='flex flex-col gap-6 justify-start 
+                px-48  py-20 bg-white rounded-xl shadow-s 
                 bg-gradient-to-r from-indigo-500/30 bg-[length:200%_200%] animate-gradient-x 
                 bg-gradient-to-r from-indigo-500/30 from-10% via-sky-500/20 via-30% to-emerald-500/30 to-90%
                 '
@@ -29,30 +29,48 @@ const Work: React.FC = () => {
                 </div>
 
             </div>
-            <div className="flex flex-col flex-grow">
+            <div className="flex flex-col flex-grow mx-48">
 
 
-                <div className="mx-32">
-                    <div className='my-4 font-openSans text-xl'>
+                <div className=" mt-10">
+                    <p className="font-inter font-semibold text-lg">Overview</p>
+                    <div className='my-2 font-openSans text-2xl'>
                         Microsoft's <a className="text-accent font-extrabold "
                             href='https://react.fluentui.dev/?path=/docs/concepts-introduction--docs'
                             target="_blank">Fluent UI v9</a> is the latest iteration of their design system.
                         To maintain visual cohesion across all Azure
                         portal components—a platform that serves millions of developers and businesses
                         globally—I developed a custom theme that integrated Azure's brand colors into each
-                        Fluent UI component. <br></br><br></br>
-                        This customization ensures a cohesive design by aligning the color scheme, typography, and overall style.
+                        Fluent UI component.
                     </div>
                 </div>
 
+                <div className="mt-8">
+                    <h1 className="font-inter font-semibold text-lg">Results</h1>
+                    <div className='flow-root'>
+                        <div className='mt-1 font-openSans text-2xl'>
+                            Azure-Theme was published as an <a href="https://www.npmjs.com/package/@fluentui-contrib/azure-theme?activeTab=readme" target="_blank" className="text-accent font-extrabold">npm package</a> for easy access and implementation
+                            by developers. By contributing to Microsoft's <a href="https://github.com/microsoft/fluentui-contrib/tree/main/packages/azure-theme" target="_blank" className="text-accent font-extrabold">fluentui-contrib repository</a>—a
+                            key project that supports Fluent—I help maintain the portal's cohesive
+                            look, and support one of the largest cloud platforms in the world.
+                        </div>
 
-                <div className="flex flex-col mx-32 mt-1 h-max">
-
-                    <div className="flex gap-10">  <div className="flex flex-col gap-1 justify-between mt-3 ">
-                        <div className="bg-[#f9f9f9] p-6 rounded-sm ">
-                            <pre>
-                                <code>
-                                    {`import * as React from 'react';
+                    </div>
+                    <div className="mt-8">
+                        <h1 className="font-inter font-semibold text-lg">Example</h1>
+                        <div className="flex flex-col mt-2 h-max">
+                        <p className="font-openSans text-xl">
+                                            To apply Fluent styles, wrap your application with a provider. 
+                                            Then, import <span className="font-mono text-lg bg-[#f9f9f9] rounded-sm">azure-theme</span> from the <span className="font-mono text-lg bg-[#f9f9f9] rounded-sm">fluentui-contrib</span> repository to style 
+                                            components for the Azure Portal.
+                                        </p>
+                            <div className="flex gap-10 mt-4">
+                                
+                                <div className="flex flex-row gap-10 justify-between mt-3 ">
+                                    <div className="bg-[#f9f9f9] p-6 rounded-sm ">
+                                        <pre>
+                                            <code>
+                                                {`import * as React from 'react';
 import { Button, Slider } from '@fluentui/react-components';
 import { FluentProvider, button } from '@fluentui/react-components';
 import { AzureDarkTheme } from '@fluentui-contrib/azure-theme';
@@ -68,42 +86,80 @@ const theme = AzureDarkTheme; // or AzureLightTheme
         </FluentProvider>
     );
 }`}
-                                </code>
-                            </pre>
-                        </div>
-                        
-                    </div>
-                        <div className="mt-3">
-                            <div className='flow-root'>
-                                <div className='mt-1 font-openSans text-xl'>
-                                    Azure-Theme was published as an npm package for easy access and implementation
-                                    by developers. By contributing to Microsoft's fluentui-contrib repository—a
-                                    key project that supports Fluent—I help maintain the portal's cohesive
-                                    look, and support one of the largest cloud platforms in the world.
+                                            </code>
+                                        </pre>
+                                    </div>
+                                    
+                                    <div className="flex flex-col gap-4" >
+                                       
+                                        <div className="flex flex-col gap-4 ">
+                                            <p className="font-inter font-semibold text-lg">Button and Slider demo</p>
+                                            <Button className="w-44" onClick={() => alert('Hi!')}> Azure-themed Button </Button>
+                                            <Button className="w-44" appearance="primary" > Primary Button </Button>
+                                            <Slider className="w-44" value={30}></Slider>
+                                        </div>
+                                    </div>
                                 </div>
 
                             </div>
-                            <div className='flex flex-row gap-3 mt-1'>
-                                <a className='content-center size-7' href="https://www.npmjs.com/package/@fluentui-contrib/azure-theme?activeTab=readme" target="_blank">
-                                    <img loading='lazy' className='hover:cursor-pointer' src={npm} />
-                                </a>
-                                <a className='size-6' href="https://github.com/microsoft/fluentui-contrib/tree/main/packages/azure-theme" target="_blank">
-                                    <img loading='lazy' className='hover:cursor-pointer' src={github} />
-                                </a>
-                            </div>
-                            <div className="mt-3">
-                            <h1 className="font-inter font-semibold text-xl">Results:</h1>
-                            <div className="flex gap-5">
-                                <Button style={{ marginTop: '10px' }}> Azure-themed Button </Button>
-                                <Button appearance="primary" style={{ marginTop: '10px' }}> Primary Button </Button>
-                                <Slider></Slider>
-                            </div>
-                        </div>
+
+
+
                         </div>
                     </div>
 
 
                 </div>
+                {/* <div className='flex flex-row gap-4 mt-1'>
+                        <a className='content-center size-8' href="https://www.npmjs.com/package/@fluentui-contrib/azure-theme?activeTab=readme" target="_blank">
+                            <img loading='lazy' className='hover:cursor-pointer' src={npm} />
+                        </a>
+                        <a className='size-7' href="https://github.com/microsoft/fluentui-contrib/tree/main/packages/azure-theme" target="_blank">
+                            <img loading='lazy' className='hover:cursor-pointer' src={github} />
+                        </a>
+                    </div> */}
+                {/* <div className="flex flex-col mx-32 mt-2 h-max">
+                    <h1 className="text-2xl">How to use </h1>
+                    <div className="flex gap-10">
+                        <div className="flex flex-row gap-10 justify-between mt-3 ">
+                            <div className="bg-[#f9f9f9] p-6 rounded-sm ">
+                                <pre>
+                                    <code>
+                                        {`import * as React from 'react';
+import { Button, Slider } from '@fluentui/react-components';
+import { FluentProvider, button } from '@fluentui/react-components';
+import { AzureDarkTheme } from '@fluentui-contrib/azure-theme';
+
+function App() {
+const theme = AzureDarkTheme; // or AzureLightTheme
+
+    return (
+        <FluentProvider theme={theme}>
+            <Button>Azure Themed Button</Button>
+            <Button appearance='primary'>Primary Button</Button>
+            <Slider />
+        </FluentProvider>
+    );
+}`}
+                                    </code>
+                                </pre>
+                            </div>
+                            <p>some text</p>
+                        </div>
+
+                    </div>
+                    <div className="mt-10">
+                        <h1 className="font-inter font-semibold text-3xl">Examples:</h1>
+                        <p className="mt-2 text-2xl">Just 3 components styled</p>
+                        <div className="flex gap-5">
+                            <Button style={{ marginTop: '10px' }}> Azure-themed Button </Button>
+                            <Button appearance="primary" style={{ marginTop: '10px' }}> Primary Button </Button>
+                            <Slider></Slider>
+                        </div>
+                    </div>
+
+
+                </div> */}
             </div>
 
             <Footer />
