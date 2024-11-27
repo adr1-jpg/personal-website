@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  mode: 'jit',
   content: ["./src/**/*.{html,js,ts,tsx}"],
   theme: {
     extend: {
@@ -40,6 +41,15 @@ module.exports = {
           '50%': { 'background-position': '50% 100%' },
         },
 
+      },
+      screens: {
+      'between-lg-xl': { 'min': '1024px', 'max': '1630px' }, // Custom range between 1024px and 1630px
+      'max-1600': { 'max': '1600px' },
+      'min-1600': { 'min' : '1600px'},
+      'min-1300': { 'min' : '1300px'}
+        // 'between-xl-2xl': '1630px', // Targeting 1630px (for the max range)
+        // 'max-md': { 'max': '1024px' }, // Target screens below 1024px
+        // 'min-2xl': { 'min': '1630px' }, // Target screens above 1630px
       },
     },
   },

@@ -38,11 +38,12 @@ const Header: React.FC = () => {
     return (
         <div className="sticky top-0 z-50 bg-background flex justify-between items-center px-8 py-1 w-screen">
             <img onClick={handleHomeClick} className="w-14 hover:cursor-pointer" src={logo}></img>
-            <div className="flex flex-row gap-8 font-montaga text-xl">
+            <div className="hidden lg:block">
+              <div className="flex flex-row gap-8 font-montaga text-xl">
                 <a
                     // className={`${navState.currentState === 'home' ? 'text-accent font-bold' : ''} hover:cursor-pointer scroll-link`}
                     className='hover:cursor-pointer scroll-link'
-                    onClick={handleHomeClick}  href="#">home</a>
+                    onClick={handleHomeClick} href="#">home</a>
                 <a
                     // className={`${navState.currentState === 'about' ? 'text-accent font-bold' : ''} hover:cursor-pointer scroll-link`}
                     className='hover:cursor-pointer scroll-link'
@@ -55,6 +56,15 @@ const Header: React.FC = () => {
                     // className={`${navState.currentState === 'gallery' ? 'text-accent font-bold' : ''} hover:cursor-pointer scroll-link`}
                     className='hover:cursor-pointer scroll-link'
                     onClick={handleGalleryClick} >gallery</a>
+            </div>  
+            </div>
+            
+
+            <div className="block lg:hidden">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="size-7">
+                    <path fill-rule="evenodd" d="M2 4.75A.75.75 0 0 1 2.75 4h14.5a.75.75 0 0 1 0 1.5H2.75A.75.75 0 0 1 2 4.75ZM2 10a.75.75 0 0 1 .75-.75h14.5a.75.75 0 0 1 0 1.5H2.75A.75.75 0 0 1 2 10Zm0 5.25a.75.75 0 0 1 .75-.75h14.5a.75.75 0 0 1 0 1.5H2.75a.75.75 0 0 1-.75-.75Z" clip-rule="evenodd" />
+                </svg>
+
             </div>
 
         </div>

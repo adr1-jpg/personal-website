@@ -91,12 +91,12 @@ const Home: React.FC = () => {
         );
     }
     return (
-        <div id="home" className="flex flex-col bg-background">
+        <div id="home" className="grid bg-background">
             <Header />
 
-            <div id='home' className='grid grid-cols-2 gap-6 h-screen' ref={homeRef}>
+            <div id='home' className='grid lg:grid-cols-2 md:grid-cols-1 gap-6 h-screen' ref={homeRef}>
                 <div
-                    className='flex flex-col ml-40 mr-10 justify-center gap-6'
+                    className='flex flex-col py-5 px-20 justify-center gap-6'
                 >
                     <h1 className='text-6xl font-montaga text-left'>
                         Adriana Orantes
@@ -121,24 +121,37 @@ const Home: React.FC = () => {
 
                     </div>
                 </div>
-                <img
+                <div className='overflow-hidden'>
+                    <img
                     src={self}
                     rel="preload"
                     onLoad={handleImageLoad}
+                    className="
+                    min-1300: h-screen
+                    object-cover 
+                    opacity-0 
+                    visibility-hidden 
+                    transition-opacity 
+                    duration-[2500ms] 
+                    ease-in-out
+                    min-1300:justify-self-end
+                    justify-self-center
+                    
+                    
+                    "
                     style={{
-                        width: '100%',
-                        height: '100%',
-                        objectFit: 'cover',
                         opacity: loaded ? 1 : 0,
                         visibility: loaded ? 'visible' : 'hidden',
-                        transition: 'opacity 2.5s ease-in-out',
                     }}
                 />
+                </div>
+                
             </div>
+
             <div id='about' className='grid ' ref={aboutRef}>
-                <div className='flex flex-col mx-48 mt-10 '>
+                <div className='flex flex-col mt-10 min-1600:mx-40 mx-20'>
                     <h2 className='font-inter text-accent text-start text-5xl font-bold mt-10'>It's so nice to meet you!</h2>
-                    <div className='grid grid-cols-2 gap-10 mt-10 mb-20'>
+                    <div className='grid max-1600:grid-cols-1 lg:grid-cols-2 gap-10 mt-10 mb-20'>
                         <img className='rounded-sm' src={nyc} loading='lazy' />
                         <p className='font-openSans text-2xl text-left content-center '>
                             I'm a Salvadoran American passionate about being
@@ -157,8 +170,8 @@ const Home: React.FC = () => {
                     </div>
                 </div>
 
-                <div id='edu' className='flex flex-col px-48 py-20 bg-[#D0D2CA] justify-center'>
-                    <div className='grid grid-cols-2 gap-20 '>
+                <div id='edu' className='flex flex-col  py-20 bg-[#D0D2CA] justify-center'>
+                    <div className='grid max-1600:grid-cols-1 lg:grid-cols-2 min-1600:mx-40 mx-20 gap-10  '>
                         <div className='content-center self-center'>
                             <TypingEffect text='I can, and I will.' />
                             <div className='flow-root'>
@@ -186,7 +199,7 @@ const Home: React.FC = () => {
                 </div>
             </div>
 
-            <div id='work' className='flex flex-col mx-48 gap-6 mt-20' ref={workRef}>
+            <div id='work' className='flex flex-col min-1600:mx-40 mx-20 gap-6 mt-20' ref={workRef}>
 
                 <div className='p-4'>
                     <div className='flow-root'>
@@ -216,25 +229,27 @@ const Home: React.FC = () => {
                         <img loading='lazy' src={azureTheme} />
                     </div>
                 </div>
-                <h1 className='font-openSans text-2xl text-left mt-5'>Projects</h1>
-                <div className='grid grid-cols-2 gap-5'>
-                    <div onClick={handleCampusClick} ref={typeRef} className='flex justify-center px-28 py-20 
+                {/* <h1 className='font-openSans text-2xl text-left mt-5'>Projects</h1> */}
+                {/* <div className='grid min-1300:grid-cols-2 gap-5'>
+                    <div onClick={handleCampusClick} ref={typeRef} className='flex self-baseline justify-center px-28 py-20 
                     bg-white rounded-s shadow-s hover:cursor-pointer items-center
                     transition-transform duration-200 hover:-translate-y-2'
                     >
                         <div >
-                            <img src={virtualCampus} />
+                            <img className='size-full'src={virtualCampus} />
                         </div>
                     </div>
-                    <div onClick={handleAquaireClick} ref={typeRef} className='flex justify-center px-28 py-20 bg-aquaire
+                    <div onClick={handleAquaireClick} ref={typeRef} className='flex self-baseline justify-center px-28 py-20 bg-aquaire
                      rounded-s shadow-s hover:cursor-pointer items-center
                      transition-transform duration-200 hover:-translate-y-2'
                     >
-                        <img loading='lazy' src={aquaire} />
+                        <div >
+                             <img className='size-full' loading='lazy' src={aquaire} />
+                        </div>
                     </div>
-                </div>
+                </div> */}
             </div>
-            <div className='grid grid-rows-2 mt-20 mb-10 gap-5 text-center justify-items-center mx-48 content-center'>
+            <div className='grid grid-rows-2 mt-20 mb-10 gap-5 min-1600:mx-40 mx-20 text-center justify-items-center content-center'>
                 <p className='font-inter text-2xl'>In my free time, I enjoy exploring the West Coast, international
                     travel, and photography.</p>
                 <div className='flex gap-2 items-center text-accent cursor-pointer' onClick={handleGalleryClick}>
@@ -246,8 +261,6 @@ const Home: React.FC = () => {
 
 
             </div>
-
-
             <Footer />
         </div>
     );
