@@ -1,5 +1,5 @@
 import React from "react";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import ImageListItemBar from '@mui/material/ImageListItemBar';
@@ -16,6 +16,12 @@ const Gallery: React.FC = () => {
     useEffect(() => {
         window.scrollTo(0, 0);
       }, []);
+      const [loaded, setLoaded] = useState(false);
+
+      const handleImageLoad = () => {
+          setLoaded(true);
+      };
+      
 
     const itemData = [
         {
@@ -55,7 +61,17 @@ const Gallery: React.FC = () => {
                     cols={2}>
                     {itemData.map((item) => (
                         <ImageListItem>
-                            <img loading='lazy' src={item.img} />
+                            <img loading='lazy' src={item.img} 
+                            onLoad={handleImageLoad}
+                            style={{
+                                width: '100%',
+                                height: '100%',
+                                objectFit: 'cover',
+                                opacity: loaded ? 1 : 0,
+                                visibility: loaded ? 'visible' : 'hidden',
+                                transition: 'opacity .5s ease-in-out',
+                            }}
+                            />
                             {/* <ImageListItemBar position="below" title={item.title} /> */}
                         </ImageListItem>
                     ))}
