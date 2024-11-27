@@ -11,8 +11,9 @@ import './home.css'
 import { useState, useEffect } from 'react';
 import { useForm } from '../../context/DataProvider';
 import { useNavigate } from 'react-router';
-
+// import Lazy from '../../components/Lazy'
 const Home: React.FC = () => {
+
     const navigate = useNavigate();
 
     const handleCardClick = () => {
@@ -22,7 +23,11 @@ const Home: React.FC = () => {
         navigate('/gallery')
     }
     const [isVisible, setIsVisible] = useState(false);
+    const [loaded, setLoaded] = useState(false);
 
+    const handleImageLoad = () => {
+        setLoaded(true);
+    };
 
     const homeRef = useRef<HTMLDivElement | null>(null);
     const aboutRef = useRef<HTMLDivElement | null>(null);
@@ -143,9 +148,10 @@ const Home: React.FC = () => {
         <div id="home" className="flex flex-col bg-background">
             <Header />
 
-            <div id='home' className='flex flex-row gap-6' ref={homeRef}>
+            <div id='home' className='grid grid-cols-2 gap-6 h-screen' ref={homeRef}>
                 <div
-                    className={`${isVisible ? 'slide-in' : ''} flex flex-col mx-32 justify-center gap-6`}
+                    // className={`${isVisible ? 'slide-in' : ''} flex flex-col mx-32 justify-center gap-6`}
+                    className='flex flex-col mx-32 justify-center gap-6'
                 >
                     <h1 className='text-6xl font-montaga text-left'>
                         Adriana Orantes
@@ -173,16 +179,28 @@ const Home: React.FC = () => {
                 <img
                     src={self}
                     rel="preload"
-                   
-                    className='h-[calc(100vh-77px)]'>
+                    onLoad={handleImageLoad}
+                    style={{
+                        width: '100%',
+                        height: '100%',
+                        objectFit: 'cover',
+                        opacity: loaded ? 1 : 0,
+                        visibility: loaded ? 'visible' : 'hidden',
+                        transition: 'opacity .5s ease-in-out',
+                    }}
+                //   className={`${loaded ? 'visible' : 'hidden'}`}
+                >
+
                 </img>
+
+
 
             </div>
             <div id='about' ref={aboutRef}>
                 <div className='flex flex-col mx-32 mt-10 h-screen'>
                     <h2 className='font-inter text-accent text-start text-5xl font-bold mt-10'>It's so nice to meet you!</h2>
                     <div className='grid grid-cols-2 gap-10 mt-10'>
-                        <img src={nyc} loading='lazy'/>
+                        <img src={nyc} loading='lazy' />
                         <p className='font-openSans text-xl text-left content-center'>I’m a Salvadoran American passionate about being
                             <span className='font-semibold'> playful</span>, <span className='font-semibold'> curious</span>, and
                             <span className='font-semibold'> bringing people together</span>.<br></br><br></br>
@@ -249,7 +267,7 @@ const Home: React.FC = () => {
                 p-32 bg-white rounded-xl shadow-s 
                 bg-gradient-to-r from-indigo-500/30 bg-[length:200%_200%] animate-gradient-x 
                 bg-gradient-to-r from-indigo-500/30 from-10% via-sky-500/20 via-30% to-emerald-500/30 to-90% hover:cursor-pointer
-                ' 
+                '
                 >
                     <div className='size-7/12' >
                         <img loading='lazy' src={azureTheme} />
