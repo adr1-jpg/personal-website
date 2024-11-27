@@ -164,7 +164,7 @@ const Home: React.FC = () => {
                         <a href='#about' className='scroll-link text-left font-openSans text-xl font-semibold'>Learn more about me</a>
                         <a href='#about' className='scroll-link'>
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                                className="size-6 self-end">
+                                className="size-6 self-end motion-safe:animate-bounce">
                                 <path fill-rule="evenodd" d="M12 2.25c-5.385 
                                 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 
                                 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25Zm-.53 
@@ -186,8 +186,9 @@ const Home: React.FC = () => {
                         objectFit: 'cover',
                         opacity: loaded ? 1 : 0,
                         visibility: loaded ? 'visible' : 'hidden',
-                        transition: 'opacity .5s ease-in-out',
+                        transition: 'opacity 1s ease-in-out',
                     }}
+                    
                 //   className={`${loaded ? 'visible' : 'hidden'}`}
                 >
 
@@ -196,12 +197,12 @@ const Home: React.FC = () => {
 
 
             </div>
-            <div id='about' ref={aboutRef}>
-                <div className='flex flex-col mx-32 mt-10 h-screen'>
+            <div id='about' className='grid 'ref={aboutRef}>
+                <div className='flex flex-col mx-32 mt-10 h-screen '>
                     <h2 className='font-inter text-accent text-start text-5xl font-bold mt-10'>It's so nice to meet you!</h2>
-                    <div className='grid grid-cols-2 gap-10 mt-10'>
-                        <img src={nyc} loading='lazy' />
-                        <p className='font-openSans text-xl text-left content-center'>I’m a Salvadoran American passionate about being
+                    <div className='flex flex-column gap-10 mt-10 content-center space-between align-center'>
+                        <img className='size-3/4'src={nyc} loading='lazy' />
+                        <p className='font-openSans text-2xl text-left content-start'>I’m a Salvadoran American passionate about being
                             <span className='font-semibold'> playful</span>, <span className='font-semibold'> curious</span>, and
                             <span className='font-semibold'> bringing people together</span>.<br></br><br></br>
                             Growing up, I had no clear picture of the future I was working toward.
