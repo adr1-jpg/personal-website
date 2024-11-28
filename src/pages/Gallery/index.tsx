@@ -56,9 +56,30 @@ const Gallery: React.FC = () => {
             <div id='gallery' className='flex flex-col mx-32 mt-8'>
                 <h2 className='font-inter text-left text-3xl'>Gallery</h2>
             </div>
-            <div className='mx-32 my-5'>
+            <div className='mx-32 my-5 hidden lg:block'>
                 <ImageList variant="quilted"
                     cols={2}>
+                    {itemData.map((item) => (
+                        <ImageListItem>
+                            <img loading='lazy' src={item.img} 
+                            onLoad={handleImageLoad}
+                            style={{
+                                width: '100%',
+                                height: '100%',
+                                objectFit: 'cover',
+                                opacity: loaded ? 1 : 0,
+                                visibility: loaded ? 'visible' : 'hidden',
+                                transition: 'opacity 2s ease-in-out',
+                            }}
+                            />
+                            {/* <ImageListItemBar position="below" title={item.title} /> */}
+                        </ImageListItem>
+                    ))}
+                </ImageList>
+            </div>
+            <div className='mx-5 my-5 block lg:hidden'>
+                <ImageList variant="quilted"
+                    cols={1}>
                     {itemData.map((item) => (
                         <ImageListItem>
                             <img loading='lazy' src={item.img} 

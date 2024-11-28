@@ -3,6 +3,7 @@ import styles from './Header.module.css';
 import logo from '../../assets/icons/logo-adri.svg'
 import { useForm } from "../../context/DataProvider";
 import { useNavigate } from "react-router";
+import { Link } from 'react-router-dom';
 const Header: React.FC = () => {
     const navigate = useNavigate();
 
@@ -11,6 +12,14 @@ const Header: React.FC = () => {
     }
     const handleGalleryClick = () => {
         navigate('/gallery')
+    }
+    const handleWorkClick = () => {
+        // navigate('/personal-website#about')
+        setNavState({ ...navState, currentState: 'work' })
+    }
+    const handleAboutClick = () => {
+        // navigate('/personal-website')
+        setNavState({ ...navState, currentState: 'about' })
     }
 
     const { navState, setNavState } = useForm();
@@ -39,26 +48,28 @@ const Header: React.FC = () => {
         <div className="sticky top-0 z-50 bg-background flex justify-between items-center px-8 py-1 ">
             <img onClick={handleHomeClick} className="w-14 hover:cursor-pointer" src={logo}></img>
             <div className="hidden lg:block">
-              <div className="flex flex-row gap-8 font-montaga text-xl">
-                <a
-                    // className={`${navState.currentState === 'home' ? 'text-accent font-bold' : ''} hover:cursor-pointer scroll-link`}
-                    className='hover:cursor-pointer scroll-link'
-                    onClick={handleHomeClick} href="#">home</a>
-                <a
-                    // className={`${navState.currentState === 'about' ? 'text-accent font-bold' : ''} hover:cursor-pointer scroll-link`}
-                    className='hover:cursor-pointer scroll-link'
-                    onClick={() => setNavState({ ...navState, currentState: 'about' })} href="#about">about</a>
-                <a
-                    // className={`${navState.currentState === 'work' ? 'text-accent font-bold' : ''} hover:cursor-pointer scroll-link`}
-                    className='hover:cursor-pointer scroll-link'
-                    onClick={() => setNavState({ ...navState, currentState: 'work' })} href="#work">work</a>
-                <a
-                    // className={`${navState.currentState === 'gallery' ? 'text-accent font-bold' : ''} hover:cursor-pointer scroll-link`}
-                    className='hover:cursor-pointer scroll-link'
-                    onClick={handleGalleryClick} >gallery</a>
-            </div>  
+                <div className="flex flex-row gap-8 font-montaga text-xl">
+                    <a
+                        // className={`${navState.currentState === 'home' ? 'text-accent font-bold' : ''} hover:cursor-pointer scroll-link`}
+                        className='hover:cursor-pointer scroll-link'
+                        onClick={handleHomeClick} href="#">home</a>
+                    <a
+                        // className={`${navState.currentState === 'about' ? 'text-accent font-bold' : ''} hover:cursor-pointer scroll-link`}
+                        className='hover:cursor-pointer scroll-link'
+                        onClick={handleAboutClick} href="#about">about</a>
+                    <a
+                        // className={`${navState.currentState === 'work' ? 'text-accent font-bold' : ''} hover:cursor-pointer scroll-link`}
+                        className='hover:cursor-pointer scroll-link'
+                        href="#work">work</a>
+
+                    <a
+
+                        // className={`${navState.currentState === 'gallery' ? 'text-accent font-bold' : ''} hover:cursor-pointer scroll-link`}
+                        className='hover:cursor-pointer scroll-link'
+                        onClick={handleGalleryClick} >gallery</a>
+                </div>
             </div>
-            
+
 
             {/* <div className="block lg:hidden">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="size-7">
