@@ -48,7 +48,27 @@ const Home: React.FC = () => {
     useEffect(() => {
         setIsVisible(true);
     }, []);
-
+    document.querySelectorAll('a.scroll-link').forEach(anchor => {
+        console.log('in a scroll-link')
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault(); // Prevent the default anchor click behavior
+            
+            const targetId = anchor.getAttribute('href')?.substring(1); // Get the target ID
+            const targetElement = document.getElementById(targetId as string);
+            if (targetElement && targetElement.id === 'about') {
+                window.scrollTo({
+                    top: targetElement.offsetTop,
+                    behavior: 'smooth'
+                });
+            }
+            else if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop - 78,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
     const typeRef = useRef<HTMLDivElement>(null);
     const TypingEffect = ({ text }: { text: string }) => {
         // track if text is visible
@@ -92,6 +112,18 @@ const Home: React.FC = () => {
             </div>
         );
     }
+    const scrollToAbout = () => {
+        const target = document.querySelector('#about');
+    
+    if (target) {
+      const offsetTop = target.getBoundingClientRect().top + window.scrollY - 78;
+
+      window.scrollTo({
+        top: offsetTop,
+        behavior: 'smooth', // Smooth scrolling
+      });
+    }
+    }
     return (
         <div id="home" className="grid bg-background">
             <Header />
@@ -108,8 +140,8 @@ const Home: React.FC = () => {
                     </p>
                     <div className='hidden md:block lg:block'>
                         <div className='flex gap-2 items-center text-accent cursor-pointer '>
-                            <a href='#about' className='scroll-link text-left font-openSans text-2xl font-semibold'>Learn more about me</a>
-                            <a href='#about' className='scroll-link self-end'>
+                            <a  href="#about" className='scroll-link text-left font-openSans text-2xl font-semibold'>Learn more about me big</a>
+                            <a   href="#about" className='scroll-link self-end'>
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
                                     className="size-7 motion-safe:animate-bounce">
                                     <path fill-rule="evenodd" d="M12 2.25c-5.385 
@@ -124,8 +156,8 @@ const Home: React.FC = () => {
                     </div>
                     <div className='block md:hidden'>
                         <div className='flex gap-1 items-start text-accent cursor-pointer '>
-                            <a href='#about' className='scroll-link text-left font-openSans text-xl font-semibold'>Learn more about me</a>
-                            <a href='#about' className='scroll-link self-end'>
+                            <a onClick={scrollToAbout} className='scroll-link text-left font-openSans text-xl font-semibold'>Learn more about me small</a>
+                            <a onClick={scrollToAbout} href='#about' className='scroll-link self-end'>
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
                                     className="size-5 self-end motion-safe:animate-bounce">
                                     <path fill-rule="evenodd" d="M12 2.25c-5.385 

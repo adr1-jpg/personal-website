@@ -96,7 +96,7 @@ const theme = AzureDarkTheme; // or AzureLightTheme
                                             <p className="font-inter font-semibold text-lg">Button and Slider demo</p>
                                             <Button className="w-44" onClick={() => alert('A Fluent button styled with the azure-theme package')}> Azure-themed Button </Button>
                                             <Button className="w-44" onClick={() => alert('A primary button!')} appearance="primary" > Primary Button </Button>
-                                            <Slider className="w-44" value={30}></Slider>
+                                            <Slider className="w-44" defaultValue={30}></Slider>
                                         </div>
                                     </div>
 
@@ -109,7 +109,7 @@ const theme = AzureDarkTheme; // or AzureLightTheme
                                     <p className="font-inter font-semibold text-lg">Button and Slider demo</p>
                                     <Button className="w-44" onClick={() => alert('Just an example of how a Fluent button styled with the azure-theme package')}> Azure-themed Button </Button>
                                     <Button className="w-44" onClick={() => alert('A primary button!')} appearance="primary" > Primary Button </Button>
-                                    <Slider className="w-44" value={30}></Slider>
+                                    <Slider className="w-44"defaultValue={30} />
                                 </div>
                             </div>
                         </div>
