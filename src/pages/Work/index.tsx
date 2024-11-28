@@ -5,7 +5,7 @@ import Header2 from "../../components/Header2";
 import theme from '../../assets/images/azure-theme-button.png'
 import azure from '../../assets/icons/azure-theme.svg'
 import azureTheme from '../../assets/icons/azure-theme.svg'
-import npm from '../../assets/icons/npm.svg'
+import npm from '../../assets/icons/npm.png'
 import github from '../../assets/icons/github.svg'
 import Footer from "../../components/Footer";
 
@@ -49,11 +49,19 @@ const Work: React.FC = () => {
                     <h1 className="font-inter font-semibold text-lg">Results</h1>
                     <div className='flow-root'>
                         <div className='mt-1 font-openSans text-2xl'>
-                            Azure-Theme was published as an <a href="https://www.npmjs.com/package/@fluentui-contrib/azure-theme?activeTab=readme" target="_blank" className="text-accent font-extrabold">npm package</a> for easy access and implementation
-                            by developers. By contributing to Microsoft's <a href="https://github.com/microsoft/fluentui-contrib/tree/main/packages/azure-theme" target="_blank" className="text-accent font-extrabold">fluentui-contrib repository</a>—a
+                            Azure-Theme was published as an <a href="https://www.npmjs.com/package/@fluentui-contrib/azure-theme?activeTab=readme" target="_blank" className=" font-extrabold">npm package</a> for easy access and implementation
+                            by developers. By contributing to Microsoft's <a href="https://github.com/microsoft/fluentui-contrib/tree/main/packages/azure-theme" target="_blank" className="font-extrabold">fluentui-contrib repository</a>—a
                             key project that supports Fluent—I help maintain the portal's cohesive
                             look, and support one of the largest cloud platforms in the world.
                         </div>
+                        <div className="flex items-center align-center gap-3 mt-2">
+                        <a href=''>
+                            <img className='size-8'src={npm} />
+                        </a>
+                        <a href=''>
+                            <img className='size-7' src={github} />
+                        </a>
+                    </div>
 
                     </div>
                     <div className="mt-8">
@@ -93,7 +101,7 @@ const theme = AzureDarkTheme; // or AzureLightTheme
                                     <div className="flex flex-col gap-4 hidden lg:block" >
 
                                         <div className="flex flex-col gap-4 ">
-                                            <p className="font-inter font-semibold text-lg">Button and Slider demo</p>
+                                            <p className="font-inter font-semibold text-lg mt-4">Button and Slider demo</p>
                                             <Button className="w-44" onClick={() => alert('A Fluent button styled with the azure-theme package')}> Azure-themed Button </Button>
                                             <Button className="w-44" onClick={() => alert('A primary button!')} appearance="primary" > Primary Button </Button>
                                             <Slider className="w-44" defaultValue={30}></Slider>
@@ -107,9 +115,9 @@ const theme = AzureDarkTheme; // or AzureLightTheme
                             <div className="block lg:hidden">
                                 <div className="flex flex-col gap-4 ">
                                     <p className="font-inter font-semibold text-lg">Button and Slider demo</p>
-                                    <Button className="w-44" onClick={() => alert('Just an example of how a Fluent button styled with the azure-theme package')}> Azure-themed Button </Button>
+                                    <Button className="w-44" onClick={() => alert('A Fluent button styled with the azure-theme package :)')}> Azure-themed Button </Button>
                                     <Button className="w-44" onClick={() => alert('A primary button!')} appearance="primary" > Primary Button </Button>
-                                    <Slider className="w-44"defaultValue={30} />
+                                    <Slider className="w-44" defaultValue={30} />
                                 </div>
                             </div>
                         </div>
