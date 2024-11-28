@@ -12,6 +12,8 @@ import './home.css'
 import { useState, useEffect } from 'react';
 import { useForm } from '../../context/DataProvider';
 import { useNavigate } from 'react-router';
+import { Card } from '@fluentui/react-components'
+
 // import Lazy from '../../components/Lazy'
 const Home: React.FC = () => {
 
@@ -235,38 +237,11 @@ const Home: React.FC = () => {
                 </div>
 
                 <h1 className='font-openSans text-2xl text-left mt-5'>Check out my latest work at Microsoft</h1>
-
-                <div onClick={handleCardClick} ref={typeRef} className='flex justify-center  items-center
-               
-                lg:p-64 md:p-32 p-20 bg-white rounded-s shadow-s 
-                bg-gradient-to-r from-indigo-500/30 bg-[length:200%_200%] animate-gradient-x 
+                <Card className='items-center bg-gradient-to-r from-indigo-500/30 bg-[length:200%_200%] animate-gradient-x 
                 bg-gradient-to-r from-indigo-500/30 from-10% via-sky-500/20 via-30% to-emerald-500/30 to-90% hover:cursor-pointer
-                transition-transform duration-200 hover:-translate-y-2
-                '
-                >
-                    {/* <div  className=''>
-                        <img src={azureTheme} />
-                    </div> */}
-                </div>
-                {/* <h1 className='font-openSans text-2xl text-left mt-5'>Projects</h1> */}
-                {/* <div className='grid min-1300:grid-cols-2 gap-5'>
-                    <div onClick={handleCampusClick} ref={typeRef} className='flex self-baseline justify-center px-28 py-20 
-                    bg-white rounded-s shadow-s hover:cursor-pointer items-center
-                    transition-transform duration-200 hover:-translate-y-2'
-                    >
-                        <div >
-                            <img className='size-full'src={virtualCampus} />
-                        </div>
-                    </div>
-                    <div onClick={handleAquaireClick} ref={typeRef} className='flex self-baseline justify-center px-28 py-20 bg-aquaire
-                     rounded-s shadow-s hover:cursor-pointer items-center
-                     transition-transform duration-200 hover:-translate-y-2'
-                    >
-                        <div >
-                             <img className='size-full' loading='lazy' src={aquaire} />
-                        </div>
-                    </div>
-                </div> */}
+                transition-transform duration-200 hover:-translate-y-2 '>
+                    <img className='w-96 py-20 px-5' src={azureTheme} />
+                </Card>
             </div>
             <div className='grid grid-rows-2 mt-20 mb-10 gap-5 lg:mx-40 md:mx-40 mx-5 text-center justify-items-center content-center'>
                 <p className='font-inter text-2xl'>In my free time, I enjoy exploring the West Coast, international
