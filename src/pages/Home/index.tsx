@@ -105,28 +105,46 @@ const Home: React.FC = () => {
                         At Microsoft, I thrive on transforming complex challenges into elegant solutions, driving projects that enhance user experience.<br /><br />
                         Outside of work, you'll find me dog-watching, working on a puzzle, or taking a 10-mile walk.
                     </p>
-                    <div className='flex gap-2 items-center text-accent cursor-pointer'>
-                        <a href='#about' className='scroll-link text-left font-openSans text-xl font-semibold'>Learn more about me</a>
-                        <a href='#about' className='scroll-link'>
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                                className="size-6 self-end motion-safe:animate-bounce">
-                                <path fill-rule="evenodd" d="M12 2.25c-5.385 
+                    <div className='hidden md:block lg:block'>
+                        <div className='flex gap-2 items-center text-accent cursor-pointer '>
+                            <a href='#about' className='scroll-link text-left font-openSans text-xl font-semibold'>Learn more about me</a>
+                            <a href='#about' className='scroll-link'>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                    className="size-6 self-end motion-safe:animate-bounce">
+                                    <path fill-rule="evenodd" d="M12 2.25c-5.385 
                                 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 
                                 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25Zm-.53 
                                 14.03a.75.75 0 0 0 1.06 0l3-3a.75.75 0 1 0-1.06
                                 -1.06l-1.72 1.72V8.25a.75.75 0 0 0-1.5 0v5.69l
                                 -1.72-1.72a.75.75 0 0 0-1.06 1.06l3 3Z" clip-rule="evenodd" />
-                            </svg>
-                        </a>
-
+                                </svg>
+                            </a>
+                        </div>
                     </div>
+                    <div className='block md:hidden'>
+                        <div className='flex gap-1 items-start text-accent cursor-pointer '>
+                            <a href='#about' className='scroll-link text-left font-openSans text-l font-semibold'>Learn more about me</a>
+                            <a href='#about' className='scroll-link'>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                    className="size-4 self-end motion-safe:animate-bounce">
+                                    <path fill-rule="evenodd" d="M12 2.25c-5.385 
+                                0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 
+                                9.75-4.365 9.75-9.75S17.385 2.25 12 2.25Zm-.53 
+                                14.03a.75.75 0 0 0 1.06 0l3-3a.75.75 0 1 0-1.06
+                                -1.06l-1.72 1.72V8.25a.75.75 0 0 0-1.5 0v5.69l
+                                -1.72-1.72a.75.75 0 0 0-1.06 1.06l3 3Z" clip-rule="evenodd" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
                 </div>
                 <div className='overflow-hidden hidden lg:block'>
                     <img
-                    src={self}
-                    rel="preload"
-                    onLoad={handleImageLoad}
-                    className="
+                        src={self}
+                        rel="preload"
+                        onLoad={handleImageLoad}
+                        className="
                     min-1300: h-screen
                     object-cover 
                     opacity-0 
@@ -139,19 +157,19 @@ const Home: React.FC = () => {
                     
                     
                     "
-                    style={{
-                        opacity: loaded ? 1 : 0,
-                        visibility: loaded ? 'visible' : 'hidden',
-                    }}
-                />
+                        style={{
+                            opacity: loaded ? 1 : 0,
+                            visibility: loaded ? 'visible' : 'hidden',
+                        }}
+                    />
                 </div>
-                
+
             </div>
 
             <div id='about' className='grid ' ref={aboutRef}>
-                <div className='flex flex-col mt-10 min-1600:mx-40 mx-20'>
-                    <h2 className='font-inter text-accent text-start text-5xl font-bold mt-10'>It's so nice to meet you!</h2>
-                    <div className='grid s:grid-cols-1 lg:grid-cols-2 gap-10 mt-10 mb-20'>
+                <div className='flex flex-col mt-10 lg:mx-40 md:mx-40 mx-5'>
+                    <h2 className='font-inter text-accent text-start md:text-5xl lg:text-5xl text-2xl font-bold md:mt-10 large:mt-10 mt-10'>It's so nice to meet you!</h2>
+                    <div className='grid s:grid-cols-1 lg:grid-cols-2 lg:gap-10 md:gap-10 gap-3 md:mt-10 lg:mt-10 mt-3 mb-20'>
                         <img className='rounded-sm' src={nyc} loading='lazy' />
                         <p className='font-openSans text-2xl text-left content-center '>
                             I'm a Salvadoran American passionate about being
@@ -171,7 +189,7 @@ const Home: React.FC = () => {
                 </div>
 
                 <div id='edu' className='flex flex-col  py-20 bg-[#D0D2CA] justify-center'>
-                    <div className='grid s:grid-cols-1 lg:grid-cols-2 min-1600:mx-40 mx-20 gap-10  '>
+                    <div className='grid s:grid-cols-1 lg:grid-cols-2 lg:mx-40 md:mx-40 mx-5 gap-10  '>
                         <div className='content-center self-center'>
                             <TypingEffect text='I can, and I will.' />
                             <div className='flow-root'>
@@ -199,9 +217,9 @@ const Home: React.FC = () => {
                 </div>
             </div>
 
-            <div id='work' className='flex flex-col min-1600:mx-40 mx-20 gap-6 mt-20' ref={workRef}>
+            <div id='work' className='flex flex-col lg:mx-40 md:mx-40 mx-5 gap-6 mt-20' ref={workRef}>
 
-                <div className='p-4'>
+                <div className=''>
                     <div className='flow-root'>
                         <div className='my-4 font-openSans text-3xl'>
                             Right now, I'm a <span className='font-extrabold'>Design Engineer </span>
@@ -249,7 +267,7 @@ const Home: React.FC = () => {
                     </div>
                 </div> */}
             </div>
-            <div className='grid grid-rows-2 mt-20 mb-10 gap-5 min-1600:mx-40 mx-20 text-center justify-items-center content-center'>
+            <div className='grid grid-rows-2 mt-20 mb-10 gap-5 lg:mx-40 md:mx-40 mx-5 text-center justify-items-center content-center'>
                 <p className='font-inter text-2xl'>In my free time, I enjoy exploring the West Coast, international
                     travel, and photography.</p>
                 <div className='flex gap-2 items-center text-accent cursor-pointer' onClick={handleGalleryClick}>
