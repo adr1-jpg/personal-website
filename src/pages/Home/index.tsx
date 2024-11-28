@@ -140,7 +140,7 @@ const Home: React.FC = () => {
                     </p>
                     <div className='hidden md:block lg:block'>
                         <div className='flex gap-2 items-center text-accent cursor-pointer '>
-                            <a  href="#about" className='scroll-link text-left font-openSans text-2xl font-semibold'>Learn more about me big</a>
+                            <a  href="#about" className='scroll-link text-left font-openSans text-2xl font-semibold'>Learn more about me</a>
                             <a   href="#about" className='scroll-link self-end'>
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
                                     className="size-7 motion-safe:animate-bounce">
@@ -156,7 +156,7 @@ const Home: React.FC = () => {
                     </div>
                     <div className='block md:hidden'>
                         <div className='flex gap-1 items-start text-accent cursor-pointer '>
-                            <a onClick={scrollToAbout} className='scroll-link text-left font-openSans text-xl font-semibold'>Learn more about me small</a>
+                            <a onClick={scrollToAbout} className='scroll-link text-left font-openSans text-xl font-semibold'>Learn more about me</a>
                             <a onClick={scrollToAbout} href='#about' className='scroll-link self-end'>
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
                                     className="size-5 self-end motion-safe:animate-bounce">
