@@ -237,16 +237,16 @@ const Home: React.FC = () => {
                 <h1 className='font-openSans text-2xl text-left mt-5'>Check out my latest work at Microsoft</h1>
 
                 <div onClick={handleCardClick} ref={typeRef} className='flex justify-center  items-center
-                md:h-72 lg:h-72 h-72
-                lg:p-40 md:p-32 p-20 bg-white rounded-s shadow-s 
+               
+                lg:p-64 md:p-32 p-20 bg-white rounded-s shadow-s 
                 bg-gradient-to-r from-indigo-500/30 bg-[length:200%_200%] animate-gradient-x 
                 bg-gradient-to-r from-indigo-500/30 from-10% via-sky-500/20 via-30% to-emerald-500/30 to-90% hover:cursor-pointer
                 transition-transform duration-200 hover:-translate-y-2
                 '
                 >
-                    <div  className='w-96'>
+                    {/* <div  className=''>
                         <img src={azureTheme} />
-                    </div>
+                    </div> */}
                 </div>
                 {/* <h1 className='font-openSans text-2xl text-left mt-5'>Projects</h1> */}
                 {/* <div className='grid min-1300:grid-cols-2 gap-5'>
