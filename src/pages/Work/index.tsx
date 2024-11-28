@@ -59,13 +59,13 @@ const Work: React.FC = () => {
                     <div className="mt-8">
                         <h1 className="font-inter font-semibold text-lg">Example</h1>
                         <div className="flex flex-col mt-2 h-max">
-                        <p className="font-openSans text-xl">
-                                            To apply Fluent styles, wrap your application with a provider. 
-                                            Then, import <span className="font-mono text-lg bg-[#f9f9f9] rounded-sm">azure-theme</span> from the <span className="font-mono text-lg bg-[#f9f9f9] rounded-sm">fluentui-contrib</span> repository to style 
-                                            components for the Azure Portal.
-                                        </p>
+                            <p className="font-openSans text-xl">
+                                To apply Fluent styles, wrap your application with a provider.
+                                Then, import <span className="font-mono text-lg bg-[#f9f9f9] rounded-sm">azure-theme</span> from the <span className="font-mono text-lg bg-[#f9f9f9] rounded-sm">fluentui-contrib</span> repository to style
+                                components for the Azure Portal.
+                            </p>
                             <div className="flex gap-10 mt-4">
-                                
+
                                 <div className="flex flex-row gap-10 justify-between mt-3 ">
                                     <div className="bg-[#f9f9f9] p-6 rounded-sm ">
                                         <pre>
@@ -89,18 +89,28 @@ const theme = AzureDarkTheme; // or AzureLightTheme
                                             </code>
                                         </pre>
                                     </div>
-                                    
-                                    <div className="flex flex-col gap-4" >
-                                       
+
+                                    <div className="flex flex-col gap-4 hidden lg:block" >
+
                                         <div className="flex flex-col gap-4 ">
                                             <p className="font-inter font-semibold text-lg">Button and Slider demo</p>
                                             <Button className="w-44" onClick={() => alert('Just an example of how a Fluent button styled with the azure-theme package')}> Azure-themed Button </Button>
-                                            <Button className="w-44"  onClick={() => alert('A primary button!')} appearance="primary" > Primary Button </Button>
+                                            <Button className="w-44" onClick={() => alert('A primary button!')} appearance="primary" > Primary Button </Button>
                                             <Slider className="w-44" value={30}></Slider>
                                         </div>
                                     </div>
+
+
                                 </div>
 
+                            </div>
+                            <div className="block lg:hidden">
+                                <div className="flex flex-col gap-4 ">
+                                    <p className="font-inter font-semibold text-lg">Button and Slider demo</p>
+                                    <Button className="w-44" onClick={() => alert('Just an example of how a Fluent button styled with the azure-theme package')}> Azure-themed Button </Button>
+                                    <Button className="w-44" onClick={() => alert('A primary button!')} appearance="primary" > Primary Button </Button>
+                                    <Slider className="w-44" value={30}></Slider>
+                                </div>
                             </div>
                         </div>
                     </div>
