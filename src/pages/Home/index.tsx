@@ -96,7 +96,7 @@ const Home: React.FC = () => {
 
             <div id='home' className='grid lg:grid-cols-2 md:grid-cols-1 gap-6 h-screen' ref={homeRef}>
                 <div
-                    className='flex flex-col py-5 px-20 justify-center gap-6'
+                    className='flex flex-col py-5 md:px-20 lg:px-20 px-5 justify-center gap-6'
                 >
                     <h1 className='text-6xl font-montaga text-left'>
                         Adriana Orantes
@@ -123,10 +123,10 @@ const Home: React.FC = () => {
                     </div>
                     <div className='block md:hidden'>
                         <div className='flex gap-1 items-start text-accent cursor-pointer '>
-                            <a href='#about' className='scroll-link text-left font-openSans text-l font-semibold'>Learn more about me</a>
+                            <a href='#about' className='scroll-link text-left font-openSans text-xl font-semibold'>Learn more about me</a>
                             <a href='#about' className='scroll-link'>
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                                    className="size-4 self-end motion-safe:animate-bounce">
+                                    className="size-5 self-end motion-safe:animate-bounce">
                                     <path fill-rule="evenodd" d="M12 2.25c-5.385 
                                 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 
                                 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25Zm-.53 
