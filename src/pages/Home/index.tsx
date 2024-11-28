@@ -92,7 +92,7 @@ const Home: React.FC = () => {
     }
     return (
         <div id="home" className="grid bg-background">
-            {/* <Header /> */}
+            <Header />
 
             <div id='home' className='grid lg:grid-cols-2 md:grid-cols-1 gap-6 h-screen' ref={homeRef}>
                 <div
