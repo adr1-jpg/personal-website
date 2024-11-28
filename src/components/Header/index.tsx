@@ -36,7 +36,7 @@ const Header: React.FC = () => {
         });
     });
     return (
-        <div className="sticky top-0 z-50 bg-background flex justify-between items-center px-8 py-1 w-screen">
+        <div className="sticky top-0 z-50 bg-background flex justify-between items-center px-8 py-1 ">
             <img onClick={handleHomeClick} className="w-14 hover:cursor-pointer" src={logo}></img>
             <div className="hidden lg:block">
               <div className="flex flex-row gap-8 font-montaga text-xl">

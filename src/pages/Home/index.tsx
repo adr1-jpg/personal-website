@@ -92,7 +92,7 @@ const Home: React.FC = () => {
     }
     return (
         <div id="home" className="grid bg-background">
-            <Header />
+            {/* <Header /> */}
 
             <div id='home' className='grid lg:grid-cols-2 md:grid-cols-1 gap-6 h-screen' ref={homeRef}>
                 <div
@@ -121,7 +121,7 @@ const Home: React.FC = () => {
 
                     </div>
                 </div>
-                <div className='overflow-hidden'>
+                <div className='overflow-hidden hidden lg:block'>
                     <img
                     src={self}
                     rel="preload"
@@ -151,7 +151,7 @@ const Home: React.FC = () => {
             <div id='about' className='grid ' ref={aboutRef}>
                 <div className='flex flex-col mt-10 min-1600:mx-40 mx-20'>
                     <h2 className='font-inter text-accent text-start text-5xl font-bold mt-10'>It's so nice to meet you!</h2>
-                    <div className='grid max-1600:grid-cols-1 lg:grid-cols-2 gap-10 mt-10 mb-20'>
+                    <div className='grid s:grid-cols-1 lg:grid-cols-2 gap-10 mt-10 mb-20'>
                         <img className='rounded-sm' src={nyc} loading='lazy' />
                         <p className='font-openSans text-2xl text-left content-center '>
                             I'm a Salvadoran American passionate about being
@@ -171,7 +171,7 @@ const Home: React.FC = () => {
                 </div>
 
                 <div id='edu' className='flex flex-col  py-20 bg-[#D0D2CA] justify-center'>
-                    <div className='grid max-1600:grid-cols-1 lg:grid-cols-2 min-1600:mx-40 mx-20 gap-10  '>
+                    <div className='grid s:grid-cols-1 lg:grid-cols-2 min-1600:mx-40 mx-20 gap-10  '>
                         <div className='content-center self-center'>
                             <TypingEffect text='I can, and I will.' />
                             <div className='flow-root'>
@@ -219,13 +219,13 @@ const Home: React.FC = () => {
                 <h1 className='font-openSans text-2xl text-left mt-5'>Check out my latest work at Microsoft</h1>
 
                 <div onClick={handleCardClick} ref={typeRef} className='flex justify-center 
-                p-32 bg-white rounded-s shadow-s 
+                lg:p-40 md:p-32 p-20 bg-white rounded-s shadow-s 
                 bg-gradient-to-r from-indigo-500/30 bg-[length:200%_200%] animate-gradient-x 
                 bg-gradient-to-r from-indigo-500/30 from-10% via-sky-500/20 via-30% to-emerald-500/30 to-90% hover:cursor-pointer
                 transition-transform duration-200 hover:-translate-y-2
                 '
                 >
-                    <div className='size-7/12' >
+                    <div  >
                         <img loading='lazy' src={azureTheme} />
                     </div>
                 </div>

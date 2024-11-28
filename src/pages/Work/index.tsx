@@ -14,22 +14,22 @@ const Work: React.FC = () => {
         window.scrollTo(0, 0);
     }, []);
     return (
-        <div id='work' className="flex flex-col min-h-screen bg-background">
+        <div id='work' className="flex flex-col bg-background">
             <Header />
             <div className='flex flex-col gap-6 justify-start 
-                px-48  py-20 bg-white rounded-xl shadow-s 
+                lg:px-48  lg:py-20 px-10 py-5 bg-white rounded-xl shadow-s 
                 bg-gradient-to-r from-indigo-500/30 bg-[length:200%_200%] animate-gradient-x 
                 bg-gradient-to-r from-indigo-500/30 from-10% via-sky-500/20 via-30% to-emerald-500/30 to-90%
                 '
-            ><h1 className="font-inter font-semibold text-6xl mt-5 text-start">
+            ><h1 className="font-inter font-semibold lg:text-6xl text-4xl mt-5 text-start">
                     Creating a Unified Design System for Azure
                 </h1>
-                <div className='size-3/12' >
+                <div className='lg:size-3/12 size-8/12' >
                     <img loading='lazy' src={azureTheme} />
                 </div>
 
             </div>
-            <div className="flex flex-col flex-grow mx-48">
+            <div className="flex flex-col flex-grow lg:mx-40 mx-10">
 
 
                 <div className=" mt-10">
@@ -64,9 +64,9 @@ const Work: React.FC = () => {
                                 Then, import <span className="font-mono text-lg bg-[#f9f9f9] rounded-sm">azure-theme</span> from the <span className="font-mono text-lg bg-[#f9f9f9] rounded-sm">fluentui-contrib</span> repository to style
                                 components for the Azure Portal.
                             </p>
-                            <div className="flex gap-10 mt-4">
+                            <div className="flex gap-10 mt-4 ">
 
-                                <div className="flex flex-row gap-10 justify-between mt-3 ">
+                                <div className="flex flex-row gap-10 justify-between mt-3block hidden lg:block ">
                                     <div className="bg-[#f9f9f9] p-6 rounded-sm ">
                                         <pre>
                                             <code>
