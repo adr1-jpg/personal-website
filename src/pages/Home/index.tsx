@@ -102,16 +102,16 @@ const Home: React.FC = () => {
                     <h1 className='text-6xl font-montaga text-left'>
                         Adriana Orantes
                     </h1>
-                    <p className='text-left font-openSans text-2xl'>
+                    <p className='text-left font-openSans text-3xl'>
                         At Microsoft, I thrive on transforming complex challenges into elegant solutions, driving projects that enhance user experience.<br /><br />
                         Outside of work, you'll find me dog-watching, working on a puzzle, or taking a 10-mile walk.
                     </p>
                     <div className='hidden md:block lg:block'>
                         <div className='flex gap-2 items-center text-accent cursor-pointer '>
-                            <a href='#about' className='scroll-link text-left font-openSans text-xl font-semibold'>Learn more about me</a>
-                            <a href='#about' className='scroll-link'>
+                            <a href='#about' className='scroll-link text-left font-openSans text-2xl font-semibold'>Learn more about me</a>
+                            <a href='#about' className='scroll-link self-end'>
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                                    className="size-6 self-end motion-safe:animate-bounce">
+                                    className="size-7 motion-safe:animate-bounce">
                                     <path fill-rule="evenodd" d="M12 2.25c-5.385 
                                 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 
                                 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25Zm-.53 
@@ -125,7 +125,7 @@ const Home: React.FC = () => {
                     <div className='block md:hidden'>
                         <div className='flex gap-1 items-start text-accent cursor-pointer '>
                             <a href='#about' className='scroll-link text-left font-openSans text-xl font-semibold'>Learn more about me</a>
-                            <a href='#about' className='scroll-link'>
+                            <a href='#about' className='scroll-link self-end'>
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
                                     className="size-5 self-end motion-safe:animate-bounce">
                                     <path fill-rule="evenodd" d="M12 2.25c-5.385 
@@ -146,7 +146,7 @@ const Home: React.FC = () => {
                         rel="preload"
                         onLoad={handleImageLoad}
                         className="
-                    min-1300: h-screen
+                    min-1300: h-[calc(100vh-78px)]
                     object-cover 
                     opacity-0 
                     visibility-hidden 
@@ -155,8 +155,6 @@ const Home: React.FC = () => {
                     ease-in-out
                     min-1300:justify-self-end
                     justify-self-center
-                    
-                    
                     "
                         style={{
                             opacity: loaded ? 1 : 0,
@@ -168,7 +166,7 @@ const Home: React.FC = () => {
             </div>
 
             <div id='about' className='grid ' ref={aboutRef}>
-                <div className='flex flex-col lg:mt-10 md:mt-10 lg:mx-40 md:mx-40 mx-5'>
+                <div className='flex flex-col lg:mt-10 md:mt-10 lg:mx-48 md:mx-48 mx-5'>
                     <h2 className='font-inter text-accent text-start 
                     md:text-5xl lg:text-5xl text-2xl font-bold md:mt-10 
                     large:mt-10 '>It's so nice to meet you!</h2>
@@ -192,7 +190,7 @@ const Home: React.FC = () => {
                 </div>
 
                 <div id='edu' className='flex flex-col  py-20 bg-[#D0D2CA] justify-center'>
-                    <div className='grid s:grid-cols-1 lg:grid-cols-2 lg:mx-40 md:mx-40 mx-5 gap-10  '>
+                    <div className='grid s:grid-cols-1 lg:grid-cols-2 lg:mx-48 md:mx-48 mx-5 gap-10  '>
                         <div className='content-center self-center'>
                             <TypingEffect text='I can, and I will.' />
                             <div className='flow-root'>
@@ -220,7 +218,7 @@ const Home: React.FC = () => {
                 </div>
             </div>
 
-            <div id='work' className='flex flex-col lg:mx-40 md:mx-40 mx-5 gap-6 mt-20' ref={workRef}>
+            <div id='work' className='flex flex-col lg:mx-48 md:mx-48 mx-5 gap-6 mt-20 ' ref={workRef}>
 
                 <div className=''>
                     <div className='flow-root'>
@@ -238,13 +236,15 @@ const Home: React.FC = () => {
                 </div>
 
                 <h1 className='font-openSans text-2xl text-left mt-5'>Check out my latest work at Microsoft</h1>
-                <Card onClick={handleCardClick} className='items-center bg-gradient-to-r from-indigo-500/30 bg-[length:200%_200%] animate-gradient-x 
+                <Card onClick={handleCardClick} className='items-center 
+                
+                bg-gradient-to-r from-indigo-500/30 bg-[length:200%_200%] animate-gradient-x 
                 bg-gradient-to-r from-indigo-500/30 from-10% via-sky-500/20 via-30% to-emerald-500/30 to-90% hover:cursor-pointer
                 transition-transform duration-200 hover:-translate-y-2 '>
-                    <img className='w-96 py-20 px-5' src={azureTheme} />
+                    <img className='w-96 py-20 px-2' src={azureTheme} />
                 </Card>
             </div>
-            <div className='grid grid-rows-2 mt-20 mb-10 gap-5 lg:mx-40 md:mx-40 mx-5 text-center justify-items-center content-center'>
+            <div className='grid grid-rows-2 mt-20 mb-10 gap-5 lg:mx-48 md:mx-48 mx-5 text-center justify-items-center content-center'>
                 <p className='font-inter text-2xl'>In my free time, I enjoy exploring the West Coast, international
                     travel, and photography.</p>
                 <div className='flex gap-2 items-center text-accent cursor-pointer' onClick={handleGalleryClick}>

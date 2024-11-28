@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import ImageListItemBar from '@mui/material/ImageListItemBar';
-import Header from "../../components/Header";
+import Header2 from "../../components/Header2";
 import Footer from "../../components/Footer";
 import rainier from '../../assets/images/rainier.jpg'
 import cityscape from '../../assets/images/cityscape.jpg'
@@ -52,7 +52,7 @@ const Gallery: React.FC = () => {
 
     return (
         <div className="bg-background">
-            <Header />
+            <Header2 />
             <div id='gallery' className='flex flex-col mx-32 mt-8'>
                 <h2 className='font-inter text-left text-3xl'>Gallery</h2>
             </div>

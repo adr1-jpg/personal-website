@@ -1,7 +1,7 @@
 import React from "react";
 import { useEffect } from "react";
 import { Button, Slider } from "@fluentui/react-components";
-import Header from "../../components/Header";
+import Header2 from "../../components/Header2";
 import theme from '../../assets/images/azure-theme-button.png'
 import azure from '../../assets/icons/azure-theme.svg'
 import azureTheme from '../../assets/icons/azure-theme.svg'
@@ -15,7 +15,7 @@ const Work: React.FC = () => {
     }, []);
     return (
         <div id='work' className="flex flex-col bg-background">
-            <Header />
+            <Header2 />
             <div className='flex flex-col gap-6 justify-start 
                 lg:px-48  lg:py-20 px-10 py-5 bg-white rounded-xl shadow-s 
                 bg-gradient-to-r from-indigo-500/30 bg-[length:200%_200%] animate-gradient-x 

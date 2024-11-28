@@ -4,7 +4,7 @@ import logo from '../../assets/icons/logo-adri.svg'
 import { useForm } from "../../context/DataProvider";
 import { useNavigate } from "react-router";
 import { Link } from 'react-router-dom';
-const Header2: React.FC = () => {
+const Header: React.FC = () => {
     const navigate = useNavigate();
 
     const handleHomeClick = () => {
@@ -49,10 +49,7 @@ const Header2: React.FC = () => {
                         // className={`${navState.currentState === 'home' ? 'text-accent font-bold' : ''} hover:cursor-pointer scroll-link`}
                         className='hover:cursor-pointer scroll-link'
                         onClick={handleHomeClick} href="#">home</a>
-                 {/* <a
-                        // className={`${navState.currentState === 'about' ? 'text-accent font-bold' : ''} hover:cursor-pointer scroll-link`}
-                        className='hover:cursor-pointer scroll-link'
-                        href="#about">about</a> */}
+                  
                     <a
                         // className={`${navState.currentState === 'work' ? 'text-accent font-bold' : ''} hover:cursor-pointer scroll-link`}
                         className='hover:cursor-pointer scroll-link'
@@ -76,4 +73,4 @@ const Header2: React.FC = () => {
     )
 }
 
-export default Header2;
+export default Header;
