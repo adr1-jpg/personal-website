@@ -98,8 +98,7 @@ const Home: React.FC = () => {
 
             <div id='home' className='grid lg:grid-cols-2 md:grid-cols-1 gap-6 h-screen' ref={homeRef}>
                 <div
-                    className='flex flex-col py-5 md:px-20 lg:px-20 px-5 justify-center gap-6'
-                >
+                    className='flex flex-col py-5 md:px-20 lg:px-20 px-5 justify-center gap-6'>
                     <h1 className='text-6xl font-montaga text-left'>
                         Adriana Orantes
                     </h1>
@@ -169,8 +168,10 @@ const Home: React.FC = () => {
             </div>
 
             <div id='about' className='grid ' ref={aboutRef}>
-                <div className='flex flex-col mt-10 lg:mx-40 md:mx-40 mx-5'>
-                    <h2 className='font-inter text-accent text-start md:text-5xl lg:text-5xl text-2xl font-bold md:mt-10 large:mt-10 mt-10'>It's so nice to meet you!</h2>
+                <div className='flex flex-col lg:mt-10 md:mt-10 lg:mx-40 md:mx-40 mx-5'>
+                    <h2 className='font-inter text-accent text-start 
+                    md:text-5xl lg:text-5xl text-2xl font-bold md:mt-10 
+                    large:mt-10 '>It's so nice to meet you!</h2>
                     <div className='grid s:grid-cols-1 lg:grid-cols-2 lg:gap-10 md:gap-10 gap-3 md:mt-10 lg:mt-10 mt-3 mb-20'>
                         <img className='rounded-sm' src={nyc} loading='lazy' />
                         <p className='font-openSans text-2xl text-left content-center '>
@@ -237,7 +238,7 @@ const Home: React.FC = () => {
                 </div>
 
                 <h1 className='font-openSans text-2xl text-left mt-5'>Check out my latest work at Microsoft</h1>
-                <Card className='items-center bg-gradient-to-r from-indigo-500/30 bg-[length:200%_200%] animate-gradient-x 
+                <Card onClick={handleCardClick} className='items-center bg-gradient-to-r from-indigo-500/30 bg-[length:200%_200%] animate-gradient-x 
                 bg-gradient-to-r from-indigo-500/30 from-10% via-sky-500/20 via-30% to-emerald-500/30 to-90% hover:cursor-pointer
                 transition-transform duration-200 hover:-translate-y-2 '>
                     <img className='w-96 py-20 px-5' src={azureTheme} />
