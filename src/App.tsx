@@ -17,7 +17,7 @@ function App() {
       <DataProvider>
         <Router>
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/personal-website" element={<Home />} />
             <Route path="/work" element={<Work />} />
             <Route path="/personal-website/campus" element={<VirtualCampus />} />
             <Route path="/personal-website/aquaire" element={<Aquaire />} />

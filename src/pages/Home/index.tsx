@@ -52,7 +52,7 @@ const Home: React.FC = () => {
         console.log('in a scroll-link')
         anchor.addEventListener('click', function (e) {
             e.preventDefault(); // Prevent the default anchor click behavior
-            
+
             const targetId = anchor.getAttribute('href')?.substring(1); // Get the target ID
             const targetElement = document.getElementById(targetId as string);
             if (targetElement && targetElement.id === 'about') {
@@ -114,15 +114,15 @@ const Home: React.FC = () => {
     }
     const scrollToAbout = () => {
         const target = document.querySelector('#about');
-    
-    if (target) {
-      const offsetTop = target.getBoundingClientRect().top + window.scrollY - 78;
 
-      window.scrollTo({
-        top: offsetTop,
-        behavior: 'smooth', // Smooth scrolling
-      });
-    }
+        if (target) {
+            const offsetTop = target.getBoundingClientRect().top + window.scrollY - 78;
+
+            window.scrollTo({
+                top: offsetTop,
+                behavior: 'smooth', // Smooth scrolling
+            });
+        }
     }
     return (
         <div id="home" className="grid bg-background">
@@ -140,8 +140,8 @@ const Home: React.FC = () => {
                     </p>
                     <div className='hidden md:block lg:block'>
                         <div className='flex gap-2 items-center text-accent cursor-pointer '>
-                            <a  href="#about" className='scroll-link text-left font-openSans text-2xl font-semibold'>Learn more about me</a>
-                            <a   href="#about" className='scroll-link self-end'>
+                            <a href="#about" className='scroll-link text-left font-openSans text-2xl font-semibold'>Learn more about me</a>
+                            <a href="#about" className='scroll-link self-end'>
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
                                     className="size-7 motion-safe:animate-bounce">
                                     <path fill-rule="evenodd" d="M12 2.25c-5.385 
@@ -275,6 +275,23 @@ const Home: React.FC = () => {
                 transition-transform duration-200 hover:-translate-y-2 '>
                     <img className='w-96 py-20 px-2' src={azureTheme} />
                 </Card>
+                <h1 className='font-openSans text-2xl text-left mt-5'>Projects</h1>
+                <div className='grid md:grid-cols-2 lg:grid-cols-2 grid-cols-1 justify-between gap-4'>
+                    <Card onClick={handleCampusClick} className='items-center 
+                bg-white hover:cursor-pointer w-full
+                transition-transform duration-200 hover:-translate-y-2 
+                size-72 justify-center'>
+                        <img className='w-72 py-20 px-2' src={virtualCampus} />
+                    </Card>
+
+                    <Card onClick={handleAquaireClick} className='w-full 
+                    !bg-aquaire
+                    transition-transform duration-200 hover:-translate-y-2 items-center
+                    size-72 justify-center hover:cursor-pointer'> 
+                        <img className='w-72 py-20 px-2' src={aquaire} />
+                    </Card>
+                </div>
+
             </div>
             <div className='grid grid-rows-2 mt-20 mb-10 gap-5 lg:mx-48 md:mx-48 mx-5 text-center justify-items-center content-center'>
                 <p className='font-inter text-2xl'>In my free time, I enjoy exploring the West Coast, international
