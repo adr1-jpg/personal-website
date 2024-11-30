@@ -198,7 +198,7 @@ const Home: React.FC = () => {
                             items-center
                             max-1236:items-start
                             transition-transform duration-200 hover:-translate-y-2 hover:cursor-pointer
-                            bg-gray-card
+                            !bg-gray-card
                             min-h-[256px]
                             max-940:justify-center
                             '>
