@@ -182,7 +182,10 @@ const Home: React.FC = () => {
                             items-center
                             max-1236:items-start
                             transition-transform duration-200 hover:-translate-y-2 hover:cursor-pointer'>
-                            <div className='flex flex-col max-h-[104px]'>
+                            <div className='flex flex-col 
+                
+                            '>
+                                {/* max-h-[104px] */}
                                 <div className='content-center'>
                                     <p className=' text-[26px] max-1236:text-[38px] font-medium font-poppins leading-tight text-campus'>Columbia Virtual Campus</p>
                                 </div>
@@ -195,7 +198,10 @@ const Home: React.FC = () => {
                             items-center
                             max-1236:items-start
                             transition-transform duration-200 hover:-translate-y-2 hover:cursor-pointer
-                            bg-[#24292E]'>
+                            bg-gray-card
+                            min-h-[256px]
+                            max-940:justify-center
+                            '>
                             <div className='flex flex-col'>
                                 <div className='content-center'>
                                     <img src={aquaire} className='w-full max-w-[200px] h-auto' />

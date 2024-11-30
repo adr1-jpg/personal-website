@@ -19,7 +19,8 @@ module.exports = {
         'pastel-blue': '#E6F2FF',
         'aquaire': '#3A435E',
         'campus': '#0072CE',
-        'orange': '#F6C09F'
+        'orange': '#F6C09F',
+        'gray-card': '#24292E',
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
