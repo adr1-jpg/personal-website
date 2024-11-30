@@ -1,47 +1,68 @@
 @keyframes slide-in {
-    0% {
-      transform: translateX(-100%); /* Start off-screen to the left */
-      opacity: 0; /* Start as invisible */
-    }
-    60% {
-      transform: translateX(5%); /* Overshoot a little past its final position */
-      opacity: 1;
-    }
-    100% {
-      transform: translateX(0); /* Set the final position */
-      opacity: 1;
-    }
-  }
-  
-  /* Apply the animation to elements with the class .slide-in */
-  .slide-in {
-    animation: slide-in 2s ease-out forwards;
-  }
- 
-  @keyframes blink {
-    50% {
-      opacity: 0;
-    }
-  }
-  .animate-blink {
-    animation: blink 0.8s step-end infinite;
+  0% {
+    transform: translateX(-100%);
+    /* Start off-screen to the left */
+    opacity: 0;
+    /* Start as invisible */
   }
 
-  /* @keyframes fadeUpDown {
-    0% {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    50% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    100% {
-      opacity: 0;
-      transform: translateY(-20px);
-    }
+  60% {
+    transform: translateX(5%);
+    /* Overshoot a little past its final position */
+    opacity: 1;
   }
-  
-  .image {
-    animation: fadeUpDown 3s ease-in-out;
-  } */
+
+  100% {
+    transform: translateX(0);
+    /* Set the final position */
+    opacity: 1;
+  }
+}
+
+/* Apply the animation to elements with the class .slide-in */
+.slide-in {
+  animation: slide-in 2s ease-out forwards;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.animate-blink {
+  animation: blink 0.8s step-end infinite;
+}
+
+.gradient-background::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /* transform: translate(-50%, -50%); */
+  width: 110%;
+  height: 110%;
+  background: radial-gradient(circle, #BAE1FF, transparent);
+  z-index: -1;
+}
+
+.intro {
+  max-width: 1024px;
+}
+
+@media (max-width: 1236px) {
+  .intro {
+    max-width: 828px;
+  }
+}
+
+@media (max-width: 940px) {
+  .intro {
+    max-width: 612px;
+  }
+}
+
+@media (max-width: 640px) {
+  .intro {
+    max-width: 100%;
+  }
+}

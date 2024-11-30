@@ -9,11 +9,14 @@ module.exports = {
         openSans: ['Open Sans', 'Arial', 'sans-serif'],
         montaga: ['Montaga', 'serif'],  // Add Montaga font here
         poppins: ['Poppins', 'sans-serif'], // Define Poppins
+        lora: ['Lora', 'serif'], // Define Lora
       },
       colors: {
         'accent': '#C14725',
         'background': '#F5F5F5',
-        'blue': '#1480DC',
+        'blue': '#033D75',
+        'light-blue': '#0078E9',
+        'pastel-blue': '#E6F2FF',
         'aquaire': '#3A435E',
         'campus': '#0072CE',
         'orange': '#F6C09F'
@@ -46,7 +49,12 @@ module.exports = {
       'between-lg-xl': { 'min': '1024px', 'max': '1630px' }, // Custom range between 1024px and 1630px
       'max-1600': { 'max': '1600px' },
       'min-1600': { 'min' : '1600px'},
-      'min-1300': { 'min' : '1300px'}
+      'min-1236': { 'min' : '1236px'},
+      'max-1236': { 'max' : '1236px'},
+      'max-940': { 'max' : '940px'},
+      'min-940': { 'min' : '940px'},
+      'max-770': { 'max' : '770px'},
+      'max-640': { 'max' : '640px'},
         // 'between-xl-2xl': '1630px', // Targeting 1630px (for the max range)
         // 'max-md': { 'max': '1024px' }, // Target screens below 1024px
         // 'min-2xl': { 'min': '1630px' }, // Target screens above 1630px

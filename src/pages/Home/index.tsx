@@ -14,7 +14,6 @@ import { useForm } from '../../context/DataProvider';
 import { useNavigate } from 'react-router';
 import { Card } from '@fluentui/react-components'
 
-// import Lazy from '../../components/Lazy'
 const Home: React.FC = () => {
 
     const navigate = useNavigate();
@@ -120,192 +119,48 @@ const Home: React.FC = () => {
 
             window.scrollTo({
                 top: offsetTop,
-                behavior: 'smooth', // Smooth scrolling
+                behavior: 'smooth', 
             });
         }
     }
     return (
-        <div id="home" className="grid bg-background">
+        <div className='bg-background '>
             <Header />
-
-            <div id='home' className='grid lg:grid-cols-2 md:grid-cols-1 gap-6 h-screen' ref={homeRef}>
-                <div
-                    className='flex flex-col py-5 md:px-20 lg:px-20 px-5 justify-center gap-6'>
-                    <h1 className='text-6xl font-montaga text-left'>
-                        Adriana Orantes
-                    </h1>
-                    <p className='text-left font-openSans text-3xl'>
-                        At Microsoft, I thrive on transforming complex challenges into elegant solutions, driving projects that enhance user experience.<br /><br />
-                        Outside of work, you'll find me dog-watching, working on a puzzle, or taking a 10-mile walk.
-                    </p>
-                    <div className='hidden md:block lg:block'>
-                        <div className='flex gap-2 items-center text-accent cursor-pointer '>
-                            <a href="#about" className='scroll-link text-left font-openSans text-2xl font-semibold'>Learn more about me</a>
-                            <a href="#about" className='scroll-link self-end'>
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                                    className="size-7 motion-safe:animate-bounce">
-                                    <path fill-rule="evenodd" d="M12 2.25c-5.385 
-                                0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 
-                                9.75-4.365 9.75-9.75S17.385 2.25 12 2.25Zm-.53 
-                                14.03a.75.75 0 0 0 1.06 0l3-3a.75.75 0 1 0-1.06
-                                -1.06l-1.72 1.72V8.25a.75.75 0 0 0-1.5 0v5.69l
-                                -1.72-1.72a.75.75 0 0 0-1.06 1.06l3 3Z" clip-rule="evenodd" />
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                    <div className='block md:hidden'>
-                        <div className='flex gap-1 items-start text-accent cursor-pointer '>
-                            <a onClick={scrollToAbout} className='scroll-link text-left font-openSans text-xl font-semibold'>Learn more about me</a>
-                            <a onClick={scrollToAbout} href='#about' className='scroll-link self-end'>
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                                    className="size-5 self-end motion-safe:animate-bounce">
-                                    <path fill-rule="evenodd" d="M12 2.25c-5.385 
-                                0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 
-                                9.75-4.365 9.75-9.75S17.385 2.25 12 2.25Zm-.53 
-                                14.03a.75.75 0 0 0 1.06 0l3-3a.75.75 0 1 0-1.06
-                                -1.06l-1.72 1.72V8.25a.75.75 0 0 0-1.5 0v5.69l
-                                -1.72-1.72a.75.75 0 0 0-1.06 1.06l3 3Z" clip-rule="evenodd" />
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-
-                </div>
-                <div className='overflow-hidden hidden lg:block'>
-                    <img
-                        src={self}
-                        rel="preload"
-                        onLoad={handleImageLoad}
-                        className="
-                    min-1300: h-[calc(100vh-78px)]
-                    object-cover 
-                    opacity-0 
-                    visibility-hidden 
-                    transition-opacity 
-                    duration-[2500ms] 
-                    ease-in-out
-                    min-1300:justify-self-end
-                    justify-self-center
-                    "
-                        style={{
-                            opacity: loaded ? 1 : 0,
-                            visibility: loaded ? 'visible' : 'hidden',
-                        }}
-                    />
-                </div>
-
-            </div>
-
-            <div id='about' className='grid ' ref={aboutRef}>
-                <div className='flex flex-col lg:mt-10 md:mt-10 lg:mx-48 md:mx-48 mx-5'>
-                    <h2 className='font-inter text-accent text-start 
-                    md:text-5xl lg:text-5xl text-2xl font-bold md:mt-10 
-                    large:mt-10 '>It's so nice to meet you!</h2>
-                    <div className='grid s:grid-cols-1 lg:grid-cols-2 lg:gap-10 md:gap-10 gap-3 md:mt-10 lg:mt-10 mt-3 mb-20'>
-                        <img className='rounded-sm' src={nyc} loading='lazy' />
-                        <p className='font-openSans text-2xl text-left content-center '>
-                            I'm a Salvadoran American passionate about being
-                            <span className='font-semibold'> playful</span>, <span className='font-semibold'> curious</span>, and
-                            <span className='font-semibold'> bringing people together</span>.<br></br><br></br>
-                            Growing up, I had no clear picture of the future I was working toward.
-                            I just knew it would be something that would <span className='font-bold'> inspire</span> and
-                            <span className='font-bold'> challenge</span> me, while also bringing a sense of
-                            <span className='font-bold'> stability</span>, <span className='font-bold'> fulfillment </span>
-                            and <span className='font-bold'> joy</span>.<br></br><br></br>
-                            I first discovered computer science in high school through a summer program at MIT.
-                            It was tough—I had never experienced such academic rigor.
-                            But by proactively seeking support, <span className='text-accent font-bold'>I persevered.</span>
-
-                        </p>
-                    </div>
-                </div>
-
-                <div id='edu' className='flex flex-col  py-20 bg-[#D0D2CA] justify-center'>
-                    <div className='grid s:grid-cols-1 lg:grid-cols-2 lg:mx-48 md:mx-48 mx-5 gap-10  '>
-                        <div className='content-center self-center'>
-                            <TypingEffect text='I can, and I will.' />
-                            <div className='flow-root'>
-                                <div className='my-4 font-openSans text-2xl'>
-                                    For undergrad, I attended Columbia University’s School of Engineering.
-                                    I majored in <span className='font-bold'>Computer Science</span> with a focus on applications.
-                                </div>
-                            </div>
-                            <div className='flow-root'>
-                                <div className='my-4 font-openSans text-2xl'>
-                                    As a <span className='font-bold'>first-generation college student</span>, I struggled navigating higher education.
-                                    With the support of friends, family, and my Columbia community, I gained the
-                                    confidence to <span className='font-bold'>embrace difficult challenges</span> and push forward.
-                                </div>
-                            </div>
-
-                        </div>
-                        <div>
-
-                            <img className='rounded-sm' loading='lazy' src={cs} />
-                        </div>
-
-
-                    </div>
-                </div>
-            </div>
-
-            <div id='work' className='flex flex-col lg:mx-48 md:mx-48 mx-5 gap-6 mt-20 ' ref={workRef}>
-
+            <div className='flex max-1236:flex-col justify-self-center intro min-1236:gap-20 max-1236:gap-5 max-1236:justify-center min-1236:items-center p-10' >
                 <div className=''>
-                    <div className='flow-root'>
-                        <div className='my-4 font-openSans text-3xl'>
-                            Right now, I'm a <span className='font-extrabold'>Design Engineer </span>
-                            for <span className='font-extrabold'>Microsoft's</span> cloud service, <span className='text-blue font-extrabold'>Azure</span>.
+                    <h1 className='text-5xl font-lora text-blue'>
+                        Hi, I'm Adri!
+                    </h1>
+                    <p className='text-left leading-loose pt-4 text-[20px]'>
+                        I love tackling real-world problems that make a difference in people's lives.<br />
+                        Design Engineer @ <span className='text-light-blue'>Microsoft Azure</span>.<br />
+                        Puzzle, cycling, and dog enthusiast.
+                    </p>
+                </div>
+                <div>
+                    <img src={self} className='w-full max-w-md max-1236:max-w-sm h-auto rounded-[20px]' />
+                </div>
+            </div>
+            <div className='flex justify-center bg-pastel-blue ' >
+                <div className='flex flex-col max-w-[1024px] w-full p-10'>
+                    <h1 className='text-2xl font-lora text-left '>
+                        Check out my work ✨
+                    </h1>
+                    <div className='flex max-1236:flex-col bg-white rounded-[20px] min-940:p-20 max-940:p-5 gap-5 mt-5
+                    transition-transform duration-200 hover:-translate-y-2 hover:cursor-pointer'>
+                        <div className='card flex flex-row '>
+                            <div className='content-center'>
+                                <img src={azureTheme} className='w-full max-w-md max-1236:max-w-sm max-640:w-[250px] h-auto' />
+                            </div>
+                        </div>
+                        <div className='max-1236:mt-2'>
+                            <h1 className='font-lora text-[24px] font-medium leading-normal'>Azure Theme for Fluent UI</h1>
+                            <p className='font-openSans text-lg min-1236:pt-3'>A custom theme package for Fluent UI, aligning components with Azure Portal's
+                                brand colors and design language.</p>
                         </div>
                     </div>
-                    <div className='flow-root'>
-                        <div className='my-4 font-openSans text-3xl'>
-                            I build interactive and insightful prototypes for designers and researchers
-                            to conduct user studies. I also help maintain <span className='font-black text-accent'>Fluent</span>—Microsoft's internal design system.
-                        </div>
-                    </div>
                 </div>
-
-                <h1 className='font-openSans text-2xl text-left mt-5'>Check out my latest work at Microsoft</h1>
-                <Card onClick={handleCardClick} className='items-center 
-                
-                bg-gradient-to-r from-indigo-500/30 bg-[length:200%_200%] animate-gradient-x 
-                bg-gradient-to-r from-indigo-500/30 from-10% via-sky-500/20 via-30% to-emerald-500/30 to-90% hover:cursor-pointer
-                transition-transform duration-200 hover:-translate-y-2 '>
-                    <img className='w-96 py-20 px-2' src={azureTheme} />
-                </Card>
-                <h1 className='font-openSans text-2xl text-left mt-5'>Projects</h1>
-                <div className='grid md:grid-cols-2 lg:grid-cols-2 grid-cols-1 justify-between gap-4'>
-                    <Card onClick={handleCampusClick} className='items-center 
-                bg-white hover:cursor-pointer w-full
-                transition-transform duration-200 hover:-translate-y-2 
-                size-72 justify-center'>
-                        <img className='w-72 py-20 px-2' src={virtualCampus} />
-                    </Card>
-
-                    <Card onClick={handleAquaireClick} className='w-full 
-                    !bg-aquaire
-                    transition-transform duration-200 hover:-translate-y-2 items-center
-                    size-72 justify-center hover:cursor-pointer'> 
-                        <img className='w-72 py-20 px-2' src={aquaire} />
-                    </Card>
-                </div>
-
             </div>
-            <div className='grid grid-rows-2 mt-20 mb-10 gap-5 lg:mx-48 md:mx-48 mx-5 text-center justify-items-center content-center'>
-                <p className='font-inter text-2xl'>In my free time, I enjoy exploring the West Coast, international
-                    travel, and photography.</p>
-                <div className='flex gap-2 items-center text-accent cursor-pointer' onClick={handleGalleryClick}>
-                    <a className='font-openSans  text-2xl'>View my gallery</a>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6 self-center motion-safe:animate-bounce">
-                        <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25Zm4.28 10.28a.75.75 0 0 0 0-1.06l-3-3a.75.75 0 1 0-1.06 1.06l1.72 1.72H8.25a.75.75 0 0 0 0 1.5h5.69l-1.72 1.72a.75.75 0 1 0 1.06 1.06l3-3Z" clip-rule="evenodd" />
-                    </svg>
-                </div>
-
-
-            </div>
-            <Footer />
         </div>
     );
 };
