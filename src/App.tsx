@@ -3,7 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import Home from './pages/Home';
 import Work from './pages/Work';
-import VirtualCampus from './pages/virtualCampus'
+import CVC from './pages/CVC'
 import Aquaire from './pages/aquaire';
 import { DataProvider } from './context/DataProvider';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
@@ -17,10 +17,10 @@ function App() {
       <DataProvider>
         <Router>
           <Routes>
-            <Route path="/personal-website" element={<Home />} />
+            <Route path="/" element={<Home />} />
             <Route path="/work" element={<Work />} />
-            <Route path="/personal-website/campus" element={<VirtualCampus />} />
-            <Route path="/personal-website/aquaire" element={<Aquaire />} />
+            <Route path="/campus" element={<CVC />} />
+            <Route path="/aquaire" element={<Aquaire />} />
             <Route path="/gallery" element={<Gallery />} />
           </Routes>
         </Router>

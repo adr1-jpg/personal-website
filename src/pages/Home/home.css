@@ -34,15 +34,9 @@
   animation: blink 0.8s step-end infinite;
 }
 
-.gradient-background::before {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  /* transform: translate(-50%, -50%); */
-  width: 110%;
-  height: 110%;
-  background: radial-gradient(circle, #BAE1FF, transparent);
-  z-index: -1;
+.bg-gradient {
+  background: radial-gradient(circle at 60% top, #BAE1FF, #F5F5F5 30%);
+
 }
 
 .intro {

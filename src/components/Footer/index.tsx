@@ -5,8 +5,7 @@ import github from '../../assets/icons/github.png'
 
 const Footer: React.FC = () => {
     return (
-        <div className="justify-items-center bg-pastel-blue">
-
+        <div className="justify-items-center">
             <div className="hidden md:block lg:block flex w-full max-w-[1024px] px-10 py-5">
                 <div className="flex justify-between text-[16px]">
                     <p>Made by Adriana Orantes</p>

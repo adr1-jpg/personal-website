@@ -42,7 +42,7 @@ const Header2: React.FC = () => {
     });
 
     return (
-        <div id='header' className="h-[80px] sticky top-0 z-50 bg-background flex justify-between items-center px-8 py-2 ">
+        <div id='header' className="h-[60px] sticky top-0 z-50 flex justify-between items-center px-8 py-2 ">
             <img onClick={handleHomeClick} className="w-[40px] hover:cursor-pointer" src={logo}></img>
             <div className="hidden lg:block">
                 <div className="flex flex-row gap-8 font-openSans text-[16px]">

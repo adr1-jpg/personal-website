@@ -34,7 +34,6 @@ module.exports = {
       keyframes: {
         animation: {
           'bounce-slow': 'bounce 3s linear infinite',
-
         },
         'gradient-x': {
           '0%, 100%': { 'background-position': '0% 50%' },
