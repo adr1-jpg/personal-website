@@ -24,7 +24,7 @@ const Footer: React.FC = () => {
                 </div>
             </div>
 
-            <div className="block md:hidden">
+            {/* <div className="block md:hidden bg-pastel-blue">
                 <div className="flex flex-col gap-2 justify-between mx-8 my-10 text-[16px]">
                     <p>© 2024 Adriana Orantes</p>
                     <div className="flex gap-5 font-openSans ">
@@ -39,7 +39,7 @@ const Footer: React.FC = () => {
                         </a>
                     </div>
                 </div>
-            </div>
+            </div> */}
         </div>
 
     )
