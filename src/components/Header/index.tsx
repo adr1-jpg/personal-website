@@ -43,14 +43,14 @@ const Header2: React.FC = () => {
 
     return (
         <div id='header' className="h-[80px] sticky top-0 z-50 bg-background flex justify-between items-center px-8 py-2 ">
-            <img onClick={handleHomeClick} className="w-12 hover:cursor-pointer" src={logo}></img>
+            <img onClick={handleHomeClick} className="w-[40px] hover:cursor-pointer" src={logo}></img>
             <div className="hidden lg:block">
-                <div className="flex flex-row gap-8 font-montaga text-xl">
+                <div className="flex flex-row gap-8 font-openSans text-[16px]">
                     <a
                         // className={`${navState.currentState === 'home' ? 'text-accent font-bold' : ''} hover:cursor-pointer scroll-link`}
                         className='hover:cursor-pointer scroll-link'
                         onClick={handleHomeClick} href="#"
-                        >home</a>
+                        >Home</a>
                  {/* <a
                         // className={`${navState.currentState === 'about' ? 'text-accent font-bold' : ''} hover:cursor-pointer scroll-link`}
                         className='hover:cursor-pointer scroll-link'
@@ -60,12 +60,12 @@ const Header2: React.FC = () => {
                         className='hover:cursor-pointer scroll-link'
                         // onClick={handleWorkClick}
                         >
-                            work</a>
+                            About me</a>
                     <a
                         // className={`${navState.currentState === 'gallery' ? 'text-accent font-bold' : ''} hover:cursor-pointer scroll-link`}
                         className='hover:cursor-pointer scroll-link'
                         // onClick={handleGalleryClick} 
-                        >gallery</a>
+                        >Photos</a>
                 </div>
             </div>
 
