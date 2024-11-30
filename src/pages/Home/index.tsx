@@ -5,8 +5,8 @@ import self from '../../assets/images/self.jpg'
 import nyc from '../../assets/images/nyc-me.jpeg'
 import cs from '../../assets/images/me-cs.jpg'
 import azureTheme from '../../assets/icons/azure-theme.png'
-import virtualCampus from '../../assets/icons/campus.png'
-import aquaire from '../../assets/icons/aquaire.png'
+import cvc from '../../assets/icons/cvc.png'
+import aquaire from '../../assets/icons/AQUAire.png'
 import neighborhood from '../../assets/icons/neighborhood.svg'
 import './home.css'
 import { useState, useEffect } from 'react';
@@ -106,7 +106,7 @@ const Home: React.FC = () => {
             };
         }, []);
         return (
-            <div ref={typeRef} className="font-inter text-accent text-5xl font-bold">
+            <div ref={typeRef} className="text-5xl font-lora text-blue">
                 {displayedText}
             </div>
         );
@@ -119,7 +119,7 @@ const Home: React.FC = () => {
 
             window.scrollTo({
                 top: offsetTop,
-                behavior: 'smooth', 
+                behavior: 'smooth',
             });
         }
     }
@@ -128,16 +128,19 @@ const Home: React.FC = () => {
             <Header />
             <div className='flex max-1236:flex-col justify-self-center intro min-1236:gap-20 max-1236:gap-5 max-1236:justify-center min-1236:items-center p-10' >
                 <div className=''>
-                    <h1 className='text-5xl font-lora text-blue'>
-                        Hi, I'm Adri!
-                    </h1>
+
+                    <div>
+                        <TypingEffect text="Hi, I'm Adri!" />
+                    </div>
+
+
                     <p className='text-left leading-loose pt-4 text-[20px]'>
                         I love tackling real-world problems that make a difference in people's lives.<br />
                         Design Engineer @ <span className='text-light-blue'>Microsoft Azure</span>.<br />
                         Puzzle, cycling, and dog enthusiast.
                     </p>
                 </div>
-                <div>
+                <div className='h-full'>
                     <img src={self} className='w-full max-w-md max-1236:max-w-sm h-auto rounded-[20px]' />
                 </div>
             </div>
@@ -146,7 +149,7 @@ const Home: React.FC = () => {
                     <h1 className='text-2xl font-lora text-left '>
                         Check out my work ✨
                     </h1>
-                    <div className='flex max-1236:flex-col bg-white rounded-[20px] min-940:p-20 max-940:p-5 gap-5 mt-5
+                    <div className='flex max-1236:flex-col bg-white rounded-[20px] min-940:p-20 max-940:px-10 max-940:py-16 gap-5 mt-5
                     transition-transform duration-200 hover:-translate-y-2 hover:cursor-pointer'>
                         <div className='card flex flex-row '>
                             <div className='content-center'>
@@ -159,8 +162,51 @@ const Home: React.FC = () => {
                                 brand colors and design language.</p>
                         </div>
                     </div>
+                    <div className='flex flex-row max-1236:flex-col gap-5'>
+                        {/* <div className='flex max-1236:flex-col bg-white rounded-[20px] justify-center
+                            min-940:px-20 max-940:p-5 
+                            gap-5 mt-5
+                            items-center
+                            transition-transform duration-200 hover:-translate-y-2 hover:cursor-pointer'>
+                            <div className='flex flex-col '>
+                                <div className='content-center'>
+                                <p className='text-[28px] font-medium font-poppins leading-tight text-campus'>Columbia Virtual Campus</p>
+                                </div>
+                                <p className='font-lora text-[20px] font-medium leading-normal mt-1'>Reimagining student connection</p>
+                            </div>
+
+                        </div> */}
+                        <div className='flex max-1236:flex-col bg-white rounded-[20px] basis-1/2
+                            min-940:p-20 max-940:px-10 max-940:py-16
+                            gap-5 mt-5
+                            items-center
+                            max-1236:items-start
+                            transition-transform duration-200 hover:-translate-y-2 hover:cursor-pointer'>
+                            <div className='flex flex-col max-h-[104px]'>
+                                <div className='content-center'>
+                                    <p className=' text-[26px] max-1236:text-[38px] font-medium font-poppins leading-tight text-campus'>Columbia Virtual Campus</p>
+                                </div>
+                                <p className='font-lora text-[20px] font-medium mt-2 leading-tight'>Reimagining student connection</p>
+                            </div>
+                        </div>
+                        <div className='flex max-1236:flex-col bg-white rounded-[20px] basis-1/2
+                            min-940:p-20 max-940:px-10 max-940:py-16
+                            gap-5 mt-5
+                            items-center
+                            max-1236:items-start
+                            transition-transform duration-200 hover:-translate-y-2 hover:cursor-pointer
+                            bg-[#24292E]'>
+                            <div className='flex flex-col'>
+                                <div className='content-center'>
+                                    <img src={aquaire} className='w-full max-w-[200px] h-auto' />
+                                </div>
+                                <p className='text-white font-lora text-[20px] font-medium mt-2 leading-tight'>Local, clean water</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
+            <Footer />
         </div>
     );
 };

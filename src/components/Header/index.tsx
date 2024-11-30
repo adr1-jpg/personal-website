@@ -49,7 +49,8 @@ const Header2: React.FC = () => {
                     <a
                         // className={`${navState.currentState === 'home' ? 'text-accent font-bold' : ''} hover:cursor-pointer scroll-link`}
                         className='hover:cursor-pointer scroll-link'
-                        onClick={handleHomeClick} href="#">home</a>
+                        onClick={handleHomeClick} href="#"
+                        >home</a>
                  {/* <a
                         // className={`${navState.currentState === 'about' ? 'text-accent font-bold' : ''} hover:cursor-pointer scroll-link`}
                         className='hover:cursor-pointer scroll-link'
@@ -57,11 +58,14 @@ const Header2: React.FC = () => {
                     <a
                         // className={`${navState.currentState === 'work' ? 'text-accent font-bold' : ''} hover:cursor-pointer scroll-link`}
                         className='hover:cursor-pointer scroll-link'
-                        onClick={handleWorkClick}>work</a>
+                        // onClick={handleWorkClick}
+                        >
+                            work</a>
                     <a
                         // className={`${navState.currentState === 'gallery' ? 'text-accent font-bold' : ''} hover:cursor-pointer scroll-link`}
                         className='hover:cursor-pointer scroll-link'
-                        onClick={handleGalleryClick} >gallery</a>
+                        // onClick={handleGalleryClick} 
+                        >gallery</a>
                 </div>
             </div>
 
