@@ -10,6 +10,9 @@ const Header2: React.FC = () => {
     const handleHomeClick = () => {
         navigate('/')
     }
+    const handleAboutClick = () => {
+        navigate('/about')
+    }
     const handleGalleryClick = () => {
         navigate('/gallery')
     }
@@ -58,7 +61,7 @@ const Header2: React.FC = () => {
                     <a
                         // className={`${navState.currentState === 'work' ? 'text-accent font-bold' : ''} hover:cursor-pointer scroll-link`}
                         className='hover:cursor-pointer scroll-link'
-                        // onClick={handleWorkClick}
+                        onClick={handleAboutClick} 
                         >
                             About me</a>
                     <a

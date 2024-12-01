@@ -18,7 +18,7 @@ function App() {
       <DataProvider>
         <HashRouter>
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/personal-website" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/work" element={<Work />} />
             <Route path="/campus" element={<CVC />} />
