@@ -29,7 +29,7 @@ const About: React.FC = () => {
                     </div>
                     <div className="flex flex-col gap-6 leading-normal basis-1/2">
                         <p className="font-lora text-[50px] ">I can, and I will</p>
-                        <p className="font-openSans leading-normal">I'm a Salvadoran American passionate about being playful, curious, and bringing people together.<br /><br />
+                        <p className="font-openSans leading-normal">
                             For undergrad, I attended Columbia University's School of Engineering. I majored in Computer Science with a focus on applications.
 
                             As a first-generation college student, I struggled navigating higher education. With the support of friends, family, and my Columbia community, I gained the confidence to embrace difficult challenges and push forward.</p>
