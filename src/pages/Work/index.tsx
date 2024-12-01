@@ -18,7 +18,6 @@ const Work: React.FC = () => {
             <Header />
             <div className='flex flex-col gap-6 justify-start 
                 items-center
-               
                 rounded-xl shadow-s 
                 bg-gradient-to-r from-indigo-500/30 bg-[length:200%_200%] animate-gradient-x 
                 bg-gradient-to-r from-indigo-500/30 from-10% via-sky-500/20 via-30% to-emerald-500/30 to-90%

@@ -116,9 +116,7 @@ const Home: React.FC = () => {
     return (
         <div className='bg-gradient'>
             <Header />
-            <div className='flex max-1236:flex-col justify-self-center intro min-1236:gap-20 max-1236:gap-5 max-1236:justify-center min-1236:items-center p-10
-            
-            ' >
+            <div className='flex max-1236:flex-col justify-self-center intro min-1236:gap-20 max-1236:gap-5 max-1236:justify-center min-1236:items-center p-10' >
                 <div className='h-auto'>
                     <div className=''>
                         <TypingEffect text="Hi, I'm Adri!" />
