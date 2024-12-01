@@ -41,7 +41,7 @@
 
 .bp {
   max-width: 1024px;
-  
+  width: 100%;
   justify-self: center;
 }
 
@@ -118,6 +118,9 @@
   padding: 24px;
   height: 264px;
 }
+.one-card-logo {
+  width: 500px;
+}
 .one-card-body {
   display: flex;
   gap:15px;
@@ -139,6 +142,7 @@
   }
   .intro {
     height: calc(100vh - 225px);
+    align-items: start;
   }
 
   .two-card-container {
@@ -189,6 +193,7 @@
   }
   .intro {
     height: calc(100vh - 200px);
+    align-items: start;
   }
 
   .self {
@@ -209,6 +214,9 @@
     flex-direction: column;
 
   }
+  .one-card-logo {
+    width: 250px;
+  }
 }
 
 @media (max-width: 670px) {
@@ -219,7 +227,7 @@
   }
 
   .intro {
-    height: calc(100vh - 500px);
+    min-height: fit-content;
   }
   .self {
     align-self: baseline;
@@ -258,8 +266,12 @@
   }
   .one-card {
     /* max-width: 337.5px; */
+    width: 100%;
   }
   .two-card-container, .work-container {
     gap: 8px;
+  }
+  .one-card-logo {
+    width: 200px;
   }
 }

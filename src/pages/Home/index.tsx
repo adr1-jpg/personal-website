@@ -142,7 +142,7 @@ const Home: React.FC = () => {
                         <div className='one-card-body'>
                             <div className='card flex flex-row '>
                                 <div className='content-center'>
-                                    <img src={azureTheme} className='w-full max-w-md max-1236:max-w-sm max-640:w-[250px] h-auto' />
+                                    <img src={azureTheme} className='one-card-logo h-auto' />
                                 </div>
                             </div>
                             <div className='max-1236:mt-2'>
