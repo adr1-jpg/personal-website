@@ -7,7 +7,7 @@ import CVC from './pages/CVC'
 import About from './pages/About';
 import Aquaire from './pages/aquaire';
 import { DataProvider } from './context/DataProvider';
-import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import { BrowserRouter as HashRouter, Route, Routes, Link } from 'react-router-dom';
 import Gallery from './pages/Gallery';
 import { FluentProvider } from '@fluentui/react-components';
 import { AzureLightTheme } from '@fluentui-contrib/azure-theme';
@@ -16,7 +16,7 @@ function App() {
   return (
     <FluentProvider theme={AzureLightTheme}>
       <DataProvider>
-        <Router>
+        <HashRouter>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
@@ -25,7 +25,7 @@ function App() {
             <Route path="/aquaire" element={<Aquaire />} />
             <Route path="/gallery" element={<Gallery />} />
           </Routes>
-        </Router>
+        </HashRouter>
       </DataProvider >
     </FluentProvider>
   );
