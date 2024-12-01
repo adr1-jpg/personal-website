@@ -8,7 +8,7 @@ const Header2: React.FC = () => {
     const navigate = useNavigate();
 
     const handleHomeClick = () => {
-        navigate('/')
+        navigate('/personal-website')
     }
     const handleAboutClick = () => {
         navigate('/about')
@@ -52,7 +52,7 @@ const Header2: React.FC = () => {
                     <a
                         // className={`${navState.currentState === 'home' ? 'text-accent font-bold' : ''} hover:cursor-pointer scroll-link`}
                         className='hover:cursor-pointer scroll-link'
-                        onClick={handleHomeClick} href="#"
+                        onClick={handleHomeClick} 
                         >Home</a>
                  {/* <a
                         // className={`${navState.currentState === 'about' ? 'text-accent font-bold' : ''} hover:cursor-pointer scroll-link`}
@@ -67,7 +67,7 @@ const Header2: React.FC = () => {
                     <a
                         // className={`${navState.currentState === 'gallery' ? 'text-accent font-bold' : ''} hover:cursor-pointer scroll-link`}
                         className='hover:cursor-pointer scroll-link'
-                        // onClick={handleGalleryClick} 
+                        onClick={handleGalleryClick} 
                         >Photos</a>
                 </div>
             </div>

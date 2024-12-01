@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import ImageListItemBar from '@mui/material/ImageListItemBar';
-import Header2 from "../../components/Header2";
+import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import rainier from '../../assets/images/rainier.jpg'
 import cityscape from '../../assets/images/cityscape.jpg'
@@ -51,12 +51,16 @@ const Gallery: React.FC = () => {
     ];
 
     return (
-        <div className="bg-background">
-            <Header2 />
-            <div id='gallery' className='flex flex-col mx-32 mt-8'>
+        <div className="bg-background ">
+            <Header />
+            <div id='gallery' className='flex flex-col mx-32 w-full hidden lg:block'>
                 <h2 className='font-inter text-left text-3xl'>Gallery</h2>
             </div>
-            <div className='mx-32 my-5 hidden lg:block'>
+            <div id='gallery' className='mx-5 block lg:hidden'>
+                <h2 className='font-inter text-left text-3xl mt-5'>Gallery</h2>
+            </div>
+
+            <div className='mx-32 hidden lg:block max-w-[1024px] mt-5 '>
                 <ImageList variant="quilted"
                     cols={2}>
                     {itemData.map((item) => (
@@ -77,7 +81,8 @@ const Gallery: React.FC = () => {
                     ))}
                 </ImageList>
             </div>
-            <div className='mx-5 my-5 block lg:hidden'>
+
+            <div className='mx-5 my-3 block lg:hidden'>
                 <ImageList variant="quilted"
                     cols={1}>
                     {itemData.map((item) => (
