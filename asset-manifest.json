@@ -1,25 +1,26 @@
 {
   "files": {
-    "main.css": "/personal-website/static/css/main.d89b260b.css",
-    "main.js": "/personal-website/static/js/main.5e61b596.js",
-    "static/js/453.253ccfac.chunk.js": "/personal-website/static/js/453.253ccfac.chunk.js",
-    "static/media/cityscape.jpg": "/personal-website/static/media/cityscape.d4dc994e744c6ad1a655.jpg",
-    "static/media/lisboa.jpg": "/personal-website/static/media/lisboa.2c5a2c940df100109d8e.jpg",
-    "static/media/door.jpg": "/personal-website/static/media/door.5ca8452f5eedf58038a4.jpg",
-    "static/media/water.jpg": "/personal-website/static/media/water.ccd54bd2f04c29f3f568.jpg",
-    "static/media/love.jpg": "/personal-website/static/media/love.5f0942566a098f281b66.jpg",
-    "static/media/graphic.svg": "/personal-website/static/media/graphic.dac7a2b670d3496b4bb6721a123b745b.svg",
-    "static/media/rainier.jpg": "/personal-website/static/media/rainier.3d37d029498e48d2485b.jpg",
-    "static/media/azure-theme.png": "/personal-website/static/media/azure-theme.9d628c38150c80414435.png",
-    "static/media/self.jpg": "/personal-website/static/media/self.c58a19a5f32acfe7df83.jpg",
-    "static/media/AQUAire.png": "/personal-website/static/media/AQUAire.92247c449e924ab298d3.png",
-    "index.html": "/personal-website/index.html",
-    "main.d89b260b.css.map": "/personal-website/static/css/main.d89b260b.css.map",
-    "main.5e61b596.js.map": "/personal-website/static/js/main.5e61b596.js.map",
-    "453.253ccfac.chunk.js.map": "/personal-website/static/js/453.253ccfac.chunk.js.map"
+    "main.css": "/www.adris.world/static/css/main.0382686b.css",
+    "main.js": "/www.adris.world/static/js/main.62a78a0b.js",
+    "static/js/453.253ccfac.chunk.js": "/www.adris.world/static/js/453.253ccfac.chunk.js",
+    "static/media/cityscape.jpg": "/www.adris.world/static/media/cityscape.d4dc994e744c6ad1a655.jpg",
+    "static/media/lisboa.jpg": "/www.adris.world/static/media/lisboa.2c5a2c940df100109d8e.jpg",
+    "static/media/nyc-me.jpeg": "/www.adris.world/static/media/nyc-me.0bb4dd8a9357f1498835.jpeg",
+    "static/media/door.jpg": "/www.adris.world/static/media/door.5ca8452f5eedf58038a4.jpg",
+    "static/media/water.jpg": "/www.adris.world/static/media/water.ccd54bd2f04c29f3f568.jpg",
+    "static/media/love.jpg": "/www.adris.world/static/media/love.5f0942566a098f281b66.jpg",
+    "static/media/graphic.svg": "/www.adris.world/static/media/graphic.dac7a2b670d3496b4bb6721a123b745b.svg",
+    "static/media/rainier.jpg": "/www.adris.world/static/media/rainier.3d37d029498e48d2485b.jpg",
+    "static/media/azure-theme.png": "/www.adris.world/static/media/azure-theme.9d628c38150c80414435.png",
+    "static/media/self.jpg": "/www.adris.world/static/media/self.c58a19a5f32acfe7df83.jpg",
+    "static/media/AQUAire.png": "/www.adris.world/static/media/AQUAire.92247c449e924ab298d3.png",
+    "index.html": "/www.adris.world/index.html",
+    "main.0382686b.css.map": "/www.adris.world/static/css/main.0382686b.css.map",
+    "main.62a78a0b.js.map": "/www.adris.world/static/js/main.62a78a0b.js.map",
+    "453.253ccfac.chunk.js.map": "/www.adris.world/static/js/453.253ccfac.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d89b260b.css",
-    "static/js/main.5e61b596.js"
+    "static/css/main.0382686b.css",
+    "static/js/main.62a78a0b.js"
   ]
 }
