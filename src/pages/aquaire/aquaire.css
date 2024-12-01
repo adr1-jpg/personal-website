@@ -1,0 +1,79 @@
+.proj-logo {
+    font-size: 55px;
+    letter-spacing: 1px;
+    font-weight: bold;
+    color: #3A435E;
+    height: fit-content;
+    margin: 30px 0 30px 0;
+}
+
+.work-page-desc {
+    font-size: 24px;
+    /* margin-bottom: 50px; */
+    margin-bottom: 50px;
+}
+
+.section-header {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.section-text {
+    font-size: 18px;
+}
+
+@media screen and (max-width: 1236px) {
+    .proj-logo {
+        font-size: 45px;
+        margin: 25px 0 25px 0;
+    }
+    .work-page-desc {
+        font-size: 18px;
+        margin: 15px 0 40px 0;
+    }
+    .section-header {
+        font-size: 18px;
+        margin-bottom: 12px;
+    }
+    .section-text {
+        font-size: 15px;
+
+    }
+
+}
+
+@media screen and (max-width: 940px) {
+    .proj-logo {
+        font-size: 40px;
+        margin: 20px 0 20px 0;
+    }
+    .work-page-desc {
+        font-size: 16px;
+        margin: 13px 0 30px 0;
+    }
+    .section-header {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+    .section-text {
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (max-width: 670px) {
+    .proj-logo {
+        font-size: 35px;
+        margin: 10px 0 10px 0;
+    }
+    .work-page-desc {
+        font-size: 14px;
+    }
+    .section-header {
+        font-size: 15px;
+        margin-bottom: 5px;
+    }
+    .section-text {
+        font-size: 13px;
+    }
+}

@@ -106,90 +106,86 @@ const Home: React.FC = () => {
             };
         }, []);
         return (
-            <div ref={typeRef} className="text-5xl font-lora text-blue relative" style={{ minWidth: `${text.length}ch` }}>
-            <span style={{ visibility: 'hidden' }}>{text}</span>
-            <span className='absolute left-[0]'>{displayedText}</span>
-        </div>
+            <div ref={typeRef} className="font-lora text-blue relative greeting" style={{ minWidth: `${text.length}ch` }}>
+                <span style={{ visibility: 'hidden' }}>{text}</span>
+                <span className='absolute left-[0]'>{displayedText}</span>
+            </div>
         );
     }
 
     return (
         <div className='bg-gradient'>
             <Header />
-            <div className='flex max-1236:flex-col justify-self-center intro min-1236:gap-20 max-1236:gap-5 max-1236:justify-center min-1236:items-center p-10' >
+            <div className='flex bp intro' >
                 <div className='h-auto'>
                     <div className=''>
                         <TypingEffect text="Hi, I'm Adri!" />
                     </div>
-                    <p className='text-left leading-loose pt-4 text-[20px]'>
+                    <p className='text-left leading-loose desc font-openSans'>
                         I love tackling real-world problems that make a difference in people's lives.<br />
                         Design Engineer @ <span className='text-light-blue'>Microsoft Azure</span>.<br />
                         Puzzle, cycling, and dog enthusiast.
                     </p>
                 </div>
-                <div className='h-auto'>
+                <div className='h-auto self'>
                     <img src={self} rel='preload' className='w-full max-w-md max-1236:max-w-60 h-auto rounded-[20px] ' />
                 </div>
             </div>
-            <div className='flex justify-center bg-background ' >
-                <div className='flex flex-col max-w-[1024px] w-full p-10'>
-                    <h1 className='text-2xl font-lora text-left '>
-                        Check out my work ✨
-                    </h1>
-                    <Link to='/work'>
-                        <div className='flex max-1236:flex-col bg-white rounded-[20px] min-940:p-20 max-940:px-10 max-940:py-16 gap-5 mt-5
-                    transition-transform duration-200 hover:-translate-y-2 hover:cursor-pointer'>
+            <div className='bp'>
+
+                <h1 className='text-2xl font-lora text-left work-title mb-5'>
+                    Check out my work ✨
+                </h1>
+                <div className='work-container'>
+                    <Link to='/work' className='one-card'>
+                        <div className='one-card-body
+                        transition-transform 
+                        duration-200 hover:-translate-y-2 hover:cursor-pointer'>
                             <div className='card flex flex-row '>
                                 <div className='content-center'>
                                     <img src={azureTheme} className='w-full max-w-md max-1236:max-w-sm max-640:w-[250px] h-auto' />
                                 </div>
                             </div>
                             <div className='max-1236:mt-2'>
-                                <h1 className='font-lora text-[24px] font-medium leading-normal'>Azure Theme for Fluent UI</h1>
-                                <p className='font-openSans text-lg min-1236:pt-3'>A custom theme package for Fluent UI, aligning components with Azure Portal's
+                                <h1 className='font-lora card-title'>Azure Theme for Fluent UI</h1>
+                                <p className='font-openSans card-text'>A custom theme package for Fluent UI, aligning components with Azure Portal's
                                     brand colors and design language.</p>
                             </div>
                         </div>
                     </Link>
-                    <Link to='/campus'>
-                        <div className='flex flex-row max-1236:flex-col gap-5'>
-                            <div className='flex max-1236:flex-col bg-white rounded-[20px] basis-1/2
-                            min-940:p-20 max-940:px-10 max-940:py-16
-                            gap-5 mt-5
-                            items-center
-                            max-1236:items-start
-                            transition-transform duration-200 hover:-translate-y-2 hover:cursor-pointer'>
-                                <div className='flex flex-col 
-                            '>
-                                    <div className='content-center'>
-                                        <p className=' text-[26px] max-1236:text-[30px] font-medium font-poppins leading-tight text-campus'>Columbia Virtual Campus</p>
-                                    </div>
-                                    <p className='font-lora text-[20px] font-medium mt-2 leading-tight'>Reimagining student connection</p>
-                                </div>
-                            </div>
-                            <div className='flex max-1236:flex-col bg-white rounded-[20px] basis-1/2
-                            min-940:p-20 max-940:px-10 max-940:py-16
-                            gap-5 mt-5
-                            items-center
-                            max-1236:items-start
-                            transition-transform duration-200 hover:-translate-y-2 hover:cursor-pointer
-                            !bg-gray-card
-                            min-h-[256px]
-                            max-940:justify-center
+                    
+                    {/* <div className='two-card-container bp'>
+
+                        <Link to='/campus' className='two-card'>
+                            <div className='transition-transform 
+                            duration-200 hover:-translate-y-2 hover:cursor-pointer
                             '>
                                 <div className='flex flex-col'>
-                                    <Link to='/aquaire'>
-                                        <div className='content-center'>
-                                            <img src={aquaire} className='w-full max-w-[180px] h-auto' />
-                                        </div>
-                                        <p className='text-white font-lora text-[20px] 
-                                        font-medium mt-2 leading-tight'>Local, clean water</p>
-                                    </Link>
+                                    <div className='content-center'>
+                                        <p className=' text-[26px] max-1236:text-[30px] font-medium font-poppins leading-tight text-campus card-brand'>Columbia Virtual Campus</p>
+                                    </div>
+                                    <p className='font-lora text-[20px] 
+                                        font-medium mt-2 leading-tight card-title-two'>Reimagining student connection</p>
 
                                 </div>
                             </div>
-                        </div>
-                    </Link>
+                        </Link>
+
+                        <Link to='/aquaire' className='two-card'>
+                            <div className='transition-transform 
+                            duration-200 hover:-translate-y-2 hover:cursor-pointer'>
+                                <div className='flex flex-col'>
+                                    <div className='content-center'>
+                                        <img src={aquaire} className='w-full max-w-[160px] h-auto' />
+                                    </div>
+                                    <p className='font-lora text-[20px] 
+                                        font-medium mt-2 leading-tight card-title-two'>Local, clean water</p>
+                                </div>
+                            </div>
+                        </Link>
+
+
+                    </div> */}
                 </div>
             </div>
             <Footer />

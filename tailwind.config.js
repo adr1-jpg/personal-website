@@ -10,6 +10,7 @@ module.exports = {
         montaga: ['Montaga', 'serif'],  // Add Montaga font here
         poppins: ['Poppins', 'sans-serif'], // Define Poppins
         lora: ['Lora', 'serif'], // Define Lora
+        montserrat: ['Montserrat', 'sans-serif'], // Define Montserrat
       },
       colors: {
         'accent': '#C14725',

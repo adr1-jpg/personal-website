@@ -8,7 +8,7 @@ const About: React.FC = () => {
         <div className="bg-background">
             <Header />
             <div className="justify-items-center bg-background">
-                <div className="flex max-w-[1024px] w-full px-10 py-20 content-center gap-16">
+                <div className="flex max-w-[1024px] w-full py-20 content-center gap-16">
                     <div className="flex flex-col gap-6 leading-normal basis-1/2">
                         <p className="font-lora text-[50px] ">Nice to meet you</p>
                         <p className="font-openSans leading-normal">I'm a Salvadoran American passionate about being playful, curious, and bringing people together.<br /><br />
@@ -23,7 +23,7 @@ const About: React.FC = () => {
             </div>
             <div className="justify-items-center bg-background">
                 
-                <div className="flex max-w-[1024px] w-full px-10 py-20 content-center gap-10 rounded-[20px]">
+                <div className="flex max-w-[1024px] w-full py-10 content-center gap-10 rounded-[20px]">
                 <div className="basis-1/2">
                         <img src={cs} className="rounded-[20px]"/>
                     </div>
