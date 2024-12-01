@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/www.adris.world/static/css/main.0382686b.css",
-    "main.js": "/www.adris.world/static/js/main.62a78a0b.js",
+    "main.js": "/www.adris.world/static/js/main.6bce26ea.js",
     "static/js/453.253ccfac.chunk.js": "/www.adris.world/static/js/453.253ccfac.chunk.js",
     "static/media/cityscape.jpg": "/www.adris.world/static/media/cityscape.d4dc994e744c6ad1a655.jpg",
     "static/media/lisboa.jpg": "/www.adris.world/static/media/lisboa.2c5a2c940df100109d8e.jpg",
@@ -16,11 +16,11 @@
     "static/media/AQUAire.png": "/www.adris.world/static/media/AQUAire.92247c449e924ab298d3.png",
     "index.html": "/www.adris.world/index.html",
     "main.0382686b.css.map": "/www.adris.world/static/css/main.0382686b.css.map",
-    "main.62a78a0b.js.map": "/www.adris.world/static/js/main.62a78a0b.js.map",
+    "main.6bce26ea.js.map": "/www.adris.world/static/js/main.6bce26ea.js.map",
     "453.253ccfac.chunk.js.map": "/www.adris.world/static/js/453.253ccfac.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.0382686b.css",
-    "static/js/main.62a78a0b.js"
+    "static/js/main.6bce26ea.js"
   ]
 }
