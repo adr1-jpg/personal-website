@@ -136,11 +136,10 @@ const Home: React.FC = () => {
                 <h1 className='text-2xl font-lora text-left work-title mb-5'>
                     Check out my work ✨
                 </h1>
-                <div className='work-container'>
-                    <Link to='/work' className='one-card'>
-                        <div className='one-card-body
-                        transition-transform 
+                <div className='work-container transition-transform 
                         duration-200 hover:-translate-y-2 hover:cursor-pointer'>
+                    <Link to='/work' className='one-card'>
+                        <div className='one-card-body'>
                             <div className='card flex flex-row '>
                                 <div className='content-center'>
                                     <img src={azureTheme} className='w-full max-w-md max-1236:max-w-sm max-640:w-[250px] h-auto' />
