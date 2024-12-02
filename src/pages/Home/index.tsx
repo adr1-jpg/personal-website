@@ -138,7 +138,7 @@ const Home: React.FC = () => {
                 </h1>
                 <div className='work-container'>
                     <div className='transition-transform 
-                        duration-200 hover:-translate-y-2 hover:cursor-pointe'>
+                        duration-200 hover:-translate-y-2 hover:cursor-pointer'>
                         <Link to='/work' className='one-card'>
                             <div className='one-card-body'>
                                 <div className='card flex flex-row '>
@@ -158,11 +158,10 @@ const Home: React.FC = () => {
                     </div>
 
                     <div className='two-card-container bp'>
-
-                        <Link to='/campus' className='two-card'>
-                            <div className='transition-transform 
-                            duration-200 hover:-translate-y-2 hover:cursor-pointer
-                            '>
+                        
+                        <Link to='/campus' className='two-card transition-transform 
+                        duration-200 hover:-translate-y-2 hover:cursor-pointer' >
+                            <div className=''>
                                 <div className='flex flex-col'>
                                     <div className='content-center'>
                                         <p className=' text-[26px] max-1236:text-[30px] font-medium font-poppins leading-tight text-campus card-brand'>Columbia Virtual Campus</p>
