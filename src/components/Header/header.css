@@ -2,6 +2,13 @@
     background-color: #F5F5F5;
 }
 .top-padding {
-    padding: 15px 10px;
+    padding: 15px 30px;
     margin-bottom: 10px;
+}
+
+@media screen and (max-width: 640px) {
+    .top-padding {
+        padding: 15px 10px;
+    }
+    
 }
