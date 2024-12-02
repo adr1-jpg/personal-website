@@ -57,7 +57,7 @@ const Gallery: React.FC = () => {
 
             <div className='mx-32 hidden lg:block max-w-[1024px] mt-5 justify-self-center'>
                 <h2 className='font-inter text-left text-3xl'>Gallery</h2>
-                <p className="mb-5 font-openSans mt-3">In my free time, I enjoy exploring the West Coast, international travel, and photography.</p>
+                <p className="mb-5 font-openSans mt-3 about-text" >In my free time, I enjoy exploring the West Coast, international travel, and photography.</p>
                 <ImageList variant="quilted"
                     cols={2}>
                     {itemData.map((item) => (
@@ -81,6 +81,7 @@ const Gallery: React.FC = () => {
 
             <div className='mx-5 my-3 block lg:hidden'>
                 <h2 className='font-inter text-left text-3xl mt-5 mb-3'>Gallery</h2>
+                <p className="mb-5 font-openSans mt-3 about-text" >In my free time, I enjoy exploring the West Coast, international travel, and photography.</p>
                 <ImageList variant="quilted"
                     cols={1}>
                     {itemData.map((item) => (

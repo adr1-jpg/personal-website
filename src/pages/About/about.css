@@ -10,6 +10,10 @@
 .about-desc {
     gap: 1.5rem;
 }
+.about-text {
+    font-size: 16px;
+    line-height: 24px;
+}
 
 
 @media screen and (max-width: 940px) {
@@ -26,6 +30,13 @@
 
     .about-img-2 {
         border-radius: 0px !important;
+    }
+    .about-text {
+        font-size: 12px;
+        line-height: 16.8px;
+    }
+    .about-section {
+        gap: 20px !important;
     }
     
 }
