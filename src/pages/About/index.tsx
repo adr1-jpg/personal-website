@@ -3,8 +3,13 @@ import nyc from '../../assets/images/nyc-me.jpeg'
 import cs from '../../assets/images/me-cs.jpg'
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
+import { useEffect } from "react";
 import './about.css'
 const About: React.FC = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
     return (
         <div className="bg-background">
             <Header />

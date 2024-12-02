@@ -19,7 +19,7 @@ const Header2: React.FC = () => {
     const navigate = useNavigate();
 
     const handleHomeClick = () => {
-        navigate('/personal-website')
+        navigate('/')
     }
     const handleAboutClick = () => {
         navigate('/about')

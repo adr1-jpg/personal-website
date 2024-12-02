@@ -16,6 +16,7 @@ const Gallery: React.FC = () => {
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
+    
     const [loaded, setLoaded] = useState(false);
 
     const handleImageLoad = () => {
