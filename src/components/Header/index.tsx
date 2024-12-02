@@ -4,6 +4,7 @@ import logo from '../../assets/icons/logo.png';
 import { useForm } from "../../context/DataProvider";
 import { useNavigate } from "react-router";
 import { Link } from 'react-router-dom';
+import './header.css';
 const Header2: React.FC = () => {
     const navigate = useNavigate();
 
@@ -43,9 +44,25 @@ const Header2: React.FC = () => {
             }
         });
     });
+    React.useEffect(() => {
+        const handleScroll = () => {
+            const header = document.getElementById('header');
+            if (window.scrollY > 0) {
+                header?.classList.add('bg-color');
+            } else {
+                header?.classList.remove('bg-color');
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
 
     return (
-        <div id='header' className="h-[60px] sticky top-0 z-50 flex justify-between items-center px-5 pt-8 pb-10 ">
+        <div id='header' className="h-[60px] sticky top-0 z-50 flex justify-between items-center top-padding">
             <img onClick={handleHomeClick} className="w-[25px] hover:cursor-pointer" src={logo}></img>
             <div className="hidden lg:block">
                 <div className="flex flex-row gap-8 font-openSans text-[16px]">
