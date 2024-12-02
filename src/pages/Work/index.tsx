@@ -9,6 +9,7 @@ import npm from '../../assets/icons/npm.png'
 import github from '../../assets/icons/github.svg'
 import Footer from "../../components/Footer";
 import './work.css'
+
 const Work: React.FC = () => {
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -59,6 +60,14 @@ const Work: React.FC = () => {
                         styling, typography, and color scheme, aligning with Azure's design language and delivering
                         a unified experience for millions of global users.
                     </p>
+                    <div className="flex gap-3 mt-2">
+                        <a href="https://www.npmjs.com/package/@fluentui/azure-themes?activeTab=readme" target="_blank">
+                            <img src={npm} className="icon" />
+                        </a>
+                        <a href="https://github.com/adr1-jpg/fluentui-contrib/tree/6307a97b0424c3e5c069a5bf6d2dfc0b2f5d1fca/packages/azure-theme" target="_blank">
+                            <img src={github} className="icon" />
+                        </a>
+                    </div>
                 </div>
 
                 <div className="">
@@ -73,40 +82,11 @@ const Work: React.FC = () => {
                     </p>
                     <h1 className="font-lora study-header3 mt-8">A few examples: </h1>
                     <div className="demo">
-                            <Button >Azure-themed button</Button>
-                            <Button appearance="primary">Primary button</Button>
-                            <Slider defaultValue={30} />
+                        <Button >Azure-themed button</Button>
+                        <Button appearance="primary">Primary button</Button>
+                        <Slider defaultValue={30} />
                     </div>
                 </div>
-                {/* <div>
-                    <h1 className='font-lora study-header2'>Role</h1>
-                    <p className="text-[18px] leading-normal font-openSans">I developed the package using React, Typescript, HTML, and CSS.</p>
-                </div>
-
-
-                <div>
-                    <h1 className='font-lora study-header2'>Problem Statement</h1>
-                    <p className="text-[18px] leading-normal font-openSans">
-                        Ensure brand alignment with Azure's visual identity and deliver a scalable and maintainable solution.
-                    </p>
-                </div> */}
-
-                {/* 
-                <div className="study-two-col">
-                    <div className="section">
-                        <h1 className='font-lora study-header'>Results</h1>
-                        <p className="text-[18px] leading-normal font-openSans">
-                            Achieved a visually cohesive UI across 40+ Fluent components.
-                        </p>
-                        <p className="text-[18px] leading-normal font-openSans">A few examples:</p>
-                        <div className="demo">
-                            <Button >Azure-themed button</Button>
-                            <Button appearance="primary">Primary button</Button>
-                            <Slider defaultValue={30} />
-                        </div>
-                    </div>
-                </div> */}
-
             </div>
             <Footer />
         </div>
