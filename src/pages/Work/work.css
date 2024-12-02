@@ -77,6 +77,13 @@
     align-items: center;
 }
 
+.demo {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 190px;
+    margin-top: 10px;
+}
 @media screen and (max-width: 940px) {
 
     .hero-desc {
@@ -108,13 +115,19 @@
         flex-direction: column;
         gap: 10px;
     }
+    .study-text {
+        font-size: 14px;
+    }
+    .demo {
+        font-size: 12px;
+        width: 160px;
+    }
+    .demo Button {
+        font-size: 12px;
+    }
+    .hero-desc {
+        line-height: 1.3;
+    }
 
 }
 
-.demo {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    width: 190px;
-    margin-top: 10px;
-}

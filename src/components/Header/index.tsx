@@ -54,6 +54,7 @@ const Header2: React.FC = () => {
             }
         });
     });
+
     React.useEffect(() => {
         const handleScroll = () => {
             const header = document.getElementById('header');
@@ -72,7 +73,7 @@ const Header2: React.FC = () => {
     }, []);
 
     return (
-        <div id='header' className="h-[60px] sticky top-0 z-50 flex justify-between items-center top-padding">
+        <div id='header' className="min-h-[60px] sticky top-0 z-50 flex justify-between items-center top-padding">
             <img onClick={handleHomeClick} className="w-[25px] hover:cursor-pointer" src={logo}></img>
             <div className="hidden lg:block">
                 <div className="flex flex-row gap-8 font-openSans text-[16px]">

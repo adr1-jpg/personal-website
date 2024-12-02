@@ -40,20 +40,20 @@ const Work: React.FC = () => {
                 <div className="three-col top-section">
                     <div className="">
                         <h1 className='font-lora text-blue info-header'>Role</h1>
-                        <p className="text-[18px] leading-normal font-openSans">Developer</p>
+                        <p className="text-[18px] leading-normal font-openSans study-text">Developer</p>
                     </div>
                     <div className="">
                         <h1 className='font-lora text-blue info-header'>Release</h1>
-                        <p className="text-[18px] leading-normal font-openSans">August 2024</p>
+                        <p className="text-[18px] leading-normal font-openSans study-text">August 2024</p>
                     </div>
                     <div className="">
                         <h1 className='font-lora text-blue info-header'>Tools</h1>
-                        <p className="text-[18px] leading-normal font-openSans">React, Typescript, HTML, CSS</p>
+                        <p className="text-[18px] leading-normal font-openSans study-text">React, Typescript, HTML, CSS</p>
                     </div>
                 </div>
                 <div className="">
                     <h1 className='font-lora study-header'>Overview</h1>
-                    <p className="text-[18px] leading-normal font-openSans">In 2022, Microsoft launched <a href="https://fluent2.microsoft.design/" target="_blank" className="text-light-blue font-semibold">Fluent v9</a>,
+                    <p className="text-[18px] leading-normal font-openSans study-text">In 2022, Microsoft launched <a href="https://fluent2.microsoft.design/" target="_blank" className="text-light-blue font-semibold">Fluent v9</a>,
                         the latest version of their design system. I developed a custom theme for the Azure portal,
                         applying Azure's brand colors to Fluent components. This ensured a cohesive and consistent
                         styling, typography, and color scheme, aligning with Azure's design language and delivering
@@ -64,7 +64,7 @@ const Work: React.FC = () => {
                 <div className="">
                     <h1 className='font-lora study-header'>Key features</h1>
                     <p className="text-[18px] leading-normal font-openSans">
-                        <ul className="list pl-5">
+                        <ul className="list pl-5 study-text">
                             <li className="font-openSans">Light and Dark theme</li>
                             <li className="font-openSans">High contrast mode</li>
                             <li className="font-openSans">Easy implementation: Simply import the desired theme and wrap your components with
@@ -76,7 +76,7 @@ const Work: React.FC = () => {
                             <Button >Azure-themed button</Button>
                             <Button appearance="primary">Primary button</Button>
                             <Slider defaultValue={30} />
-                        </div>
+                    </div>
                 </div>
                 {/* <div>
                     <h1 className='font-lora study-header2'>Role</h1>
