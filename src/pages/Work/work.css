@@ -1,68 +1,116 @@
 .study-container {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 30px;
 }
+
 .study-header {
     font-size: 26px;
     font-weight: 500;
     min-height: fit-content;
-    margin: 25px 0 10px 0;
+    margin-bottom: 12px;
 }
+
 .hero-desc {
-    font-size:28px;
+    font-size: 28px;
     margin-top: 15px;
 }
+.list {
+    list-style-type: disc;
+
+}
+.list li::marker {
+    color: #033D75;
+}
+
 .study-header2 {
     font-size: 22px;
     font-weight: 500;
     min-height: fit-content;
     margin: 10px 0 10px 0;
 }
+
+.top-section {
+    margin-top: 25px;
+}
+
+.section {
+    margin-top: 30px;
+
+}
+
 .study-header3 {
     font-size: 18px;
     font-weight: 500;
     min-height: fit-content;
     margin: 15px 0 10px 0;
 }
+
 .study-two-col {
     display: flex;
     gap: 20px;
 }
-.hero-container{
+.three-col {
+    display: flex;
+    width: 100%;
+    gap: 15px;
+  ;
+}
+.three-col div {
+    width: 33.33%;
+}
+
+.info-header{
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.hero-container {
     align-items: center;
     padding: 80px 80px 80px 0px;
 
 }
+
 .results-container {
     display: flex;
-    gap:10px;
+    gap: 10px;
     align-items: center;
 }
+
 @media screen and (max-width: 940px) {
 
     .hero-desc {
-        font-size:28px;
+        font-size: 28px;
         margin-top: 15px;
     }
-    
+
 }
+
 @media screen and (max-width: 670px) {
     .study-two-col {
         flex-direction: column;
     }
+
     .hero-desc {
-        font-size:24px;
+        font-size: 24px;
         margin-top: 15px;
     }
+
     .hero-container {
         border-radius: 0;
     }
+
     .hero-body {
         padding-left: 10px;
     }
-    
+    .three-col {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
 }
+
 .demo {
     display: flex;
     flex-direction: column;

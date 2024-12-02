@@ -4,7 +4,7 @@ import { Button, Slider } from "@fluentui/react-components";
 import Header from "../../components/Header";
 import theme from '../../assets/images/azure-theme-button.png'
 import azure from '../../assets/icons/azure-theme.svg'
-import azureTheme from '../../assets/icons/azure-theme.png'
+import azureTheme from '../../assets/icons/azure-theme.svg'
 import npm from '../../assets/icons/npm.png'
 import github from '../../assets/icons/github.svg'
 import Footer from "../../components/Footer";
@@ -34,9 +34,24 @@ const Work: React.FC = () => {
                     </h1>
                 </div>
 
+
             </div>
             <div className="study-container bp">
-                <div>
+                <div className="three-col top-section">
+                    <div className="">
+                        <h1 className='font-lora text-blue info-header'>Role</h1>
+                        <p className="text-[18px] leading-normal font-openSans">Developer</p>
+                    </div>
+                    <div className="">
+                        <h1 className='font-lora text-blue info-header'>Release</h1>
+                        <p className="text-[18px] leading-normal font-openSans">August 2024</p>
+                    </div>
+                    <div className="">
+                        <h1 className='font-lora text-blue info-header'>Tools</h1>
+                        <p className="text-[18px] leading-normal font-openSans">React, Typescript, HTML, CSS</p>
+                    </div>
+                </div>
+                <div className="">
                     <h1 className='font-lora study-header'>Overview</h1>
                     <p className="text-[18px] leading-normal font-openSans">In 2022, Microsoft launched <a href="https://fluent2.microsoft.design/" target="_blank" className="text-light-blue font-semibold">Fluent v9</a>,
                         the latest version of their design system. I developed a custom theme for the Azure portal,
@@ -44,13 +59,26 @@ const Work: React.FC = () => {
                         styling, typography, and color scheme, aligning with Azure's design language and delivering
                         a unified experience for millions of global users.
                     </p>
-                    <div className="flex flex-row gap-3 mt-3">
-                        <a className="hover:cursor-pointer" href='https://www.npmjs.com/package/@fluentui/azure-themes?activeTab=readme' target="_blank"><img className='max-w-[30px]' src={npm} /></a>
-                        <a className="hover:cursor-pointer" href='https://github.com/microsoft/fluentui-contrib/tree/main/packages/azure-theme' target="_blank"><img className='max-w-[30px]' src={github} /></a>
-                    </div>
                 </div>
 
-                <div>
+                <div className="">
+                    <h1 className='font-lora study-header'>Key features</h1>
+                    <p className="text-[18px] leading-normal font-openSans">
+                        <ul className="list pl-5">
+                            <li className="font-openSans">Light and Dark theme</li>
+                            <li className="font-openSans">High contrast mode</li>
+                            <li className="font-openSans">Easy implementation: Simply import the desired theme and wrap your components with
+                                <a href="https://fluent2.microsoft.design/components/web/react/fluentprovider/usage" target="_blank" className="text-light-blue hover:cursor-pointer font-semibold"> FluentProvider</a></li>
+                        </ul>
+                    </p>
+                    <h1 className="font-lora study-header3 mt-8">A few examples: </h1>
+                    <div className="demo">
+                            <Button >Azure-themed button</Button>
+                            <Button appearance="primary">Primary button</Button>
+                            <Slider defaultValue={30} />
+                        </div>
+                </div>
+                {/* <div>
                     <h1 className='font-lora study-header2'>Role</h1>
                     <p className="text-[18px] leading-normal font-openSans">I developed the package using React, Typescript, HTML, and CSS.</p>
                 </div>
@@ -61,12 +89,11 @@ const Work: React.FC = () => {
                     <p className="text-[18px] leading-normal font-openSans">
                         Ensure brand alignment with Azure's visual identity and deliver a scalable and maintainable solution.
                     </p>
-                </div>
+                </div> */}
 
-
+                {/* 
                 <div className="study-two-col">
-                    <div>
-
+                    <div className="section">
                         <h1 className='font-lora study-header'>Results</h1>
                         <p className="text-[18px] leading-normal font-openSans">
                             Achieved a visually cohesive UI across 40+ Fluent components.
@@ -78,7 +105,7 @@ const Work: React.FC = () => {
                             <Slider defaultValue={30} />
                         </div>
                     </div>
-                </div>
+                </div> */}
 
             </div>
             <Footer />

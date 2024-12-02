@@ -4,7 +4,7 @@ import Footer from '../../components/Footer'
 import self from '../../assets/images/self.jpg'
 import nyc from '../../assets/images/nyc-me.jpeg'
 import cs from '../../assets/images/me-cs.jpg'
-import azureTheme from '../../assets/icons/azure-theme.png'
+import azureTheme from '../../assets/icons/azure-theme.svg'
 import cvc from '../../assets/icons/cvc.png'
 import aquaire from '../../assets/icons/AQUAire.png'
 import neighborhood from '../../assets/icons/neighborhood.svg'
@@ -145,14 +145,15 @@ const Home: React.FC = () => {
                                     <img src={azureTheme} className='one-card-logo h-auto' />
                                 </div>
                             </div>
+                            
                             <div className='max-1236:mt-2'>
                                 <h1 className='font-lora card-title'>Azure Theme for Fluent UI</h1>
                                 <p className='font-openSans card-text'>A custom theme package for Fluent UI, aligning components with Azure Portal's
                                     brand colors and design language.</p>
                             </div>
                         </div>
+    
                     </Link>
-                    
                     {/* <div className='two-card-container bp'>
 
                         <Link to='/campus' className='two-card'>
