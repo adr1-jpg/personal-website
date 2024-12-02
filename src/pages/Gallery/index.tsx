@@ -59,7 +59,8 @@ const Gallery: React.FC = () => {
                 <h2 className='font-inter text-left text-3xl'>Photos</h2>
                 <p className="mb-5 font-openSans mt-3 about-text" >In my free time, I enjoy exploring the West Coast, international travel, and photography.</p>
                 <ImageList variant="quilted"
-                    cols={2}>
+                    cols={2}
+                    style={{ minHeight: '600px' }}>
                     {itemData.map((item) => (
                         <ImageListItem>
                             <img loading='lazy' src={item.img}
