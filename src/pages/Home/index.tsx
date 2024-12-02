@@ -16,6 +16,9 @@ import { Card } from '@fluentui/react-components'
 import Image from '../../components/ImageLoad';
 
 const Home: React.FC = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
 
     const navigate = useNavigate();
 
