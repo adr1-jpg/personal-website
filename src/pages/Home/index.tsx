@@ -154,7 +154,7 @@ const Home: React.FC = () => {
                         </div>
     
                     </Link>
-                    {/* <div className='two-card-container bp'>
+                    <div className='two-card-container bp'>
 
                         <Link to='/campus' className='two-card'>
                             <div className='transition-transform 
@@ -171,7 +171,7 @@ const Home: React.FC = () => {
                             </div>
                         </Link>
 
-                        <Link to='/aquaire' className='two-card'>
+                        {/* <Link to='/aquaire' className='two-card'>
                             <div className='transition-transform 
                             duration-200 hover:-translate-y-2 hover:cursor-pointer'>
                                 <div className='flex flex-col'>
@@ -182,10 +182,10 @@ const Home: React.FC = () => {
                                         font-medium mt-2 leading-tight card-title-two'>Local, clean water</p>
                                 </div>
                             </div>
-                        </Link>
+                        </Link> */}
 
 
-                    </div> */}
+                    </div>
                 </div>
             </div>
             <Footer />

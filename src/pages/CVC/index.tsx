@@ -3,64 +3,104 @@ import { useEffect } from "react";
 import { Button, Slider } from "@fluentui/react-components";
 import Header from "../../components/Header";
 import graphic from '../../assets/icons/graphic.svg';
-
+import './cvc.css'
 import npm from '../../assets/icons/npm.png'
 import github from '../../assets/icons/github.svg'
 import Footer from "../../components/Footer";
+import sketch from '../../assets/images/sketch.png'
+import design from '../../assets/images/final-design.png'
 
 const CVC: React.FC = () => {
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
     return (
-        <div id='cvc' className="flex flex-col bg-background">
+        <div id='cvc' className="flex flex-col bp">
             <Header />
             <div className='flex flex-col gap-6 justify-start 
                 items-center
                 bg-[#FCE4D5]
                 shadow-s 
+                rounded-[20px]
                 '
-                // style={{height: 'calc(100vh - 300px)'}}
+            // style={{height: 'calc(100vh - 300px)'}}
             >
-                <div className="max-w-[1024px] w-full px-10 py-16 justify-items-start relative min-h-[500px]">
+                <div className="max-w-[1024px] campus-hero-container">
                     <div className='w-full max-640:w-[250px] h-auto' >
-                        <p className=' text-[40px] max-1236:text-[50px] font-medium font-poppins leading-tight text-campus'>Columbia Virtual Campus</p>
-                        <h1 className="font-lora font-medium lg:text-[28px] text-4xl mt-1 text-start">
+                        <p className='font-poppins text-campus'>Columbia Virtual Campus</p>
+                        <h1 className="font-lora text-campus-desc text-start">
                             Reimagining student connection
                         </h1>
                     </div>
 
                     <div className="flex flex-row w-auto">
-                        <div className="mt-10 basis-1/6 leading-relaxed">
-                            <a className="font-lora font-[24px] font-bold hover:cursor-pointer text-blue hover:text-blue hover:font-bold">Overview</a>
-                            <p className="font-lora font-[24px] text-[#8CB3CC] hover:cursor-pointer hover:font-bold">Research</p>
-                            <p className="font-lora font-[24px] text-[#8CB3CC] hover:cursor-pointer hover:font-bold">Design</p>
-                            <p className="font-lora font-[24px] text-[#8CB3CC] hover:cursor-pointer hover:font-bold">Result</p>
-                        </div>
-                        <div className="absolute bottom-[0] right-[0] w-[80%] ">
+                        <div className="graphic ">
                             <img src={graphic} className='h-auto' />
                         </div>
-                        
+
                     </div>
 
                 </div>
 
             </div>
-            <div className="flex justify-center">
-                <div className='flex flex-col max-w-[1024px] w-full p-10'>
-                    <h1 className='font-lora text-xl font-medium leading-normal mb-2'>Overview</h1>
-                    <div className='flex flex-col shadow-s'>
-                        <p className='font-openSans text-[16px] leading-normal'>As a designer for Columbia Virtual Campus, I contributed 
-                            to enhancing a platform developed during the pandemic to foster remote student connection. 
-                            My primary responsibility was redesigning the homepage to improve usability and accessibility. 
-                            I updated font colors to meet WCAG AA accessibility standards, ensuring an inclusive user 
-                            experience, and redesigned the events section to prominently feature highlighted events, 
-                            improving visibility and engagement. This redesign strengthened the platform's mission of 
-                            building community in a challenging remote environment.</p>
+
+
+            <div className="study-container bp">
+                <div className="three-col top-section">
+                    <div className="">
+                        <h1 className='font-lora text-blue info-header'>Role</h1>
+                        <p className="text-[18px] leading-normal font-openSans info-text">Designer</p>
+                    </div>
+                    <div className="">
+                        <h1 className='font-lora text-blue info-header'>Duration</h1>
+                        <p className="text-[18px] leading-normal font-openSans info-text">Sept 2020 - May 2021</p>
+                    </div>
+                    <div className="">
+                        <h1 className='font-lora text-blue info-header'>Tools</h1>
+                        <p className="text-[18px] leading-normal font-openSans info-text">Figma</p>
                     </div>
                 </div>
+
+                <div className="">
+                    <h1 className='font-lora study-header'>Overview</h1>
+                    <p className="font-openSans design-desc">As a designer for Columbia Virtual Campus, I contributed
+                        to enhancing a platform developed during the pandemic to foster remote student connection. I was tasked with redesigning the 'events' section of the homepage to improve user experience and accessibility.
+                        <br /><br />Key updates included adjusting font colors to meet WCAG AA standards for inclusivity and highlighting key events to enhance visibility and engagement.
+                    </p>
+                </div>
+
+                <div className="">
+                    <h1 className='font-lora study-header'>Design Process</h1>
+                    <h1 className='font-openSans design-desc'>I began with a low-fidelity prototype for the events section, 
+                        focusing on highlighting a featured event alongside other options. After experimenting with layouts, 
+                        I finalized a scrollable design that balances visibility and functionality, enabling users to explore 
+                        more events seamlessly.</h1>
+                    <div className="design-container mt-5 mb-5">
+
+                        <div className="">
+                            <div className="design-img">
+                                <img src={sketch} />
+                            </div>
+
+                        </div>
+                    </div>
+                    <h1 className='font-openSans design-desc mb-5'>Using this foundation, I created a high-fidelity mockup in Figma, incorporating visual design elements like color palette and interactive components.</h1>
+                    <div className="design-container">
+                        <div className="">
+                            <div className="design-img">
+                                <img src={design} />
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+
             </div>
 
+
+            <Footer />
 
         </div>
     )

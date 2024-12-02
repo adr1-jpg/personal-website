@@ -5,7 +5,7 @@ import github from '../../assets/icons/github.png'
 import './footer.css'
 const Footer: React.FC = () => {
     return (
-        <div className="bp bg-background">
+        <div className="bp">
             <div className="footer-container">
                 <div className="footer-left">
                     <p>Made by Adriana Orantes</p>
