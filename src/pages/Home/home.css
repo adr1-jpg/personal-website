@@ -276,7 +276,7 @@
     width: 200px;
   }
 }
-@media screen and (max-width: 270px) {
+@media screen and (max-width: 400px) {
   .intro {
     padding-top: 50px;
   }
