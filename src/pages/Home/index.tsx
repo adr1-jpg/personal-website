@@ -123,7 +123,7 @@ const Home: React.FC = () => {
                     </div>
                     <p className='text-left leading-loose desc font-openSans'>
                         I love tackling real-world problems that make a difference in people's lives.<br />
-                        Design Engineer @ <span className='text-light-blue'>Microsoft Azure</span>.<br />
+                        Design Engineer @ <a className='text-light-blue hover:cursor-pointer' href='https://azure.microsoft.com/en-us/pricing/purchase-options/azure-account/search?ef_id=_k_Cj0KCQiAr7C6BhDRARIsAOUKifj3TEMgGBDB3PWi2jB14RqTjd-y-2LI1j4um87UHDilRu9mQ3TmM2AaAh4DEALw_wcB_k_&OCID=AIDcmmfq865whp_SEM__k_Cj0KCQiAr7C6BhDRARIsAOUKifj3TEMgGBDB3PWi2jB14RqTjd-y-2LI1j4um87UHDilRu9mQ3TmM2AaAh4DEALw_wcB_k_&gad_source=1&gclid=Cj0KCQiAr7C6BhDRARIsAOUKifj3TEMgGBDB3PWi2jB14RqTjd-y-2LI1j4um87UHDilRu9mQ3TmM2AaAh4DEALw_wcB' target='_blank'>Microsoft Azure</a>.<br />
                         Puzzle, cycling, and dog enthusiast.
                     </p>
                 </div>

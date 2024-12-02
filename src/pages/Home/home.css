@@ -227,7 +227,7 @@
   }
 
   .intro {
-    min-height: fit-content;
+    min-height: max-content;
   }
   .self {
     align-self: baseline;
