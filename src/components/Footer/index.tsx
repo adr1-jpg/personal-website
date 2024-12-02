@@ -8,7 +8,7 @@ const Footer: React.FC = () => {
         <div className="bp">
             <div className="footer-container">
                 <div className="footer-left">
-                    <p>Made by Adriana Orantes</p>
+                    <p>Made by Adriana Orantes ✨</p>
                  </div>
                 <div className="footer-right">
                     <a className="hover:cursor-pointer flex items-center" href="https://www.linkedin.com/in/adriana-orantes-31a5a6198/" target="_blank">

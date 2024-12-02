@@ -13,6 +13,7 @@ import { useState, useEffect } from 'react';
 import { useForm } from '../../context/DataProvider';
 import { Link, useNavigate } from 'react-router-dom';
 import { Card } from '@fluentui/react-components'
+import Image from '../../components/ImageLoad';
 
 const Home: React.FC = () => {
 
@@ -119,7 +120,8 @@ const Home: React.FC = () => {
             <div className='flex bp intro' >
                 <div className='h-auto'>
                     <div className=''>
-                        <TypingEffect text="Hi, I'm Adri!" />
+                        {/* <TypingEffect text="Hi, I'm Adri!" /> */}
+                        <p className='font-lora text-blue relative greeting'>Hi, I'm Adri!</p>
                     </div>
                     <p className='text-left leading-loose desc font-openSans'>
                         I love tackling real-world problems that make a difference in people's lives.<br />
@@ -128,7 +130,8 @@ const Home: React.FC = () => {
                     </p>
                 </div>
                 <div className='h-auto self'>
-                    <img src={self} rel='preload' className='w-full max-w-md max-1236:max-w-60 h-auto rounded-[20px] ' />
+                    <Image src={self} alt='self' />
+                    {/* <img src={self} rel='preload' className='w-full max-w-md max-1236:max-w-60 h-auto rounded-[20px] ' /> */}
                 </div>
             </div>
             <div className='bp'>
@@ -147,7 +150,7 @@ const Home: React.FC = () => {
                                     </div>
                                 </div>
 
-                                <div className='max-1236:mt-2'>
+                                <div className='max-1236:mt-2 content-center'>
                                     <h1 className='font-lora card-title'>Azure Theme for Fluent UI</h1>
                                     <p className='font-openSans card-text'>A custom theme package for Fluent UI, aligning components with Azure Portal's
                                         brand colors and design language.</p>

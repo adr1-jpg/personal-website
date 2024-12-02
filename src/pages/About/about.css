@@ -23,5 +23,27 @@
     .about-desc {
         gap: 1rem;
     }
+
+    .about-img-2 {
+        border-radius: 0px !important;
+    }
+    
+}
+
+.about-img {
+    width: 300px;
+    height: 350px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+.about-img-2 {
+    border-radius: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    .about-section {
+        gap: 20px !important;
+    }
+ 
     
 }

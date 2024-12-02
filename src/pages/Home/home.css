@@ -124,7 +124,7 @@
 }
 .one-card-body {
   display: flex;
-  gap:15px;
+  gap:30px;
 }
 .card-title {
   font-size: 22px;
@@ -213,7 +213,7 @@
   .one-card-body {
     display: flex;
     flex-direction: column;
-
+    gap: 10px;
   }
   .one-card-logo {
     width: 250px;

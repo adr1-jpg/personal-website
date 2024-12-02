@@ -3,6 +3,7 @@ import nyc from '../../assets/images/nyc-me.jpeg'
 import cs from '../../assets/images/me-cs.jpg'
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
+import Image from '../../components/ImageLoad'
 import { useEffect } from "react";
 import './about.css'
 const About: React.FC = () => {
@@ -23,22 +24,21 @@ const About: React.FC = () => {
                             I first discovered computer science in high school through a summer program at MIT. It was tough—I had never experienced such academic rigor. But by proactively seeking support, I persevered.</p>
                     </div>
 
-                    <div className="basis-1/2">
-                        <img src={nyc} className="rounded-[20px]"/>
+                    <div className="basis-1/2 content-center justify-items-center">
+                        <img src={nyc} className="about-img-2"/>
                     </div>
                 </div>
             </div>
             <div className="justify-items-center bp">
                 
                 <div className="flex about-section max-w-[1024px] w-full py-10 content-center gap-10 rounded-[20px]">
-                <div className="basis-1/2">
-                        <img src={cs} className="rounded-[20px]"/>
+                <div className="basis-1/2 content-center justify-items-center">
+                        <img src={cs} className="about-img-2"/>
                     </div>
                     <div className="flex flex-col gap-6 leading-normal basis-1/2">
                         <p className="font-lora text-[50px] about-header">I can, and I will</p>
                         <p className="font-openSans leading-normal">
                             For undergrad, I attended Columbia University's School of Engineering. I majored in Computer Science with a focus on applications.
-
                             As a first-generation college student, I struggled navigating higher education. With the support of friends, family, and my Columbia community, I gained the confidence to embrace difficult challenges and push forward.</p>
                     </div>
 

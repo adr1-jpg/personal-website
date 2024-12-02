@@ -1,0 +1,31 @@
+.image-container {
+    background-color: transparent;
+    overflow: hidden;
+    position: relative;
+    border-radius: 20px;
+    width: 300px;
+    height: 350px;
+}
+
+@media screen and (max-width: 940px) {
+    .image-container {
+        width: 250px;
+        height: 300px;
+        border-radius: 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .image-container {
+        width: 200px;
+        height: 250px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .image-container {
+        width: 150px;
+        height: 200px;
+        border-radius: 3px;
+    }
+}
