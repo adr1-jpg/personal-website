@@ -136,24 +136,27 @@ const Home: React.FC = () => {
                 <h1 className='text-2xl font-lora text-left work-title mb-5'>
                     Check out my work ✨
                 </h1>
-                <div className='work-container transition-transform 
-                        duration-200 hover:-translate-y-2 hover:cursor-pointer'>
-                    <Link to='/work' className='one-card'>
-                        <div className='one-card-body'>
-                            <div className='card flex flex-row '>
-                                <div className='content-center'>
-                                    <img src={azureTheme} className='one-card-logo h-auto' />
+                <div className='work-container'>
+                    <div className='transition-transform 
+                        duration-200 hover:-translate-y-2 hover:cursor-pointe'>
+                        <Link to='/work' className='one-card'>
+                            <div className='one-card-body'>
+                                <div className='card flex flex-row '>
+                                    <div className='content-center'>
+                                        <img src={azureTheme} className='one-card-logo h-auto' />
+                                    </div>
+                                </div>
+
+                                <div className='max-1236:mt-2'>
+                                    <h1 className='font-lora card-title'>Azure Theme for Fluent UI</h1>
+                                    <p className='font-openSans card-text'>A custom theme package for Fluent UI, aligning components with Azure Portal's
+                                        brand colors and design language.</p>
                                 </div>
                             </div>
-                            
-                            <div className='max-1236:mt-2'>
-                                <h1 className='font-lora card-title'>Azure Theme for Fluent UI</h1>
-                                <p className='font-openSans card-text'>A custom theme package for Fluent UI, aligning components with Azure Portal's
-                                    brand colors and design language.</p>
-                            </div>
-                        </div>
-    
-                    </Link>
+
+                        </Link>
+                    </div>
+
                     <div className='two-card-container bp'>
 
                         <Link to='/campus' className='two-card'>
