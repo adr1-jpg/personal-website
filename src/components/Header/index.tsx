@@ -111,9 +111,9 @@ const Header2: React.FC = () => {
         </MenuTrigger>
         <MenuPopover>
           <MenuList>
-            <MenuItem onClick={handleHomeClick}>Home</MenuItem>
-            <MenuItem onClick={handleAboutClick}>About me</MenuItem>
-            <MenuItem onClick={handleGalleryClick}>Photos</MenuItem>
+            <MenuItem onClick={handleHomeClick} className="font-lora">Home</MenuItem>
+            <MenuItem onClick={handleAboutClick} className="font-lora">About me</MenuItem>
+            <MenuItem onClick={handleGalleryClick} className="font-lora">Photos</MenuItem>
           </MenuList>
         </MenuPopover>
       </Menu>
