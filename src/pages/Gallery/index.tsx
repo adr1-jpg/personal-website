@@ -51,7 +51,7 @@ const Gallery: React.FC = () => {
     ];
 
     return (
-        <div className="bg-background ">
+        <div className="bg-background">
             <Header />
 
             <div className='mx-32 hidden lg:block max-w-[1024px] mt-5 justify-self-center'>

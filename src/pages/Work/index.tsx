@@ -14,7 +14,7 @@ const Work: React.FC = () => {
         window.scrollTo(0, 0);
     }, []);
     return (
-        <div id='work' className="bg-background ">
+        <div id='work' className="bg-background">
             <Header />
             <div className='flex flex-col gap-6 justify-start 
                 shadow-s 

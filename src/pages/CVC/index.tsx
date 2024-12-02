@@ -15,13 +15,16 @@ const CVC: React.FC = () => {
         window.scrollTo(0, 0);
     }, []);
     return (
-        <div id='cvc' className="flex flex-col bp">
+        <div id='cvc' className="bg-background">
             <Header />
             <div className='flex flex-col gap-6 justify-start 
                 items-center
                 bg-[#FCE4D5]
                 shadow-s 
                 rounded-[20px]
+                bp
+                items-center
+            
                 '
             // style={{height: 'calc(100vh - 300px)'}}
             >
