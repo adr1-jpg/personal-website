@@ -89,6 +89,10 @@
     width: fit-content;
     margin-top: 10px;
 }
+.study-text {
+    font-size: 18px;
+    line-height: 28px;
+}
 @media screen and (max-width: 940px) {
 
     .hero-desc {

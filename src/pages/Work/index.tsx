@@ -41,20 +41,20 @@ const Work: React.FC = () => {
                 <div className="three-col top-section">
                     <div className="">
                         <h1 className='font-lora text-blue info-header'>Role</h1>
-                        <p className="text-[18px] leading-normal font-openSans study-text">Developer</p>
+                        <p className="text-[18px] leading-normal font-openSans info-text">Developer</p>
                     </div>
                     <div className="">
                         <h1 className='font-lora text-blue info-header'>Release</h1>
-                        <p className="text-[18px] leading-normal font-openSans study-text">August 2024</p>
+                        <p className="text-[18px] leading-normal font-openSans info-text">August 2024</p>
                     </div>
                     <div className="">
                         <h1 className='font-lora text-blue info-header'>Tools</h1>
-                        <p className="text-[18px] leading-normal font-openSans study-text">React, Typescript, HTML, CSS</p>
+                        <p className="text-[18px] leading-normal font-openSans info-text">React, Typescript, HTML, CSS</p>
                     </div>
                 </div>
                 <div className="">
                     <h1 className='font-lora study-header'>Overview</h1>
-                    <p className="text-[18px] leading-normal font-openSans study-text">In 2022, Microsoft launched <a href="https://fluent2.microsoft.design/" target="_blank" className="text-light-blue font-semibold">Fluent v9</a>,
+                    <p className="font-openSans design-desc">In 2022, Microsoft launched <a href="https://fluent2.microsoft.design/" target="_blank" className="text-light-blue font-semibold">Fluent v9</a>,
                         the latest version of their design system. I developed a custom theme for the Azure portal,
                         applying Azure's brand colors to Fluent components. This ensured a cohesive and consistent
                         styling, typography, and color scheme, aligning with Azure's design language and delivering
@@ -73,19 +73,32 @@ const Work: React.FC = () => {
                 <div className="">
                     <h1 className='font-lora study-header'>Key features</h1>
                     <p className="text-[18px] leading-normal font-openSans">
-                        <ul className="list pl-5 study-text">
+                        <ul className="list pl-5 design-desc">
                             <li className="font-openSans">Light and Dark theme</li>
                             <li className="font-openSans">High contrast mode</li>
                             <li className="font-openSans">Easy implementation: Simply import the desired theme and wrap your components with
-                                <a href="https://fluent2.microsoft.design/components/web/react/fluentprovider/usage" target="_blank" className="text-light-blue hover:cursor-pointer font-semibold"> FluentProvider</a></li>
+                                <a href="https://fluent2.microsoft.design/components/web/react/fluentprovider/usage"
+                                    target="_blank"
+                                    className="text-light-blue hover:cursor-pointer font-semibold"> FluentProvider
+                                </a>
+                            </li>
                         </ul>
                     </p>
-                    <h1 className="font-lora study-header3 mt-8">A few examples: </h1>
+
+
+                    <h1 className="text-[18px] font-openSans design-desc mt-4">This button demonstrates the Azure Theme styling 
+                        applied to a Fluent button. On click, it navigates to a 
+                        Storybook containing a showcase of all Fluent components styled with the Azure Theme. </h1>
                     <div className="demo">
-                        <Button >Azure-themed button</Button>
-                        <Button appearance="primary">Primary button</Button>
-                        <Slider defaultValue={30} />
+                        <a href="https://microsoft.github.io/fluentui-contrib/azure-theme/?path=/docs/packages-azure-theme--docs"
+                            target="_blank">
+                            <Button appearance="primary">View all components</Button>
+                        </a>
+
+                        {/* <Slider defaultValue={30} /> */}
                     </div>
+
+
                 </div>
             </div>
             <Footer />

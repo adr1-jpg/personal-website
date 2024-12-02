@@ -18,7 +18,7 @@ module.exports = {
         'blue': '#033D75',
         'light-blue': '#0078E9',
         'pastel-blue': '#E6F2FF',
-        'aquaire': '#3A435E',
+        'md-blue': '#3A435E',
         'campus': '#0072CE',
         'orange': '#F6C09F',
         'gray-card': '#24292E',
