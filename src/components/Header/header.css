@@ -9,6 +9,7 @@
 @media screen and (max-width: 640px) {
     .top-padding {
         padding: 15px 10px;
+        margin-bottom: 80px;
     }
     
 }
