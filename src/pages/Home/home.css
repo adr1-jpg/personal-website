@@ -38,6 +38,9 @@
   background: radial-gradient(circle at 60% top, #BAE1FF, #F5F5F5 30%);
 
 }
+.bg {
+  background-color: #F5F5F5;
+}
 
 .bp {
   max-width: 1024px;
@@ -280,4 +283,10 @@
   .intro {
     padding-top: 50px;
   }
+}
+.profile-img {
+  width: 100%;
+  height: auto;
+
+
 }

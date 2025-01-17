@@ -118,7 +118,7 @@ const Home: React.FC = () => {
     }
 
     return (
-        <div className='bg-gradient'>
+        <div className='bg'>
             <Header />
             <div className='flex bp intro' >
                 <div className='h-auto'>
@@ -132,7 +132,7 @@ const Home: React.FC = () => {
                         Puzzle, cycling, and dog enthusiast.
                     </p>
                 </div>
-                <div className='h-auto self'>
+                <div className='h-auto self profile-img'>
                     <Image src={self} alt='self' />
                     {/* <img src={self} rel='preload' className='w-full max-w-md max-1236:max-w-60 h-auto rounded-[20px] ' /> */}
                 </div>

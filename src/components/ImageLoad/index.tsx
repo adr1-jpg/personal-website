@@ -19,7 +19,7 @@ const Image: React.FC<LazyImageProps> = ({ src, placeholderSrc, alt, ...props })
           height: "100%",
           objectFit: "cover",
           opacity: isLoaded ? 1 : 0, // Start invisible
-          transition: "opacity 2.5s ease-in-out", // Smooth fade-in
+          // transition: "opacity 2.5s ease-in-out", // Smooth fade-in
           position: "absolute",
           top: 0,
           left: 0,
