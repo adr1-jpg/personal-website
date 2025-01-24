@@ -132,7 +132,7 @@ const Home: React.FC = () => {
                         Puzzle, cycling, and dog enthusiast.
                     </p>
                 </div>
-                <div className='h-auto self profile-img'>
+                <div className='h-auto self '>
                     <Image src={self} alt='self' />
                     {/* <img src={self} rel='preload' className='w-full max-w-md max-1236:max-w-60 h-auto rounded-[20px] ' /> */}
                 </div>
@@ -143,7 +143,7 @@ const Home: React.FC = () => {
                     Check out my work ✨
                 </h1>
                 <div className='work-container'>
-                    <div className='transition-transform 
+                    {/* <div className='transition-transform 
                         duration-200 hover:-translate-y-2 hover:cursor-pointer'>
                         <Link to='/work' className='one-card'>
                             <div className='one-card-body'>
@@ -161,7 +161,7 @@ const Home: React.FC = () => {
                             </div>
 
                         </Link>
-                    </div>
+                    </div> */}
 
                     <div className='two-card-container bp'>
                         
