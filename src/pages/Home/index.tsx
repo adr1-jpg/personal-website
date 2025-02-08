@@ -143,7 +143,7 @@ const Home: React.FC = () => {
                     Check out my work ✨
                 </h1>
                 <div className='work-container'>
-                    {/* <div className='transition-transform 
+                    <div className='transition-transform 
                         duration-200 hover:-translate-y-2 hover:cursor-pointer'>
                         <Link to='/work' className='one-card'>
                             <div className='one-card-body'>
@@ -161,7 +161,7 @@ const Home: React.FC = () => {
                             </div>
 
                         </Link>
-                    </div> */}
+                    </div>
 
                     <div className='two-card-container bp'>
                         
