@@ -17,39 +17,25 @@ const Gallery: React.FC = () => {
         window.scrollTo(0, 0);
     }, []);
     
-    const [loaded, setLoaded] = useState(false);
-
-    const handleImageLoad = () => {
-        setLoaded(true);
-    };
-
-
     const itemData = [
-        {
-            img: rainier,
-            title: 'Rainier',
-        },
-        {
-            img: lisboa,
-            title: 'Lisboa',
-        },
-        {
-            img: cityscape,
-            title: 'Seattle',
-        },
-        {
-            img: water,
-            title: 'Bainbridge',
-        },
-        {
-            img: love,
-            title: 'Love',
-        },
-        {
-            img: door,
-            title: 'Light',
-        },
+        { img: rainier, title: 'Rainier' },
+        { img: lisboa, title: 'Lisboa' },
+        { img: cityscape, title: 'Seattle' },
+        { img: water, title: 'Bainbridge' },
+        { img: love, title: 'Love' },
+        { img: door, title: 'Light' },
     ];
+
+    // Per-image loading state
+    const [loaded, setLoaded] = useState(Array(itemData.length).fill(false));
+
+    const handleImageLoad = (idx: number) => {
+        setLoaded(prev => {
+            const next = [...prev];
+            next[idx] = true;
+            return next;
+        });
+    };
 
     return (
         <div className="bg-background">
@@ -61,20 +47,33 @@ const Gallery: React.FC = () => {
                 <ImageList variant="quilted"
                     cols={2}
                     style={{ minHeight: '600px' }}>
-                    {itemData.map((item) => (
-                        <ImageListItem>
-                            <img loading='lazy' src={item.img}
-                                onLoad={handleImageLoad}
-                                style={{
+                    {itemData.map((item, idx) => (
+                        <ImageListItem key={item.title} style={{ position: 'relative', minHeight: '300px' }}>
+                            {!loaded[idx] && (
+                                <div style={{
                                     width: '100%',
                                     height: '100%',
+                                    minHeight: '300px',
+                                    background: '#e5e7eb',
+                                    borderRadius: '8px',
+                                    position: 'absolute',
+                                    top: 0,
+                                    left: 0
+                                }} />
+                            )}
+                            <img loading='lazy' src={item.img}
+                                onLoad={() => handleImageLoad(idx)}
+                                style={{
+                                    width: '100%',
+                                    height: '300px',
                                     objectFit: 'cover',
-                                    opacity: loaded ? 1 : 0,
-                                    visibility: loaded ? 'visible' : 'hidden',
-                                    transition: 'opacity 2s ease-in-out',
+                                    opacity: loaded[idx] ? 1 : 0,
+                                    transition: 'opacity 0.5s',
+                                    position: 'relative',
+                                    zIndex: 1
                                 }}
+                                alt={item.title}
                             />
-                            {/* <ImageListItemBar position="below" title={item.title} /> */}
                         </ImageListItem>
                     ))}
                 </ImageList>
@@ -85,20 +84,33 @@ const Gallery: React.FC = () => {
                 <p className="mb-5 font-openSans mt-3 about-text" >In my free time, I enjoy exploring the West Coast, international travel, and photography.</p>
                 <ImageList variant="quilted"
                     cols={1}>
-                    {itemData.map((item) => (
-                        <ImageListItem>
-                            <img loading='lazy' src={item.img}
-                                onLoad={handleImageLoad}
-                                style={{
+                    {itemData.map((item, idx) => (
+                        <ImageListItem key={item.title} style={{ position: 'relative', minHeight: '300px' }}>
+                            {!loaded[idx] && (
+                                <div style={{
                                     width: '100%',
                                     height: '100%',
+                                    minHeight: '300px',
+                                    background: '#e5e7eb',
+                                    borderRadius: '8px',
+                                    position: 'absolute',
+                                    top: 0,
+                                    left: 0
+                                }} />
+                            )}
+                            <img loading='lazy' src={item.img}
+                                onLoad={() => handleImageLoad(idx)}
+                                style={{
+                                    width: '100%',
+                                    height: '300px',
                                     objectFit: 'cover',
-                                    opacity: loaded ? 1 : 0,
-                                    visibility: loaded ? 'visible' : 'hidden',
-                                    transition: 'opacity 2s ease-in-out',
+                                    opacity: loaded[idx] ? 1 : 0,
+                                    transition: 'opacity 0.5s',
+                                    position: 'relative',
+                                    zIndex: 1
                                 }}
+                                alt={item.title}
                             />
-                            {/* <ImageListItemBar position="below" title={item.title} /> */}
                         </ImageListItem>
                     ))}
                 </ImageList>

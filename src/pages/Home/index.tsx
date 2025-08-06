@@ -2,17 +2,13 @@ import React, { useRef } from 'react';
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
 import self from '../../assets/images/self.jpg'
-import nyc from '../../assets/images/nyc-me.jpeg'
-import cs from '../../assets/images/me-cs.jpg'
+
 import azureTheme from '../../assets/icons/azure-theme.svg'
-import cvc from '../../assets/icons/cvc.png'
-import aquaire from '../../assets/icons/AQUAire.png'
-import neighborhood from '../../assets/icons/neighborhood.svg'
+
 import './home.css'
 import { useState, useEffect } from 'react';
 import { useForm } from '../../context/DataProvider';
-import { Link, useNavigate } from 'react-router-dom';
-import { Card } from '@fluentui/react-components'
+import { Link } from 'react-router-dom';
 import Image from '../../components/ImageLoad';
 
 const Home: React.FC = () => {
@@ -20,37 +16,10 @@ const Home: React.FC = () => {
         window.scrollTo(0, 0);
     }, []);
 
-    const navigate = useNavigate();
-
-    const handleCardClick = () => {
-        navigate('/work');
-    };
-    const handleAquaireClick = () => {
-        navigate('./aquaire')
-    }
-    const handleCampusClick = () => {
-        navigate('./campus')
-    }
-    const handleGalleryClick = () => {
-        navigate('/gallery')
-    }
-    const [isVisible, setIsVisible] = useState(false);
-    const [loaded, setLoaded] = useState(false);
-
-    const handleImageLoad = () => {
-        setLoaded(true);
-    };
-
-    const homeRef = useRef<HTMLDivElement | null>(null);
-    const aboutRef = useRef<HTMLDivElement | null>(null);
-    const workRef = useRef<HTMLDivElement | null>(null);
-    const galleryRef = useRef<HTMLDivElement | null>(null);
-
+ 
     const { navState, setNavState } = useForm();
     // Trigger the slide-in effect when the component mounts
-    useEffect(() => {
-        setIsVisible(true);
-    }, []);
+
 
     document.querySelectorAll('a.scroll-link').forEach(anchor => {
         console.log('in a scroll-link')
@@ -149,7 +118,7 @@ const Home: React.FC = () => {
                             <div className='one-card-body'>
                                 <div className='card flex flex-row '>
                                     <div className='content-center'>
-                                        <img src={azureTheme} className='one-card-logo h-auto' />
+                                        <img src={azureTheme} className='one-card-logo h-auto' loading='lazy'/>
                                     </div>
                                 </div>
 
