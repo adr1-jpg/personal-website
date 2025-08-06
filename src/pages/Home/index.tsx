@@ -7,7 +7,6 @@ import azureTheme from '../../assets/icons/azure-theme.svg'
 
 import './home.css'
 import { useState, useEffect } from 'react';
-import { useForm } from '../../context/DataProvider';
 import { Link } from 'react-router-dom';
 import Image from '../../components/ImageLoad';
 
@@ -17,7 +16,6 @@ const Home: React.FC = () => {
     }, []);
 
  
-    const { navState, setNavState } = useForm();
     // Trigger the slide-in effect when the component mounts
 
 
@@ -44,47 +42,7 @@ const Home: React.FC = () => {
     });
 
     const typeRef = useRef<HTMLDivElement>(null);
-    const TypingEffect = ({ text }: { text: string }) => {
-        const [isVisible, setIsVisible] = useState(false);
-        const [displayedText, setDisplayedText] = useState("");
-        const [index, setIndex] = useState(0);
-        useEffect(() => {
-            if (isVisible && index < text.length) {
-                const timeout = setTimeout(() => {
-                    console.log(text)
-                    setDisplayedText((prev) => prev + text[index]);
-                    setIndex(index + 1);
-                }, 120); // Adjust speed of typing here
-                return () => clearTimeout(timeout);
-            }
-        }, [isVisible, index, text]);
-        useEffect(() => {
-            const observer = new IntersectionObserver(
-                ([entry]) => {
-                    if (entry.isIntersecting) {
-                        setIsVisible(true);
-                    }
-                },
-                { threshold: 0.5 }
-            );
-
-            if (typeRef.current) {
-                observer.observe(typeRef.current);
-            }
-
-            return () => {
-                if (typeRef.current) {
-                    observer.unobserve(typeRef.current);
-                }
-            };
-        }, []);
-        return (
-            <div ref={typeRef} className="font-lora text-blue relative greeting" style={{ minWidth: `${text.length}ch` }}>
-                <span style={{ visibility: 'hidden' }}>{text}</span>
-                <span className='absolute left-[0]'>{displayedText}</span>
-            </div>
-        );
-    }
+ 
 
     return (
         <div className='bg'>
@@ -92,12 +50,11 @@ const Home: React.FC = () => {
             <div className='flex bp intro' >
                 <div className='h-auto'>
                     <div className=''>
-                        {/* <TypingEffect text="Hi, I'm Adri!" /> */}
                         <p className='font-lora text-blue relative greeting'>Hi, I'm Adri!</p>
                     </div>
                     <p className='text-left leading-loose desc font-openSans'>
                         I love tackling real-world problems that make a difference in people's lives.<br />
-                        Design Engineer @ <a className='text-light-blue hover:cursor-pointer' href='https://azure.microsoft.com/en-us/pricing/purchase-options/azure-account/search?ef_id=_k_Cj0KCQiAr7C6BhDRARIsAOUKifj3TEMgGBDB3PWi2jB14RqTjd-y-2LI1j4um87UHDilRu9mQ3TmM2AaAh4DEALw_wcB_k_&OCID=AIDcmmfq865whp_SEM__k_Cj0KCQiAr7C6BhDRARIsAOUKifj3TEMgGBDB3PWi2jB14RqTjd-y-2LI1j4um87UHDilRu9mQ3TmM2AaAh4DEALw_wcB_k_&gad_source=1&gclid=Cj0KCQiAr7C6BhDRARIsAOUKifj3TEMgGBDB3PWi2jB14RqTjd-y-2LI1j4um87UHDilRu9mQ3TmM2AaAh4DEALw_wcB' target='_blank'>Microsoft Azure</a>.<br />
+                        Design Engineer @ <a className='text-light-blue hover:cursor-pointer' href='https://azure.microsoft.com/en-us/pricing/purchase-options/azure-account/search?ef_id=_k_Cj0KCQiAr7C6BhDRARIsAOUKifj3TEMgGBDB3PWi2jB14RqTjd-y-2LI1j4um87UHDilRu9mQ3TmM2AaAh4DEALw_wcB_k_&OCID=AIDcmmfq865whp_SEM__k_Cj0KCQiAr7C6BhDRARIsAOUKifj3TEMgGBDB3PWi2jB14RqTjd-y-2LI1j4um87UHDilRu9mQ3TmM2AaAh4DEALw_wcB_k_&gad_source=1&gclid=Cj0KCQiAr7C6BhDRARIsAOUKifj3TEMgGBDB3PWi2jB14RqTjd-y-2LI1j4um87UHDilRu9mQ3TmM2AaAh4DEALw_wcB' target='_blank' rel="noreferrer">Microsoft Azure</a>.<br />
                         Puzzle, cycling, and dog enthusiast.
                     </p>
                 </div>

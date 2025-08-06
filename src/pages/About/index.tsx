@@ -25,7 +25,7 @@ const About: React.FC = () => {
                     </div>
 
                     <div className="basis-1/2 content-center justify-items-center">
-                        <img src={nyc} className="about-img-2"/>
+                        <img src={nyc} className="about-img-2" alt='Woman standing in Times Square'/>
                     </div>
                 </div>
             </div>
@@ -33,7 +33,7 @@ const About: React.FC = () => {
                 
                 <div className="flex about-section max-w-[1024px] w-full py-10 content-center gap-10 rounded-[20px]">
                 <div className="basis-1/2 content-center justify-items-center">
-                        <img src={cs} className="about-img-2"/>
+                        <img src={cs} className="about-img-2" alt='Woman in white dress standing and pointing to sign that says Computer Science'/>
                     </div>
                     <div className="flex flex-col about-desc gap-6 leading-normal basis-1/2">
                         <p className="font-lora text-[50px] about-header text-blue">I can, and I will</p>
