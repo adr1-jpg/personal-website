@@ -1,9 +1,7 @@
 import React from "react";
-import styles from './Header.module.css';
 import logo from '../../assets/icons/logo.png';
 import { useForm } from "../../context/DataProvider";
 import { useNavigate } from "react-router";
-import { Link } from 'react-router-dom';
 import './header.css';
 import { Navigation20Regular } from "@fluentui/react-icons"
 import {
