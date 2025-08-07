@@ -6,7 +6,7 @@ import self from '../../assets/images/self.jpg'
 import azureTheme from '../../assets/icons/azure-theme.svg'
 
 import './home.css'
-import { useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Image from '../../components/ImageLoad';
 
@@ -41,7 +41,7 @@ const Home: React.FC = () => {
         });
     });
 
-
+    const typeRef = useRef<HTMLDivElement>(null);
  
 
     return (
@@ -75,7 +75,7 @@ const Home: React.FC = () => {
                             <div className='one-card-body'>
                                 <div className='card flex flex-row '>
                                     <div className='content-center'>
-                                        <img src={azureTheme} className='one-card-logo h-auto' loading='lazy' alt='Azure Theme for Fluent UI'/>
+                                        <img src={azureTheme} className='one-card-logo h-auto' loading='lazy'/>
                                     </div>
                                 </div>
 
