@@ -48,24 +48,27 @@ const Gallery: React.FC = () => {
                     cols={2}
                     style={{ minHeight: '600px' }}>
                     {itemData.map((item, idx) => (
-                        <ImageListItem key={item.title} style={{ position: 'relative', minHeight: '300px' }}>
-                            {!loaded[idx] && (
-                                <div style={{
+                        <ImageListItem key={item.title} style={{ position: 'relative', height: '300px', minHeight: '300px' }}>
+                            <div
+                                style={{
                                     width: '100%',
                                     height: '100%',
-                                    minHeight: '300px',
                                     background: '#e5e7eb',
                                     borderRadius: '8px',
                                     position: 'absolute',
                                     top: 0,
-                                    left: 0
-                                }} />
-                            )}
-                            <img loading='lazy' src={item.img}
+                                    left: 0,
+                                    opacity: loaded[idx] ? 0 : 1,
+                                    transition: 'opacity 0.5s'
+                                }}
+                            />
+                            <img
+                                loading='lazy'
+                                src={item.img}
                                 onLoad={() => handleImageLoad(idx)}
                                 style={{
                                     width: '100%',
-                                    height: '300px',
+                                    height: '100%',
                                     objectFit: 'cover',
                                     opacity: loaded[idx] ? 1 : 0,
                                     transition: 'opacity 0.5s',
@@ -85,24 +88,27 @@ const Gallery: React.FC = () => {
                 <ImageList variant="quilted"
                     cols={1}>
                     {itemData.map((item, idx) => (
-                        <ImageListItem key={item.title} style={{ position: 'relative', minHeight: '300px' }}>
-                            {!loaded[idx] && (
-                                <div style={{
+                        <ImageListItem key={item.title} style={{ position: 'relative', height: '300px', minHeight: '300px' }}>
+                            <div
+                                style={{
                                     width: '100%',
                                     height: '100%',
-                                    minHeight: '300px',
                                     background: '#e5e7eb',
                                     borderRadius: '8px',
                                     position: 'absolute',
                                     top: 0,
-                                    left: 0
-                                }} />
-                            )}
-                            <img loading='lazy' src={item.img}
+                                    left: 0,
+                                    opacity: loaded[idx] ? 0 : 1,
+                                    transition: 'opacity 0.5s'
+                                }}
+                            />
+                            <img
+                                loading='lazy'
+                                src={item.img}
                                 onLoad={() => handleImageLoad(idx)}
                                 style={{
                                     width: '100%',
-                                    height: '300px',
+                                    height: '100%',
                                     objectFit: 'cover',
                                     opacity: loaded[idx] ? 1 : 0,
                                     transition: 'opacity 0.5s',
