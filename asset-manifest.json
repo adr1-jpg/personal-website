@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/personal-website/static/css/main.6b800d5f.css",
+    "main.js": "/personal-website/static/js/main.88ca6f44.js",
+    "static/js/453.253ccfac.chunk.js": "/personal-website/static/js/453.253ccfac.chunk.js",
+    "static/media/cityscape.jpg": "/personal-website/static/media/cityscape.4d2beee9282ac9625c9e.jpg",
+    "static/media/lisboa.jpg": "/personal-website/static/media/lisboa.88a828c463f5a598176a.jpg",
+    "static/media/graphic.svg": "/personal-website/static/media/graphic.dac7a2b670d3496b4bb6721a123b745b.svg",
+    "static/media/love.jpg": "/personal-website/static/media/love.eaab27e7d7b810ed190d.jpg",
+    "static/media/door.jpg": "/personal-website/static/media/door.c62e37f40b2bad90d488.jpg",
+    "static/media/water.jpg": "/personal-website/static/media/water.ac0cc66bf78177831026.jpg",
+    "static/media/final-design.png": "/personal-website/static/media/final-design.7ccd874adb7bb87f3cb4.png",
+    "static/media/rainier.jpg": "/personal-website/static/media/rainier.9d460b1ba95e5a8726e7.jpg",
+    "static/media/sketch.png": "/personal-website/static/media/sketch.3f106498b29ce02d158c.png",
+    "static/media/nyc-me.jpeg": "/personal-website/static/media/nyc-me.b3b195889a8d12b324c4.jpeg",
+    "static/media/me-cs.jpg": "/personal-website/static/media/me-cs.def5e8f7e6dc43dd20f2.jpg",
+    "static/media/github.svg": "/personal-website/static/media/github.aa91da591c7fc067a80088e292e81dd8.svg",
+    "static/media/self.jpg": "/personal-website/static/media/self.9ad3cda0a40a5f7f0ac0.jpg",
+    "static/media/azure-theme.svg": "/personal-website/static/media/azure-theme.9a6f12981bd7d81768c1c0cb74fdc615.svg",
+    "index.html": "/personal-website/index.html",
+    "main.6b800d5f.css.map": "/personal-website/static/css/main.6b800d5f.css.map",
+    "main.88ca6f44.js.map": "/personal-website/static/js/main.88ca6f44.js.map",
+    "453.253ccfac.chunk.js.map": "/personal-website/static/js/453.253ccfac.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6b800d5f.css",
+    "static/js/main.88ca6f44.js"
+  ]
+}
