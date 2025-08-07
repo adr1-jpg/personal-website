@@ -1,8 +1,11 @@
 import React from "react";
 import { useEffect } from "react";
+import { Button, Slider } from "@fluentui/react-components";
 import Header from "../../components/Header";
 import graphic from '../../assets/icons/graphic.svg';
 import './cvc.css'
+import npm from '../../assets/icons/npm.png'
+import github from '../../assets/icons/github.svg'
 import Footer from "../../components/Footer";
 import sketch from '../../assets/images/sketch.png'
 import design from '../../assets/images/final-design.png'

@@ -2,6 +2,8 @@ import React from "react";
 import { useEffect } from "react";
 import { Button, Slider } from "@fluentui/react-components";
 import Header from "../../components/Header";
+import theme from '../../assets/images/azure-theme-button.png'
+import azure from '../../assets/icons/azure-theme.svg'
 import azureTheme from '../../assets/icons/azure-theme.svg'
 import npm from '../../assets/icons/npm.png'
 import github from '../../assets/icons/github.svg'

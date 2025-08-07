@@ -2,6 +2,7 @@ import React from "react";
 import { useEffect, useState } from "react";
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
+import ImageListItemBar from '@mui/material/ImageListItemBar';
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import rainier from '../../assets/images/rainier.jpg'
