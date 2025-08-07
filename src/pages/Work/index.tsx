@@ -1,6 +1,6 @@
 import React from "react";
 import { useEffect } from "react";
-import { Button } from "@fluentui/react-components";
+import { Button, Slider } from "@fluentui/react-components";
 import Header from "../../components/Header";
 import azureTheme from '../../assets/icons/azure-theme.svg'
 import npm from '../../assets/icons/npm.png'
@@ -52,7 +52,7 @@ const Work: React.FC = () => {
                 </div>
                 <div className="">
                     <h1 className='font-lora study-header'>Overview</h1>
-                    <p className="font-openSans design-desc">In 2022, Microsoft launched <a href="https://fluent2.microsoft.design/" target="_blank" rel="noreferrer" className="text-light-blue font-semibold">Fluent v9</a>,
+                    <p className="font-openSans design-desc">In 2022, Microsoft launched <a href="https://fluent2.microsoft.design/" target="_blank" className="text-light-blue font-semibold">Fluent v9</a>,
                         the latest version of their design system. I developed a custom theme for the Azure portal,
                         applying Azure's brand colors to Fluent components. This ensured a cohesive and consistent
                         styling, typography, and color scheme, aligning with Azure's design language and delivering
@@ -62,7 +62,7 @@ const Work: React.FC = () => {
                         <a href="https://www.npmjs.com/package/@fluentui/azure-themes?activeTab=readme" target="_blank">
                             <img src={npm} className="icon" />
                         </a>
-                        <a href="https://github.com/adr1-jpg/fluentui-contrib/tree/6307a97b0424c3e5c069a5bf6d2dfc0b2f5d1fca/packages/azure-theme" target="_blank" rel="noreferrer">
+                        <a href="https://github.com/adr1-jpg/fluentui-contrib/tree/6307a97b0424c3e5c069a5bf6d2dfc0b2f5d1fca/packages/azure-theme" target="_blank">
                             <img src={github} className="icon" />
                         </a>
                     </div>
@@ -76,7 +76,7 @@ const Work: React.FC = () => {
                             <li className="font-openSans">High contrast mode</li>
                             <li className="font-openSans">Easy implementation: Simply import the desired theme and wrap your components with
                                 <a href="https://fluent2.microsoft.design/components/web/react/fluentprovider/usage"
-                                    target="_blank" rel="noreferrer"
+                                    target="_blank"
                                     className="text-light-blue hover:cursor-pointer font-semibold"> FluentProvider
                                 </a>
                             </li>
@@ -89,10 +89,11 @@ const Work: React.FC = () => {
                         Storybook containing a showcase of all Fluent components styled with the Azure Theme. </h1>
                     <div className="demo">
                         <a href="https://microsoft.github.io/fluentui-contrib/azure-theme/?path=/docs/packages-azure-theme--docs"
-                            target="_blank" rel="noreferrer">
+                            target="_blank">
                             <Button appearance="primary">View all components</Button>
                         </a>
 
+                        {/* <Slider defaultValue={30} /> */}
                     </div>
 
 
