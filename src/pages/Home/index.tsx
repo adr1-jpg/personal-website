@@ -111,14 +111,12 @@ const Home: React.FC = () => {
               Microsoft Azure
             </a>
             .<br />
-            
           </p>
         </div>
-        <div className="h-auto self ">
-          <Image src={self} alt="self" />
+
+          <Image src={self} alt="self" style={{borderRadius: 20}}/></div>
           {/* <img src={self} rel='preload' className='w-full max-w-md max-1236:max-w-60 h-auto rounded-[20px] ' /> */}
-        </div>
-      </div>
+      
       <div className="bp">
         <h1 className="text-2xl font-lora text-left work-title mb-5">
           Check out my work ✨

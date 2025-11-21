@@ -29,7 +29,7 @@
     }
 
     .about-img-2 {
-        border-radius: 0px !important;
+        border-radius: 20px !important;
         width: 100%;
         height: auto;
     }
@@ -46,13 +46,12 @@
 .about-img {
     width: 300px;
     height: 350px;
-    border-radius: 20px;
+    border-radius: 20px !important;
     object-fit: cover;
 }
 .about-img-2 {
-    border-radius: 20px;
+    border-radius: 20px !important;
     width: 100%;
-    aspect-ratio: 1; 
     object-fit: cover;
     display: block;
 }
