@@ -59,7 +59,7 @@ const Gallery: React.FC = () => {
                                     top: 0,
                                     left: 0,
                                     opacity: loaded[idx] ? 0 : 1,
-                                    transition: 'opacity 0.5s'
+                                    transition: 'opacity 0.1s'
                                 }}
                             />
                             <img
