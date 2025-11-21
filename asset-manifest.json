@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/personal-website/static/css/main.6d40d5e1.css",
-    "main.js": "/personal-website/static/js/main.5e4a0a21.js",
+    "main.css": "/personal-website/static/css/main.c5964a3f.css",
+    "main.js": "/personal-website/static/js/main.44112f1b.js",
     "static/js/453.253ccfac.chunk.js": "/personal-website/static/js/453.253ccfac.chunk.js",
     "static/media/cityscape.jpg": "/personal-website/static/media/cityscape.4d2beee9282ac9625c9e.jpg",
     "static/media/lisboa.jpg": "/personal-website/static/media/lisboa.88a828c463f5a598176a.jpg",
@@ -18,12 +18,12 @@
     "static/media/self.jpg": "/personal-website/static/media/self.9ad3cda0a40a5f7f0ac0.jpg",
     "static/media/azure-theme.svg": "/personal-website/static/media/azure-theme.9a6f12981bd7d81768c1c0cb74fdc615.svg",
     "index.html": "/personal-website/index.html",
-    "main.6d40d5e1.css.map": "/personal-website/static/css/main.6d40d5e1.css.map",
-    "main.5e4a0a21.js.map": "/personal-website/static/js/main.5e4a0a21.js.map",
+    "main.c5964a3f.css.map": "/personal-website/static/css/main.c5964a3f.css.map",
+    "main.44112f1b.js.map": "/personal-website/static/js/main.44112f1b.js.map",
     "453.253ccfac.chunk.js.map": "/personal-website/static/js/453.253ccfac.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6d40d5e1.css",
-    "static/js/main.5e4a0a21.js"
+    "static/css/main.c5964a3f.css",
+    "static/js/main.44112f1b.js"
   ]
 }
