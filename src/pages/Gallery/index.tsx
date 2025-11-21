@@ -1,113 +1,122 @@
 import React from "react";
 import { useEffect, useState } from "react";
-import ImageList from '@mui/material/ImageList';
-import ImageListItem from '@mui/material/ImageListItem';
-import ImageListItemBar from '@mui/material/ImageListItemBar';
+import ImageList from "@mui/material/ImageList";
+import ImageListItem from "@mui/material/ImageListItem";
+import ImageListItemBar from "@mui/material/ImageListItemBar";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
-import rainier from '../../assets/images/rainier.jpg'
-import cityscape from '../../assets/images/cityscape.jpg'
-import lisboa from '../../assets/images/lisboa.jpg'
-import water from '../../assets/images/water.jpg'
-import love from '../../assets/images/love.jpg'
-import door from '../../assets/images/door.jpg'
+import rainier from "../../assets/images/rainier.jpg";
+import cityscape from "../../assets/images/cityscape.jpg";
+import lisboa from "../../assets/images/lisboa.jpg";
+import water from "../../assets/images/water.jpg";
+import love from "../../assets/images/love.jpg";
+import door from "../../assets/images/door.jpg";
 
 const Gallery: React.FC = () => {
-    useEffect(() => {
-        window.scrollTo(0, 0);
-    }, []);
-    
-    const itemData = [
-        { img: rainier, title: 'Rainier' },
-        { img: lisboa, title: 'Lisboa' },
-        { img: cityscape, title: 'Seattle' },
-        { img: water, title: 'Bainbridge' },
-        { img: love, title: 'Love' },
-        { img: door, title: 'Light' },
-    ];
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
-    // Per-image loading state
-    const [loaded, setLoaded] = useState(Array(itemData.length).fill(false));
+  const itemData = [
+    { img: rainier, title: "Rainier" },
+    { img: lisboa, title: "Lisboa" },
+    { img: cityscape, title: "Seattle" },
+    { img: water, title: "Bainbridge" },
+    { img: love, title: "Love" },
+    { img: door, title: "Light" },
+  ];
 
-    const handleImageLoad = (idx: number) => {
-        setLoaded(prev => {
-            const next = [...prev];
-            next[idx] = true;
-            return next;
-        });
-    };
+  // Per-image loading state
+  const [loaded, setLoaded] = useState(Array(itemData.length).fill(false));
 
-    return (
-        <div className="bg-background">
-            <Header />
+  const handleImageLoad = (idx: number) => {
+    setLoaded((prev) => {
+      const next = [...prev];
+      next[idx] = true;
+      return next;
+    });
+  };
 
-            <div className='mx-32 hidden lg:block max-w-[1024px] mt-5 justify-self-center'>
-                <h2 className='font-inter text-left text-3xl'>Photos</h2>
-                <p className="mb-5 font-openSans mt-3 about-text" >In my free time, I enjoy exploring the West Coast, international travel, and photography.</p>
-                <ImageList variant="masonry"
-                    cols={2}
-                    gap={6}>
-                    {itemData.map((item, idx) => (
-                        <ImageListItem key={item.title} style={{ position: 'relative', height: '300px', minHeight: '300px' }}>
-                            <div
-                                style={{
-                                    width: '100%',
-                                    height: '100%',
-                                    background: '#e5e7eb',
-                                    borderRadius: '8px',
-                                    position: 'absolute',
-                                    top: 0,
-                                    left: 0,
-                                    opacity: loaded[idx] ? 0 : 1,
-                                    transition: 'opacity 0.1s'
-                                }}
-                            />
-                            <img
-                                loading='lazy'
-                                src={item.img}
-                                onLoad={() => handleImageLoad(idx)}
-                                style={{ aspectRatio: "3 / 2", overflow: "hidden" }}
-                                alt={item.title}
-                            />
-                        </ImageListItem>
-                    ))}
-                </ImageList>
-            </div>
+  return (
+    <div className="bg-background">
+      <Header />
 
-            <div className='mx-5 my-3 block lg:hidden'>
-                <h2 className='font-inter text-left text-3xl mt-5 mb-3'>Photos</h2>
-                <p className="mb-5 font-openSans mt-3 about-text" >In my free time, I enjoy exploring the West Coast, international travel, and photography.</p>
-                <ImageList variant="masonry"
-                   cols={2}
-                   gap={6}>
-                    {itemData.map((item, idx) => (
-                        <ImageListItem key={item.title} style={{ position: 'relative', height: '300px', minHeight: '300px' }}>
-                            <div
-                                style={{
-                                    width: '100%',
-                                    height: '100%',
-                                    background: '#e5e7eb',
-                                    borderRadius: '8px',
-                                    position: 'absolute',
-                                    top: 0,
-                                    left: 0,
-                                    opacity: loaded[idx] ? 0 : 1,
-                                    transition: 'opacity 0.5s'
-                                }}
-                            />
-                            <img
-                                loading='lazy'
-                                src={item.img}
-                                onLoad={() => handleImageLoad(idx)}
-                                style={{ aspectRatio: "3 / 2", overflow: "hidden" }}
-                                alt={item.title}
-                            />
-                        </ImageListItem>
-                    ))}
-                </ImageList>
-            </div>
-            <Footer />
-        </div>
-    )
-}
+      <div className="mx-32 hidden lg:block max-w-[1024px] mt-5 justify-self-center">
+        <h2 className="font-inter text-left text-3xl">Photos</h2>
+        <p className="mb-5 font-openSans mt-3 about-text">
+          In my free time, I enjoy exploring the West Coast, international
+          travel, and photography.
+        </p>
+        <ImageList variant="masonry" cols={2} gap={6}>
+          {itemData.map((item, idx) => (
+            <ImageListItem
+              key={item.title}
+              style={{
+                position: "relative",
+                height: "300px",
+                minHeight: "300px",
+              }}
+            >
+              <img
+                // loading="lazy"
+                src={item.img}
+                onLoad={() => handleImageLoad(idx)}
+                style={{
+                  aspectRatio: "3 / 2",
+                  overflow: "hidden",
+                  backgroundColor: "transparent",
+                  //opacity: loaded[idx] ? 1 : 0,
+                  //transition: "opacity 1s ease"
+                }}
+                alt={item.title}
+              />
+            </ImageListItem>
+          ))}
+        </ImageList>
+      </div>
+
+      <div className="mx-5 my-3 block lg:hidden">
+        <h2 className="font-inter text-left text-3xl mt-5 mb-3">Photos</h2>
+        <p className="mb-5 font-openSans mt-3 about-text">
+          In my free time, I enjoy exploring the West Coast, international
+          travel, and photography.
+        </p>
+        <ImageList variant="masonry" cols={2} gap={6}>
+          {itemData.map((item, idx) => (
+            <ImageListItem
+              key={item.title}
+              style={{
+                position: "relative",
+                height: "300px",
+                minHeight: "300px",
+              }}
+            >
+              <div
+                style={{
+                  width: "100%",
+                  height: "100%",
+                  background: "#e5e7eb",
+                  borderRadius: "8px",
+                  position: "absolute",
+                  top: 0,
+                  left: 0,
+                  opacity: loaded[idx] ? 0 : 1,
+                  transition: "opacity 0.5s",
+                }}
+              />
+              <img
+                // loading="lazy"
+                src={item.img}
+                onLoad={() => handleImageLoad(idx)}
+                style={{ aspectRatio: "3 / 2", overflow: "hidden" }}
+                alt={item.title}
+              />
+            </ImageListItem>
+          ))}
+        </ImageList>
+      </div>
+      <Footer />
+    </div>
+  );
+};
 export default Gallery;

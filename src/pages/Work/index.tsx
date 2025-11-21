@@ -28,7 +28,7 @@ const Work: React.FC = () => {
             >
                 <div className="max-w-[1024px] hero-body">
                     <div className='w-full max-w-md max-1236:max-w-sm max-640:w-[250px] h-auto' >
-                        <img loading='lazy' src={azureTheme} />
+                        <img  src={azureTheme} />
                     </div>
                     <h1 className="font-lora hero-desc">
                         A Unified Design System for Azure
