@@ -111,7 +111,7 @@ const Home: React.FC = () => {
               Microsoft Azure
             </a>
             .<br />
-            Puzzle, cycling, and dog enthusiast.
+            
           </p>
         </div>
         <div className="h-auto self ">
