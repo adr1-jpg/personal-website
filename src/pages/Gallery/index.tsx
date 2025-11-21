@@ -44,10 +44,9 @@ const Gallery: React.FC = () => {
             <div className='mx-32 hidden lg:block max-w-[1024px] mt-5 justify-self-center'>
                 <h2 className='font-inter text-left text-3xl'>Photos</h2>
                 <p className="mb-5 font-openSans mt-3 about-text" >In my free time, I enjoy exploring the West Coast, international travel, and photography.</p>
-                <ImageList variant="quilted"
+                <ImageList variant="masonry"
                     cols={2}
-                    rowHeight={200}
-                    style={{ minHeight: '600px'}}>
+                    gap={6}>
                     {itemData.map((item, idx) => (
                         <ImageListItem key={item.title} style={{ position: 'relative', height: '300px', minHeight: '300px' }}>
                             <div
@@ -67,15 +66,7 @@ const Gallery: React.FC = () => {
                                 loading='lazy'
                                 src={item.img}
                                 onLoad={() => handleImageLoad(idx)}
-                                style={{
-                                    width: '100%',
-                                    height: '100%',
-                                    objectFit: 'cover',
-                                    opacity: loaded[idx] ? 1 : 0,
-                                    transition: 'opacity 0.5s',
-                                    position: 'relative',
-                                    zIndex: 1
-                                }}
+                                style={{ aspectRatio: "3 / 2", overflow: "hidden" }}
                                 alt={item.title}
                             />
                         </ImageListItem>
@@ -86,8 +77,9 @@ const Gallery: React.FC = () => {
             <div className='mx-5 my-3 block lg:hidden'>
                 <h2 className='font-inter text-left text-3xl mt-5 mb-3'>Photos</h2>
                 <p className="mb-5 font-openSans mt-3 about-text" >In my free time, I enjoy exploring the West Coast, international travel, and photography.</p>
-                <ImageList variant="quilted"
-                    cols={1}>
+                <ImageList variant="masonry"
+                   cols={2}
+                   gap={6}>
                     {itemData.map((item, idx) => (
                         <ImageListItem key={item.title} style={{ position: 'relative', height: '300px', minHeight: '300px' }}>
                             <div
@@ -107,15 +99,7 @@ const Gallery: React.FC = () => {
                                 loading='lazy'
                                 src={item.img}
                                 onLoad={() => handleImageLoad(idx)}
-                                style={{
-                                    width: '100%',
-                                    height: '100%',
-                                    objectFit: 'cover',
-                                    opacity: loaded[idx] ? 1 : 0,
-                                    transition: 'opacity 0.5s',
-                                    position: 'relative',
-                                    zIndex: 1
-                                }}
+                                style={{ aspectRatio: "3 / 2", overflow: "hidden" }}
                                 alt={item.title}
                             />
                         </ImageListItem>

@@ -51,6 +51,10 @@
 }
 .about-img-2 {
     border-radius: 20px;
+    width: 100%;
+    aspect-ratio: 1; 
+    object-fit: cover;
+    display: block;
 }
 
 @media screen and (max-width: 768px) {

@@ -38,7 +38,7 @@ const CVC: React.FC = () => {
 
                     <div className="flex flex-row w-auto">
                         <div className="graphic ">
-                            <img src={graphic} className='h-auto' />
+                            <img src={graphic} className='h-auto' style={{minWidth: '100px', minHeight: '100px'}}/>
                         </div>
 
                     </div>
